@@ -1,0 +1,374 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+/*初始化*/
+*{ margin: 0;padding: 0;}
+.left{float:left; display:inline;}
+.right{float:right; display:inline;}
+.clear:after{content:""; clear:both; display:block;}
+.clear{zoom: 1;}
+a:link{color: white;text-decoration: none;}
+a:visited{color: white;text-decoration: none;}
+a:hover{color: white;text-decoration: none;}
+a:active{color: white;text-decoration: none;}
+/*最外层元素*/
+.main{ height: 890px;
+ width: 100%;}
+ /*head 开始*/
+.head{ width: 100%;
+height:100px;
+transition: 0.5s;
+position: fixed;
+background: #131313;}
+/*logo*/
+.logo{ margin-left: 30px;
+float: left;
+transition: 0.6s;
+margin-top: 11px;}
+/*nav*/
+.nav{ float: right;
+line-height:87px;
+height: 87px;
+margin-top: 10px;
+transition: 0.6s;
+margin-right: 38px;}
+.nav li{ list-style: none;
+color: white;
+width: 116px;
+font-family: "微软雅黑";
+margin-left: 20px;
+text-align: center;
+float: left;}
+.nav li:hover>p{ width: 100%;}
+.nav a:nth-child(1) li p{width: 100%;}
+.nav li p{ width: 0;
+height: 3px;
+transition: 0.5s;
+margin: 0 auto;
+background: #FF6600;}
+ /*head 结束*/
+.center{}
+.cen-head{ width: 100%;
+height: 100px;
+background: black;}
+/*foot state*/
+.my-footer{
+    background:#131313;
+    height: 280px;
+}
+.my-box{
+    width: 1189px;
+    margin: 0 auto;
+}
+.my-footer-con{
+    border-bottom: 1px solid #7d7d7d;
+    height: 165px;
+    padding: 35px 0 0;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.my-copyright{
+    position: relative;
+}
+.my-copyright p{
+    color:#8f8f8f;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.my-copyright p img{
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+.my-copyright .my-copyright-center{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*服务页*/
+.servecon{width: 100%;
+padding-top: 70px;}
+.servetitle{ padding-left: 75px;
+box-sizing: border-box;
+float: left;
+width: 50%;}
+.servetitle h2{margin-bottom: 4px;}
+.servetitle>p:nth-child(2){font-size: 19px;
+color: #7D7D7D;
+font-family: "微软雅黑";}
+.servetitle>p:nth-child(4){font-size: 16px;
+color: #7D7D7D;
+font-family: "微软雅黑";}
+.servex{ width: 100px;
+height: 1px;
+margin: 17px 0 17px 0;
+background: black;}
+.servelist { margin-top: 24px;}
+.servelist>li{ list-style: none;
+margin-bottom: 34px;
+margin-right: 122px;
+float: left;}
+.servelist>li>img{ display: block;
+margin: 0 auto;}
+.servelist>li>p{margin-top: 9px;
+color: #7D7D7D;
+font-family: "微软雅黑";
+font-size: 15px;}
+.scrvebtn{ width: 162px;
+margin-top: 31px;
+border: 1px solid black;
+text-align: center;
+line-height: 42px;
+overflow: hidden;
+font-family: "微软雅黑";
+height: 42px;}
+.scrvebtn>p{ width: 162px;
+text-align: center;
+transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+line-height: 42px;
+font-family: "微软雅黑";
+height: 42px;}
+.scrvebtn>p:nth-child(2){background: #FF6600;color: white;opacity: 0;}
+.scrvebtn:hover>p:nth-child(1){margin-top: -42px;opacity: 0;}
+.scrvebtn:hover>p:nth-child(2){opacity: 1;}
+.scrveconimg{ float: right;
+width: 50%;}
+
+
+/*侧栏 咨询*/
+.fixed{
+    width: 70px;
+    position: fixed;
+    right: 0;
+    bottom: 5px;
+    z-index: 10;
+}
+.fixed .ly{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background: rgba(255,102,0,0.8);
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.fixed .ly img{
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+.fixed .ly p{
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.fixed .ly:hover{
+    width: 90px;
+    height: 90px;
+    margin-top:-20px;
+    margin-left: -20px;
+}
+.fixed .ly:hover img{
+    margin-top: 15px;
+    opacity: 1;
+}
+.fixed .ly:hover p{
+    opacity: 1;
+}
+.fixed .tel{
+    background: rgba(0,0,0,0.8);
+    width: 70px;
+}
+.fixed .tel div{
+    position: relative;
+    transition: all 0.5s;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+.fixed .tel div p{
+    position: absolute;
+    color:#fff;
+    width: 0;
+    top: 0;
+    right: 70px;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+}
+.fixed .tel div img{
+    vertical-align: middle;
+}
+.fixed .tel .tel_one{
+    height: 0px;
+}
+.fixed .tel .tel_one img{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.fixed .tel .tel_two{
+
+}
+.fixed .tel:hover .tel_one{
+    height: 70px;
+}
+.fixed .tel:hover .tel_one img{
+    opacity: 1;
+}
+.fixed .tel:hover div p{
+    transition: all 0.5s 0.5s;
+    color:#fff;
+    width: 230px;
+    opacity: 1;
+}
+
+/*foot-top*/
+.my-help{
+    height: 247px;
+    position: relative;
+}
+.my-help img{
+    width: 100%;
+    height: 100%;
+}
+.my-help .my-help-mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+}
+.my-help-join{
+    margin-top: 65px;
+}
+.my-help .my-help-mask h3{
+    height: 45px;
+    font-weight: normal;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+}
+.my-help .my-help-mask h3 span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:100px;
+    height: 1px;
+    background: #fff;
+    margin: 0 auto;
+    transition: width 0.5s ease-out;
+}
+.my-help .my-help-mask h4{
+    font-weight: normal;
+    margin: 15px 0 20px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.my-help .my-serve{
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    color: #fff;
+    overflow: hidden;
+}
+.my-help .my-serve-p-one{
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+}
+.my-help .my-serve-p-two{
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+    background: #fff;
+    color: #000;
+}
+.my-help .my-serve:hover .my-serve-p-one{
+    transform: translateY(-100%);
+}
+.my-help .my-serve:hover .my-serve-p-two{
+    transform: translateY(-100%);
+}
+.my-help .my-help-join:hover h3 span{
+    width: 50px;
+}
+
+
+
+/*Cases  css*/
+.casescon1{ width: 100%;}
+.casescon1-n{ width: 25%;overflow: hidden;}
+.casescon1-n img{ width: 100%;
+transition: 1.3s;
+display: block;}
+.casescon1-n:hover >img{transform: scale(1.1);}
+.casescon2{ width: 100%;
+padding-top: 63px;
+background: #F6F6F6;}
+.casescon2-title{ text-align: center;}
+.casescon2x{ margin: 0 auto;
+width: 100px;
+height: 1px;
+margin-top: 22px;
+margin-bottom: 34px;
+background: black;}
+.casescon2-title2{ text-align: center;color: #7D7D7D;
+font-family: "微软雅黑";}
+.casescon2-con{ width: 100%;}
+.casescon2-con-n{ width: 25%;
+box-sizing: border-box;
+height: 150px;
+overflow: hidden;
+border: 1px solid black;
+border-left: none;
+}
+.casescon2-con-box{ width: 100%;
+height: 100%;
+position: relative;}
+/*.casescon2-con-n:hover >img{opacity: 0;}
+.casescon2-con-n:hover >.casescon2-con-ntop{ opacity: 1;}
+.casescon2-con-ntop{height: 150px;
+width: 100%;
+background: #FF6600;
+    transform: rotateX(90deg) translate3d(0, 0, 75px);
+transition: 1s;
+opacity: 0;
+box-sizing: border-box;
+text-align: center;}
+.casescon2-con-ntop p:nth-child(1){margin-top: 53px;}
+.casescon2-con-n img{ display: block;
+height: 150px;
+transition: 1s;
+transform: translate3d(0, 0, 75px);
+margin:  25px auto;}*/
+
