@@ -17,11 +17,11 @@ class Cases extends Component{
   		<div className="casescon2-con">
   		  		<div className="casescon2-con-n">
   		<div className="casescon2-con-box">
-  		<div className="bottom">
+  		<div className="casescon2-top">
   		<p>亮牌中国</p>
   		<p>产品互动体验站</p>
   		</div>
-  		<div className="top">  		<img src="images/logo01.png"  alt=""/></div>
+  		<div className="casescon2-bottom"><img src="images/logo01.png"  alt=""/></div>
   		</div>
   		</div>
   		</div>
@@ -33,4 +33,3 @@ class Cases extends Component{
 }
 
 export default Cases;
-;

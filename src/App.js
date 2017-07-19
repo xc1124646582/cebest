@@ -1,17 +1,60 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './App.css';
-import './apps.js';
 import Serve from './Serve';
 import Cases from './Cases';
+import Chinese from './Chinese';
 class Index extends Component {
 
 	constructor(){
 		super();
-		this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/Cases"},{"tita":"中企·云","titb":"/topics"},{"tita":"我们","titb":"/topics"},{"tita":"人才","titb":"/topics"},{"tita":"联系","titb":"/topics"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"},
+		this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/Cases"},{"tita":"中企·云","titb":"/Chinese"},{"tita":"我们","titb":"/topics"},{"tita":"人才","titb":"/topics"},{"tita":"联系","titb":"/topics"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"},
 		"foot":{"foimg":"images/f_logo.png","telephone1":"010-87127888","telephone2":"400-068-0808","copyright":"© 1999-2017 中企动力科技股份有限公司 京ICP备10002622号-16","place":"北京市经济技术开发区地盛西路1号 数码庄园B1座"}}
 	};
    componentDidMount=function () {
+function Ajax(opt){
+		if(window.XMLHttpRequest){
+			var xhr = new XMLHttpRequest();
+		}
+		else{
+			var xhr = new window.ActiveXObject( "Microsoft.XMLHTTP" );
+		}
+		if(opt.type=='get'){
+			xhr.open(opt.type,opt.url+'?'+JsonToString(opt.data),true);
+			xhr.send();
+		}
+		else if(opt.type=='post'){
+			xhr.open(opt.type,opt.url,true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			xhr.send(JsonToString(opt.data));
+		}
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+					opt.suss(xhr.responseText);
+				}
+			}
+		};
+		function JsonToString(json){
+			var arr = [];
+			for(var i in json){
+				arr.push(i+'='+json[i])
+			}
+			return arr.join('&');
+		};
+	};
+	
+	Ajax({
+		'url':'http://localhost:8005/text/text',
+		'type':'get',
+		'suss':function(opt){
+			var json = eval('('+opt+')');
+			console.log(json)
+		}
+	})
+	
+	
+	
     document.addEventListener('scroll', this.handleScroll.bind(this));
     var navs=document.getElementById("nav").getElementsByTagName("li");
     for(var i=0;i<navs.length;i++){
@@ -60,9 +103,14 @@ class Index extends Component {
     <div className="center">
     <p className="cen-head"></p>
     <Route exact path="/" component={Serve}/>
-    <Route exact path="/Cases" component={Cases}/>
+    <Route  path="/Cases" component={Cases}/>
+    <Route  path="/Chinese" component={Chinese}/>
     </div>
-                 <div className="my-help">
+    
+   
+    
+    
+                 <div className="my-help" id="help">
                      <img src="images/join_bg.jpg" alt=""/>
                      <div className="my-help-mask">
                          <div className="my-help-join">
