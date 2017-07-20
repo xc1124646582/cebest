@@ -3,30 +3,8 @@ import $ from 'jquery';
 
 class Chinese extends Component{
 	   componentDidMount=function () {
-//	   			   	var t=100;
-//	   	var l=100
-//	   	var as=true
-//	  var time =setInterval(function(){
-//	   		if(as==true){
-//	   		t+=0.2;
-//	   		l+=0.2;
-//	   		if(t>=150){
-//	   			as=false
-//	   		}
-//	   		}
-//	   		if(as==false){
-//	     	t-=0.2;
-//	   		l-=0.2;
-//	   		if(t<=100){
-//	   			as=true
-//	   		}
-//	   		}
-////	   	if(window.location.url()=="http://localhost:3000/Chinese"){
-////	   		document.getElementById("chinesecon6").style.backgroundSize=l+"%" +t+"%"
-////	   	}else{time=null;
-////	   	clearInterval(time)}
-//	   	},100)
-  };
+		   
+	   };
   
 	  render(){
   	return(

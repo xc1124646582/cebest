@@ -575,7 +575,16 @@
 .chinese-con6{ width: 100%;
     padding-bottom: 126px;
     padding-top: 157px;
-    background: url(images/cl_a_img03.jpg);}
+    background: url(images/cl_a_img03.jpg);
+    background-origin: padding-box;
+    background-size: 100% 100%;
+    animation: scale_img 30s infinite ease-out alternate;
+}
+@keyframes scale_img {
+    0%{background-size: 100% 100%;}
+    50%{background-size: 200% 200%;}
+    100%{background-size: 100% 100%;}
+}
 .chinese-con6-box{ width: 965px;
     display: flex;
     justify-content: space-around;
@@ -949,8 +958,34 @@
 }
 
 /*we css*/
-.my-ce-ultimate{
+.my-we .my-ce-ultimate{
     height: 700px;
     background: url(images/ly_bg10.jpg) no-repeat center;
     background-size: cover;
+}
+.my-we .my-ce-ultimate .my-we-box{
+    padding-top: 80px;
+    max-width: 1200px;
+    width: auto;
+    margin: 0 auto;
+    height: 590px;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt{
+    width: 645px;
+    margin:178px 0 0 30px;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt h2{
+    color: #FFF;
+    margin: 10px 0 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt p{
+    font-size: 14px;
+    color: #e4e4e4;
+    line-height: 30px;
+}
+.my-we .my-num{
+    padding: 90px 0 130px 0;
+    background: #ff6600;
 }
