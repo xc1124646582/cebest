@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+body.w1200{overflow: visible;height: auto;}
+.us-service .ser-proc {
+    width: 830px;
+    height: 330px;
+    margin: 140px auto 0 auto;
+}
+.prz {
+    position: relative;
+    zoom: 1;
+}
+.us-service .ser-proc .ser-step.move {
+    opacity: 1;
+}
+.us-service .ser-proc .ser-step1 {
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step {
+    width: 43px;
+    height: 43px;
+    background: url(img/ly_serPoint.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+.pra {
+    position: absolute;
+}
+.step-txt.move {
+    opacity: 1;
+}
+.step-txt1 {
+    left: -78px;
+    top: -60px;
+    transition: all 0.5s 0.4s;
+}
+.us-service .ser-proc .ser-curve1.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve1 {
+    width: 0;
+    height: 94px;
+    background: url(img/ly_ser01.png) no-repeat ;
+        background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    left: 43px;
+    top: 22px;
+    transition: all 0.5s;
+}
+.step-txt .cn {
+    color: #000;
+}
+.fnt_16 {
+    font-size: 14px;
+}
+.step-txt .en {
+    color: #969696;
+    font-size: 14px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+.us-service .ser-proc .ser-step2 {
+    left: 114px;
+    top: 114px;
+    transition: all 0.5s;
+}
+.step-txt2 {
+    left: -58px;
+    top: 110px;
+    transition: all 0.5s 0.8s;
+}
+.us-service .ser-proc .ser-curve2.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve2 {
+    width: 0;
+    height: 94px;
+    background: url(img/ly_ser02.png) no-repeat left top;
+    background-size: cover;
+    left: 133px;
+    top: 155px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step3 {
+    left: 223px;
+    top: 224px;
+    transition: all 0.5s;
+}
+.step-txt3 {
+    left: 216px;
+    top: 286px;
+    transition: all 0.5s 1.2s;
+}
+.us-service .ser-proc .ser-curve3.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve3 {
+    width: 0;
+    height: 94px;
+    background: url(img/ly_ser03.png) no-repeat left top;
+    background-size: cover;
+    left: 261px;
+    top: 155px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step4 {
+    left: 334px;
+    top: 114px;
+    transition: all 0.5s;
+}
+.step-txt4 {
+    left: 382px;
+    top: 170px;
+    transition: all 0.5s 1.6s;
+}
+.us-service .ser-proc .ser-curve4.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve4 {
+    width: 0;
+    height: 94px;
+    background: url(img/ly_ser04.png) no-repeat left top;
+    background-size: cover;
+    left: 356px;
+    top: 23px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step5 {
+    left: 446px;
+    top: 1px;
+    transition: all 0.5s;
+}
+.step-txt5 {
+    left: 438px;
+    top: -65px;
+    transition: all 0.5s 2s;
+}
+.us-service .ser-proc .ser-curve5.move {
+    width: 93px;
+}
+.us-service .ser-proc .ser-curve5 {
+    width: 0;
+    height: 93px;
+    background: url(img/ly_ser05.png) no-repeat left top;
+    background-size: cover;
+    left: 487px;
+    top: 23px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step6 {
+    left: 560px;
+    top: 112px;
+    transition: all 0.5s;
+}
+.step-txt6 {
+    left: 618px;
+    top: 108px;
+    transition: all 0.5s 2.4s;
+}
+.us-service .ser-proc .ser-curve6.move {
+    width: 224px;
+}
+.us-service .ser-proc .ser-curve6 {
+    width: 0;
+    height: 96px;
+    background: url(img/ly_ser06.png) no-repeat left top;
+    background-size: cover;
+    left: 580px;
+    top: 152px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step7 {
+    left: 782px;
+    top: 112px;
+    transition: all 0.5s;
+}
+.step-txt7 {
+    left: 780px;
+    top: 50px;
+    transition: all 0.5s 2.8s;
+}
+		</style>
+	</head>
+	<body>
+		       <div class="us-service">
+            <div class="w1200">
+                <div class="head-box">
+                    <div class="head-cn fnt_30 wow-serv fadeInDown f_title" data-wow-duration="0.5s">服务优势</div>
+                    <div class="head-en fnt_24 wow-serv fadeInDown" data-wow-duration="1s">Service Advantages</div>
+                    <div class="bd-line wow-serv fadeInDown" data-wow-duration="1.5s"></div>
+                    <div class="head-txt fnt_16 wow-serv fadeInDown" data-wow-duration="2s">以客户为中心，极致的客户体验<br>在每个项目中都运用专业的项目管理知识及项目管理经验</div>
+                </div>
+                <div class="ser-proc prz">
+                    <div class="ser-moveBox">
+                        <div class="ser-step1 pra ser-step"></div>
+                        <dl class="step-txt1 pra step-txt">
+                            <dt class="cn fnt_16">品牌策略</dt>
+                            <dd class="en">Brand  Strategy</dd>
+                        </dl>
+                        <div class="ser-curve1 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step2 pra ser-step"></div>
+                        <dl class="step-txt2 pra step-txt">
+                            <dt class="cn fnt_16">需求调研</dt>
+                            <dd class="en">Requirement Survey</dd>
+                        </dl>
+                        <div class="ser-curve2 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step3 pra ser-step"></div>
+                        <dl class="step-txt3 pra step-txt">
+                            <dt class="cn fnt_16">视觉设计</dt>
+                            <dd class="en">Visual Design</dd>
+                        </dl>
+                        <div class="ser-curve3 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step4 pra ser-step"></div>
+                        <dl class="step-txt4 pra step-txt">
+                            <dt class="cn fnt_16">技术实现</dt>
+                            <dd class="en">Technological Realization</dd>
+                        </dl>
+                        <div class="ser-curve4 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step5 pra ser-step"></div>
+                        <dl class="step-txt5 pra step-txt">
+                            <dt class="cn fnt_16">项目上线</dt>
+                            <dd class="en">Website Launch</dd>
+                        </dl>
+                        <div class="ser-curve5 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step6 pra ser-step"></div>
+                        <dl class="step-txt6 pra step-txt">
+                            <dt class="cn fnt_16">项目运营</dt>
+                            <dd class="en">Project Operation</dd>
+                        </dl>
+                        <div class="ser-curve6 pra ser-curve"></div>
+                    </div>
+                    <div class="ser-moveBox">
+                        <div class="ser-step7 pra ser-step"></div>
+                        <dl class="step-txt7 pra step-txt">
+                            <dt class="cn fnt_16">整合营销</dt>
+                            <dd class="en">Integrated Marketing</dd>
+                        </dl>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
