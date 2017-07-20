@@ -1,0 +1,114 @@
+/*we css*/
+.my-we .my-ce-ultimate{
+    height: 700px;
+    background: url(../images/ly_bg10.jpg) no-repeat center;
+    background-size: cover;
+}
+.my-we .my-ce-ultimate .my-we-box{
+    padding-top: 80px;
+    max-width: 1200px;
+    width: auto;
+    margin: 0 auto;
+    height: 590px;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt{
+    width: 645px;
+    margin:178px 0 0 30px;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt h2{
+    color: #FFF;
+    margin: 10px 0 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.my-we .my-ce-ultimate .my-ce-ultimate-txt p{
+    font-size: 14px;
+    color: #e4e4e4;
+    line-height: 30px;
+}
+.my-we .my-num {
+    padding: 90px 0 130px 0;
+    background: #ff6600;
+}
+.my-we .my-num ul{
+    max-width: 1200px;
+    width: auto;
+    margin: 0 auto;
+}
+.my-we .my-num ul li{
+    float: left;
+    width: 400px;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 0 0 0 60px;
+}
+.my-we .my-num ul li:first-of-type{
+    padding: 0;
+}
+.my-we .my-num ul li:last-of-type p{
+    border: none;
+}
+.my-we .my-num ul li h2{
+    font-size: 54px;
+}
+.my-we .my-num ul li p{
+    border-right: 1px solid #c7c7c7;
+}
+.my-we .my-num ul li p span{
+    display: block;
+    font-size: 14px;
+}
+.my-we .my-num ul li p span:first-of-type{
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+.my-we .my-future{
+    height: 600px;
+    background: url(../images/ly_bg11.jpg) no-repeat center;
+    background-size: cover;
+}
+.my-we .my-future .my-future-box{
+    max-width: 1200px;
+    width: auto;
+    margin: 0 auto;
+}
+.my-we .my-future .my-future-l{
+    margin: 224px 0 0;
+    width: 640px;
+}
+.my-we .my-future .my-future-l h2{
+    color: #000;
+    font-size: 24px;
+    font-weight: normal;
+}
+.my-we .my-future .my-future-l img{
+    display: block;
+}
+.my-we .my-future .my-future-l p{
+    color: #7d7d7d;
+    line-height: 30px;
+}
+.my-we .my-future .my-future-r{
+    width: 373px;
+    height: 272px;
+    margin-top: 190px;
+    position: relative;
+}
+.my-we .my-future .my-future-r img{
+    position: absolute;
+}
+.my-we .my-future .my-future-r .my-future-img-top{
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.my-we .my-future .my-future-r .my-future-img-left{
+    left: 0;
+    bottom: 0;
+}
+.my-we .my-future .my-future-r .my-future-img-right{
+    right: 0;
+    bottom: 0;
+}
+

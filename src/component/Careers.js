@@ -4,7 +4,16 @@ import $ from 'jquery';
 class Careers extends Component {
     componentDidMount = function () {
         $(".my-job-r ul li").click(function () {
-            $(this).find(".my-detail").fadeToggle().parent().find("img").toggleClass("rot")
+            $(this).find(".my-detail").stop(true).fadeToggle().parent().find("img").toggleClass("rot")
+        })
+        $(".my-job-r ul li").children(".my-detail").click(function (ev) {
+            var e=ev||window.event
+            if(e.stopPropagation){
+                //非ie
+                e.stopPropagation()
+            }else{
+                e.cancelBubble=true
+            }
         })
     };
 

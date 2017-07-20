@@ -1,40 +1,24 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
-import Serve from './Serve';
-import Cases from './Cases';
-import Chinese from './Chinese';
-import We from './We'
-import Careers from './Careers';
-import Contact from './Contact'
+import Serve from './component/Serve';
+import Cases from './component/Cases';
+import Chinese from './component/Chinese';
+import We from './component/We'
+import Careers from './component/Careers';
+import Contact from './component/Contact'
+import './style/serve.css';
+import './style/cases.css';
+import './style/chinese.css';
+import './style/we.css';
+import './style/careers.css';
+import './style/contact.css'
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
-//                  {/*<Router>
-//                   <div className="header">
-//                   <ul>
-//                   <li><Link to="/">Home</Link></li>
-//                   <li><Link to="/about">About</Link></li>
-//                   <li><Link to="/topics">Topics</Link></li>
-//                   </ul>
-//                   <hr/>
-//                   <Route exact path="/" component={Home}/>
-//                   <Route path="/about" component={About}/>
-//                   <Route path="/topics" component={Topics}/>
-//                   </div>
-//                   </Router>
-//                   <div>
-//                   </div>*/}
-//              </div>
-//          );
-//     }
-// }
-
 class Index extends Component {
-
     constructor(){
         super();
         this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/cases"},{"tita":"中企·云","titb":"/chinese"},{"tita":"我们","titb":"/we"},{"tita":"人才","titb":"/careers"},{"tita":"联系","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"},
@@ -52,6 +36,9 @@ class Index extends Component {
                 this.children[0].style.width="100%"
             }
         }
+        $("#top").click(function () {
+            $("html,body").stop(true).animate({scrollTop:0},1000)
+        })
     };
     handleScroll=function (e) {
         if(document.body.scrollTop>0){
@@ -60,12 +47,14 @@ class Index extends Component {
             document.getElementById("head").style.backgroundColor="rgba(0,0,0,0.8)"
             document.getElementById("abc").style.marginLeft="40px"
             document.getElementById("nav").style.marginTop="0"
+            document.getElementById("top").style.height="70px"
         }else{
             document.getElementById("abc").src=this.data.logo.logo
             document.getElementById("abc").style.marginLeft="30px"
             document.getElementById("head").style.height="100px"
             document.getElementById("head").style.backgroundColor="black"
             document.getElementById("nav").style.marginTop="10px"
+            document.getElementById("top").style.height="0"
         }
     };
     render(){
@@ -129,6 +118,7 @@ class Index extends Component {
                             <div className="tel_one"><img src="images/p_ico2.png" alt=""/><p>400-068-0808</p></div>
                             <div className="tel_two"><img src="images/p_ico.png" alt=""/><p>010-87127888</p></div>
                         </div>
+                        <img className="top" id="top" src="images/t_ico.png" alt=""/>
                     </div>
                     {/*fixed end*/}
                 </div>
