@@ -132,6 +132,23 @@ class Chinese extends Component{
 </div>
 <div className="scrvebtn margin " id="servebtn"><p>+查看案例</p><p>+了解更多</p></div>
 </div>
+	{/*help start*/}
+	<div className="my-help">
+		<img src="images/join_bg.jpg" alt=""/>
+		<div className="my-help-mask">
+			<div className="my-help-join">
+				<h3>自始至终提供帮助<span></span></h3>
+				<h4>我们非常希望可以帮助到您并和您一起工作，请联系我们专业的咨询顾问！</h4>
+				<div className="my-serve-g">
+					<div className="my-serve">
+						<p className="my-serve-p-one">+联系我们</p>
+						<p className="my-serve-p-two">+联系我们</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/*help end*/}
 </div>
 )
   	}
