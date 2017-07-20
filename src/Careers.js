@@ -2,7 +2,26 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Careers extends Component {
+	constructor(){
+			super();
+			this.state={
+				work:[],
+				
+			}
+		  };
     componentDidMount = function () {
+    	$.ajax({
+				'url':'http://localhost:8005/text/careers',
+				'type':'get',
+				'success':function(opt){
+					for(var i=0;i<opt.length;i++){
+						if(opt[i].work!=null){
+							this.state.work.push(opt[i].work)
+						}
+					}
+					console.log(opt)
+				}.bind(this)
+			})
         $(".my-job-r ul li").click(function () {
             $(this).find(".my-detail").fadeToggle().parent().find("img").toggleClass("rot")
         })
