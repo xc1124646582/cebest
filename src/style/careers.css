@@ -1,0 +1,267 @@
+/*careers css*/
+.my-careers .my-work{
+    height: 500px;
+    background: url("../images/ly_bg12.jpg") no-repeat center top;
+}
+.my-careers .my-work h1{
+    padding-top: 130px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+}
+.my-careers .my-work img{
+    display: block;
+    margin: 0 auto;
+    width: 99px;
+}
+.my-careers .my-work p{
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+    width: 785px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+.my-careers .my-work a{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: block;
+    border:1px solid #fff;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860) 100ms;
+}
+.my-careers .my-work a span{
+    display: block;
+    line-height: 30px;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860) 100ms;
+}
+.my-careers .my-work a .my-work-span-two{
+    background: #d45a07;
+    color:  #fff;
+}
+.my-careers .my-work a:hover{
+    border:1px solid #d45a07;
+}
+.my-careers .my-work a:hover .my-work-span-one{
+    transform: translateY(-100%);
+}
+.my-careers .my-work a:hover .my-work-span-two{
+    transform: translateY(-100%);
+}
+.my-careers .my-hr{
+    height: 475px;
+    padding-top: 125px;
+    background: url("../images/ly_bg13.jpg") no-repeat center top;
+}
+.my-careers .my-hr ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+.my-careers .my-hr ul li{
+    width: 340px;
+    margin: 0 45px;
+    float: left;
+}
+.my-careers .my-hr ul li:first-of-type{
+    margin-left: 0;
+}
+.my-careers .my-hr ul li:last-of-type{
+    margin-right: 0;
+}
+.my-careers .my-hr ul li img{
+    display: block;
+}
+.my-careers .my-hr ul li h2{
+    font-weight: normal;
+    color: #000;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 18px;
+}
+.my-careers .my-hr ul li h3{
+    font-weight: normal;
+    color: #7d7d7d;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.my-careers .my-hr ul li p{
+    color: #7d7d7c;
+    line-height: 30px;
+    text-align: left;
+}
+.my-careers .my-why{
+    height: 600px;
+    background: url(../images/ly_bg14.jpg) no-repeat center;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+.my-careers .my-why .my-why-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../images/ly_bg15.png);
+}
+.my-careers .my-why h2{
+    padding-top: 135px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #FFF;
+}
+.my-careers .my-why img{
+    width: 99px;
+    margin: 0 auto;
+    display: block;
+}
+.my-careers .my-why p{
+    color: #e4e4e4;
+    width: 560px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+.my-careers .my-why a{
+    margin: 40px auto 0;
+    display: block;
+    width: 160px;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+}
+.my-careers .my-why a span{
+    display: block;
+    line-height: 40px;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+}
+.my-careers .my-why a .my-why-span-two{
+    color: #d45a07;
+}
+.my-careers .my-why a:hover{
+    background: #fff;
+}
+.my-careers .my-why a:hover .my-why-span-one{
+    transform: translateY(-100%);
+}
+.my-careers .my-why a:hover .my-why-span-two{
+    transform: translateY(-100%);
+}
+.my-careers .my-job{
+    height: 610px;
+    background: url(../images/ly_bg16.jpg) no-repeat;
+    padding: 100px 0;
+}
+.my-careers .my-job .my-job-l{
+    width: 50%;
+    height: 610px;
+}
+.my-careers .my-job .my-job-l div{
+    width: 90%;
+    margin: 150px auto 0 auto;
+}
+.my-careers .my-job .my-job-l h2{
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+}
+.my-careers .my-job .my-job-l img{
+    display: block;
+}
+.my-careers .my-job .my-job-l p{
+    color: #7d7d7d;
+    line-height: 30px;
+}
+.my-careers .my-job .my-job-r{
+    width: 49%;
+    height: 610px;
+    border-left: 1px solid #c6c6c6;
+}
+.my-careers .my-job .my-job-r>div{
+    height: 570px;
+    width: 90%;
+    overflow: auto;
+    margin: 0 auto;
+}
+.my-careers .my-job .my-job-r ul{
+    margin-right: 65px;
+}
+.my-careers .my-job .my-job-r ul li h2{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 35px 0;
+    border-bottom: 1px solid #c6c6c6;
+    height: 24px;
+    cursor: pointer;
+    color: #7d7d7d;
+}
+.my-careers .my-job .my-job-r ul li>span{
+    margin: 0 10px;
+    color: #000;
+}
+.my-careers .my-job .my-job-r ul li img{
+    float: right;
+    margin-right: 30px;
+    margin-top: 6px;
+    transition: all 0.5s;
+}
+.my-careers .my-job .my-job-r ul li .rot{
+    transform: rotate(90deg);
+}
+.my-careers .my-job .my-job-r ul li .my-detail{
+    display: none;
+}
+.my-careers .my-job .my-job-r ul li .my-detail h3{
+    color: #000;
+    margin: 25px 0 20px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.my-careers .my-job .my-job-r ul li .my-detail p{
+    line-height: 30px;
+    overflow: hidden;
+}
+.my-careers .my-job .my-job-r ul li .my-detail p span{
+    color: #7d7d7d;
+    float: right;
+    width: calc(100% - 25px);
+    line-height: 30px;
+}
+.my-careers .my-job .my-job-r ul li .my-detail a{
+    margin: 30px 0 0;
+    width: 188px;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 12px;
+    color: #000;
+    display: block;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+}
+.my-careers .my-job .my-job-r ul li .my-detail a span{
+    display: block;
+    line-height: 44px;
+    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+}
+.my-careers .my-job .my-job-r ul li .my-detail a span:last-of-type{
+    background: #ff6600;
+    color: #fff;
+}
+.my-careers .my-job .my-job-r ul li .my-detail a:hover{
+    border-color: transparent;
+}
+.my-careers .my-job .my-job-r ul li .my-detail a:hover span:first-of-type{
+    transform: translateY(-100%);
+}
+.my-careers .my-job .my-job-r ul li .my-detail a:hover span:last-of-type{
+    transform: translateY(-100%);
+}

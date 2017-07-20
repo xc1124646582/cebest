@@ -1,0 +1,155 @@
+/*服务页*/
+.servecon{
+    width: 100%;
+    padding-top: 70px;
+}
+.servetitle{
+    padding-left: 75px;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+}
+.servetitle h2{
+    margin-bottom: 4px;
+}
+.servetitle>p:nth-child(2){
+    font-size: 19px;
+    color: #7D7D7D;
+}
+.servetitle>p:nth-child(4){
+    font-size: 16px;
+    color: #7D7D7D;
+}
+.servex{
+    width: 100px;
+    height: 1px;
+    margin: 17px 0 17px 0;
+    background: black;
+}
+.servelist {
+    margin-top: 24px;
+}
+.servelist>li{
+    list-style: none;
+    margin-bottom: 34px;
+    margin-right: 122px;
+    float: left;
+}
+.servelist>li>img{
+    display: block;
+    margin: 0 auto;
+}
+.servelist>li>p{
+    margin-top: 9px;
+    color: #7D7D7D;
+    font-size: 15px;
+}
+.scrvebtn{
+    width: 162px;
+    margin-top: 31px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 42px;
+    overflow: hidden;
+    height: 42px;
+}
+.scrvebtn>p{ width: 162px;
+    text-align: center;
+    transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+    line-height: 42px;
+    height: 42px;
+}
+.scrvebtn>p:nth-child(2){
+    background: #FF6600;
+    color: white;
+    opacity: 0;
+}
+.scrvebtn:hover>p:nth-child(1){
+    margin-top: -42px;
+    opacity: 0;
+}
+.scrvebtn:hover>p:nth-child(2){
+    opacity: 1;
+}
+.scrveconimg{
+    float: right;
+    width: 50%;
+}
+.my-more-services{
+    height: 710px;
+    font-family: "微软雅黑";
+    padding-top: 150px;
+    background: url("../images/ser_ico_bg.jpg") no-repeat;
+}
+.my-more-services h2{
+    text-align: center;
+    font-weight: normal;
+}
+.my-more-services h2 p{
+    width: 100px;
+    height: 21px;
+    margin: 0 auto 15px;
+    border-bottom: 1px solid #000;
+    color: #333;
+    font-size: 24px;
+    padding: 0 0 25px;
+}
+.my-more-services h2 span{
+    color: #7d7d7d;
+    font-size: 18px;
+    line-height: 18px;
+}
+.my-more-services ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+.my-more-services ul li{
+    width: 360px;
+    height: 190px;
+    margin: 70px 48px 0 0;
+    float: left;
+}
+.my-more-services ul li dt{
+    width: 46px;
+    height: 39px;
+    margin: 0 auto;
+}
+.my-more-services ul li dt img{
+    position: absolute;
+}
+.my-more-services ul li dd{
+    margin: 30px 0 0;
+}
+.my-more-services ul li dd h3{
+    text-align: center;
+    height: 40px;
+    color: #2e2d33;
+    font-weight: normal;
+    font-size: 14px;
+}
+.my-more-services ul li dd h4{
+    width: 30px;
+    height: 1px;
+    background: #2e2d33;
+    margin: -1px auto 12px;
+}
+.my-more-services ul li dd h5{
+    text-align: center;
+    opacity: 0;
+    font-weight: normal;
+    line-height: 1.8;
+    transition: opacity 0.3s ease-out;
+}
+.my-more-services ul li dd h5 span{
+    padding: 0 10px;
+    color: #7d7d7d;
+    font-size: 14px;
+}
+.my-more-services ul li:nth-of-type(3n){
+    margin-right: 0;
+}
+.my-more-services ul li:hover dd h5{
+    opacity: 1;
+}
+
+
