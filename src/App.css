@@ -575,7 +575,16 @@
 .chinese-con6{ width: 100%;
     padding-bottom: 126px;
     padding-top: 157px;
-    background: url(images/cl_a_img03.jpg);}
+    background: url(images/cl_a_img03.jpg);
+    background-origin: padding-box;
+    background-size: 100% 100%;
+    animation: scale_img 30s infinite ease-out alternate;
+}
+@keyframes scale_img {
+    0%{background-size: 100% 100%;}
+    50%{background-size: 200% 200%;}
+    100%{background-size: 100% 100%;}
+}
 .chinese-con6-box{ width: 965px;
     display: flex;
     justify-content: space-around;
@@ -953,4 +962,278 @@
     height: 700px;
     background: url(images/ly_bg10.jpg) no-repeat center;
     background-size: cover;
+}
+/*we-conhead */
+.mds-we-conhead{ width: 100%;
+text-align: center;
+padding-top: 64px;}
+.mds-we-conhead>p:nth-child(4){ line-height: 26px;}
+/*.mds-we-con6{width: 100%;
+color: white;
+background: #FF6600;}
+.us-tech .tech-imgGr {
+    width: 788px;
+    height: 340px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -394px;
+}
+
+.pra {
+    position: absolute;
+}
+.us-tech .tech-img1.move {
+    opacity: 1;
+}
+.us-tech .tech-img1 {
+    width: 532px;
+    height: 155px;
+    background: url(images/ly_img19.png) no-repeat left bottom;
+    background-size: cover;
+    bottom: 0;
+    left: 50%;
+    margin-left: -266px;
+    opacity: 0;
+    transition: opacity 0.8s 0.5s;
+}
+.us-tech .tech-img2.move {
+    width: 267px;
+}
+.us-tech .tech-img2 {
+    width: 0;
+    height: 253px;
+    background: url(images/ly_img20.png) no-repeat left bottom;
+    background-size: cover;
+    left: 0;
+    bottom: 0;
+    transition: opacity 0.8s 0.8s,width 0.8s 0.8s;
+}
+.us-tech .tech-img3.move {
+    width: 279px;
+}
+.us-tech .tech-img3 {
+    width: 0;
+    height: 253px;
+    background: url(images/ly_img21.png) no-repeat right bottom;
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.8s 0.8s,width 0.8s 0.8s;
+}
+.us-tech .tech-img4.move {
+    opacity: 1;
+    transition: opacity 0.8s 1.5s;
+}
+.us-tech .tech-img4 {
+    width: 188px;
+    height: 143px;
+    background: url(images/ly_img18.png) no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 50%;
+    margin-left: -94px;
+    opacity: 0;
+}
+.us-tech .tech-img5.move {
+    transform: translateY(20px);
+    opacity: 1;
+}
+.us-tech .tech-img5 {
+    width: 67px;
+    height: 12px;
+    background: url(images/ly_img22.png) no-repeat center;
+    background-size: cover;
+    top: 139px;
+    left: 50%;
+    margin-left: -33px;
+    opacity: 0;
+    transition: opacity 0.8s 1.5s;
+}*/
+
+
+
+.mds-we-con7{ width: 100%;
+padding-bottom: 113px;}
+body.w1200{overflow: visible;height: auto;}
+.us-service .ser-proc {
+    width: 830px;
+    height: 330px;
+    margin: 140px auto 0 auto;
+}
+.prz {
+    position: relative;
+    zoom: 1;
+}
+.us-service .ser-proc .ser-step.move {
+    opacity: 1;
+}
+.us-service .ser-proc .ser-step1 {
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step {
+    width: 43px;
+    height: 43px;
+    background: url(images/ly_serPoint.png);
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+.pra {
+    position: absolute;
+}
+.step-txt.move {
+    opacity: 1;
+}
+.step-txt1 {
+    left: -78px;
+    top: -60px;
+    transition: all 0.5s 0.4s;
+}
+.us-service .ser-proc .ser-curve1.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve1 {
+    width: 95px;
+    height: 94px;
+    background: url(images/ly_ser01.png) no-repeat ;
+        background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    left: 43px;
+    top: 22px;
+    transition: all 0.5s;
+}
+.step-txt .cn {
+    color: #000;
+}
+.fnt_16 {
+    font-size: 14px;
+}
+.step-txt .en {
+    color: #969696;
+    font-size: 14px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+.us-service .ser-proc .ser-step2 {
+    left: 114px;
+    top: 114px;
+    transition: all 0.5s;
+}
+.step-txt2 {
+    left: -58px;
+    top: 110px;
+    transition: all 0.5s 0.8s;
+}
+.us-service .ser-proc .ser-curve2.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve2 {
+    width: 95px;
+    height: 94px;
+    background: url(images/ly_ser02.png) no-repeat left top;
+    background-size: cover;
+    left: 133px;
+    top: 155px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step3 {
+    left: 223px;
+    top: 224px;
+    transition: all 0.5s;
+}
+.step-txt3 {
+    left: 216px;
+    top: 286px;
+    transition: all 0.5s 1.2s;
+}
+.us-service .ser-proc .ser-curve3.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve3 {
+   width: 95px;
+    height: 94px;
+    background: url(images/ly_ser03.png) no-repeat left top;
+    background-size: cover;
+    left: 261px;
+    top: 155px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step4 {
+    left: 334px;
+    top: 114px;
+    transition: all 0.5s;
+}
+.step-txt4 {
+    left: 382px;
+    top: 170px;
+    transition: all 0.5s 1.6s;
+}
+.us-service .ser-proc .ser-curve4.move {
+    width: 94px;
+}
+.us-service .ser-proc .ser-curve4 {
+    width: 95px;
+    height: 94px;
+    background: url(images/ly_ser04.png) no-repeat left top;
+    background-size: cover;
+    left: 356px;
+    top: 23px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step5 {
+    left: 446px;
+    top: 1px;
+    transition: all 0.5s;
+}
+.step-txt5 {
+    left: 438px;
+    top: -65px;
+    transition: all 0.5s 2s;
+}
+.us-service .ser-proc .ser-curve5.move {
+    width: 93px;
+}
+.us-service .ser-proc .ser-curve5 {
+    width: 95px;
+    height: 93px;
+    background: url(images/ly_ser05.png) no-repeat left top;
+    background-size: cover;
+    left: 487px;
+    top: 23px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step6 {
+    left: 560px;
+    top: 112px;
+    transition: all 0.5s;
+}
+.step-txt6 {
+    left: 618px;
+    top: 108px;
+    transition: all 0.5s 2.4s;
+}
+.us-service .ser-proc .ser-curve6.move {
+    width: 224px;
+}
+.us-service .ser-proc .ser-curve6 {
+    width: 230px;
+    height: 96px;
+    background: url(images/ly_ser06.png) no-repeat left top;
+    background-size: cover;
+    left: 580px;
+    top: 152px;
+    transition: all 0.5s;
+}
+.us-service .ser-proc .ser-step7 {
+    left: 782px;
+    top: 112px;
+    transition: all 0.5s;
+}
+.step-txt7 {
+    left: 780px;
+    top: 50px;
+    transition: all 0.5s 2.8s;
 }
