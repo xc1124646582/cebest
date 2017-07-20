@@ -4,6 +4,7 @@
 }
 .casescon1-n{
     width: 25%;
+    float: left;
     overflow: hidden;
 }
 .casescon1-n img{
@@ -40,6 +41,7 @@
 }
 .casescon2-con-n{
     width: 25%;
+    float: left;
     box-sizing: border-box;
     height: 150px;
     overflow: hidden;

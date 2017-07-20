@@ -3,28 +3,54 @@ import $ from 'jquery';
 
 
 class Cases extends Component{
+		constructor(){
+			super();
+			this.state={
+				cases1:[],
+				cases2:[]
+			}
+		  };
 	   componentDidMount=function () {
-  };
+	   		$.ajax({
+				'url':'http://localhost:8100/text/cases1',
+				'type':'get',
+				'success':function(opt){
+					this.setState({cases1:opt});
+				}.bind(this)
+			})
+	   		$.ajax({
+				'url':'http://localhost:8100/text/cases2',
+				'type':'get',
+				'success':function(opt){
+					this.setState({cases2:opt});
+					console.log(opt)
+				}.bind(this)
+			})
+		 };
 	  render(){
   	return(
-  		<div className="cases">
-  		<div className="casescon1">
-  		<div className="casescon1-n"><img src="images/case01.jpg" alt=""/></div>
+  		<div className="cases clear">
+  		<div className="casescon1 clear">
+  		{this.state.cases1.map(function(v,i){
+  			return <div key={i} className="casescon1-n"><img src={v.src} alt="" /></div>
+  		})}
   		</div>
   		<div className="casescon2">
   		<h2 className="casescon2-title">服务的客户</h2>
   		<p className="casescon2x"></p>
   		<p className="casescon2-title2">Service Customers</p>
-  		<div className="casescon2-con">
-  		  		<div className="casescon2-con-n">
+  		<div className="casescon2-con clear">
+  		 {this.state.cases2.map(function(v,i){
+  			return   		  		<div key={i}  className="casescon2-con-n">
   		<div className="casescon2-con-box">
   		<div className="casescon2-top">
-  		<p>亮牌中国</p>
-  		<p>产品互动体验站</p>
+  		<p>{v.title1}</p>
+  		<p>{v.title2}</p>
   		</div>
-  		<div className="casescon2-bottom"><img src="images/logo01.png"  alt=""/></div>
+  		<div className="casescon2-bottom"><img src={v.img}  alt=""/></div>
   		</div>
   		</div>
+  		})}
   		</div>
 
   		</div>

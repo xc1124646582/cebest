@@ -11,7 +11,7 @@ class Careers extends Component {
 		  };
     componentDidMount = function () {
     	$.ajax({
-				'url':'http://localhost:8005/text/careers',
+				'url':'http://localhost:8100/text/careers',
 				'type':'get',
 				'success':function(opt){
 					for(var i=0;i<opt.length;i++){

@@ -54,6 +54,168 @@ class We extends Component {
                         </div>
                     </div>
                 </div>
+                
+                
+                <div className="us-cloud">
+            <div className="w1200 cleargap">
+                <div className="fl us-cloud-box prz">
+                    <div className="pra cloud-img1" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-20px);"></div>
+                    <div className="pra cloud-img2" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-30px);"></div>
+                    <div className="pra cloud-img3" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-50px);"></div>
+                    <div className="pra cloud-img4" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-60px);"></div>
+                </div> 
+                <div className="ibox head-box">
+                    <div className="head-cn fnt_30 wow-cloud fadeInDown"  data-wow-duration="0.5s">中企 · 云</div>
+                    <div className="bt-line wow-cloud fadeInDown" data-wow-duration="1s"><img src="images/ly_img07.png" alt=""/></div>
+                    <div className="head-en fnt_48 wow-cloud fadeInDown" data-wow-duration="1.5s">8 years</div>
+                    <div className="head-txt fnt_16 wow-cloud fadeInDown" data-wow-duration="2s">八年持续不断的研发与迭代，200人的PaaS+SaaS研发团队，使中企高呈拥有真正落地的云应用平台产品：中企云。为企业线上品牌落地，产品营销提供云服务与大数据支持。</div>
+                </div>
+                <div className="ibox verti-box"></div>
+            </div>
+        </div>
+                
+                
+                
+                
+                        <div className="us-design mds-we-con7">
+            <div className="w1200 prz">
+                {/* we-conhead*/}
+                <div className="mds-we-conhead">
+                <h2>服务优势</h2>
+                <p>Service Advantages</p>
+                <p><img src="images/ly_img07.png" alt=""/></p>
+                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                </div>
+                <div className="us-char pra">
+                    <div className="us-brain"></div>
+                    <div className="us-charGr1 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                    </div>
+                    <div className="us-charGr2 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                    </div>
+                    <div className="us-charGr3 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                    </div>
+                    <div className="us-charGr4 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                    </div>
+                    <div className="us-charGr5 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                    </div>
+                    <div className="us-charGr6 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                    </div>
+                    <div className="us-charGr7 us-charBox">
+                        <span className="pra char-line"></span>
+                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+                
+                
+                
+                
+                 <div className="mds-we-con6 us-tech">
+                <div className="w1200 prz">
+                 {/* we-conhead*/}
+                <div className="mds-we-conhead">
+                <h2>服务优势</h2>
+                <p>Service Advantages</p>
+                <p><img src="images/ly_img07.png" alt=""/></p>
+                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                </div>
+                    <div className="tech-imgGr pra">
+                    <div className="tech-img1 pra tech-img"></div>
+                    <div className="tech-img2 pra tech-img"></div>
+                    <div className="tech-img3 pra tech-img"></div>
+                    <div className="tech-img4 pra tech-img"></div>
+                    <div className="tech-img5 pra tech-img"></div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div className="mds-we-con7">
+                {/* we-conhead*/}
+                <div className="mds-we-conhead">
+                <h2>服务优势</h2>
+                <p>Service Advantages</p>
+                <p><img src="images/ly_img06.png" alt=""/></p>
+                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                </div>
+                
+             {/*we-con7 */}   
+            <div className="us-service">
+            <div className="w1200">
+                <div className="ser-proc prz">
+                    <div className="ser-moveBox">
+                        <div className="ser-step1 pra ser-step"></div>
+                        <dl className="step-txt1 pra step-txt">
+                            <dt className="cn fnt_16">品牌策略</dt>
+                            <dd className="en">Brand  Strategy</dd>
+                        </dl>
+                        <div className="ser-curve1 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step2 pra ser-step"></div>
+                        <dl className="step-txt2 pra step-txt">
+                            <dt className="cn fnt_16">需求调研</dt>
+                            <dd className="en">Requirement Survey</dd>
+                        </dl>
+                        <div className="ser-curve2 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step3 pra ser-step"></div>
+                        <dl className="step-txt3 pra step-txt">
+                            <dt className="cn fnt_16">视觉设计</dt>
+                            <dd className="en">Visual Design</dd>
+                        </dl>
+                        <div className="ser-curve3 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step4 pra ser-step"></div>
+                        <dl className="step-txt4 pra step-txt">
+                            <dt className="cn fnt_16">技术实现</dt>
+                            <dd className="en">Technological Realization</dd>
+                        </dl>
+                        <div className="ser-curve4 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step5 pra ser-step"></div>
+                        <dl className="step-txt5 pra step-txt">
+                            <dt className="cn fnt_16">项目上线</dt>
+                            <dd className="en">Website Launch</dd>
+                        </dl>
+                        <div className="ser-curve5 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step6 pra ser-step"></div>
+                        <dl className="step-txt6 pra step-txt">
+                            <dt className="cn fnt_16">项目运营</dt>
+                            <dd className="en">Project Operation</dd>
+                        </dl>
+                        <div className="ser-curve6 pra ser-curve"></div>
+                    </div>
+                    <div className="ser-moveBox">
+                        <div className="ser-step7 pra ser-step"></div>
+                        <dl className="step-txt7 pra step-txt">
+                            <dt className="cn fnt_16">整合营销</dt>
+                            <dd className="en">Integrated Marketing</dd>
+                        </dl>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+                </div>
             </div>
         )
     }
