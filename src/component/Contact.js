@@ -66,7 +66,7 @@ class Contact extends Component {
                         <p>{this.state.contact.hotlineTwo}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.contact.emailOne}</p>
                         <p>{this.state.contact.emailTwo}</p>
                     </div>
-                    <img src="images/case_con01_bg2.png" alt=""/>
+                    <img draggable="false" src="images/case_con01_bg2.png" alt=""/>
                 </div>
             </div>
         )
