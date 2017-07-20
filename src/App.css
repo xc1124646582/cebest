@@ -963,7 +963,6 @@
     background: url(images/ly_bg10.jpg) no-repeat center;
     background-size: cover;
 }
-<<<<<<< HEAD
 .my-we .my-ce-ultimate .my-we-box{
     padding-top: 80px;
     max-width: 1200px;
@@ -986,10 +985,10 @@
     color: #e4e4e4;
     line-height: 30px;
 }
-.my-we .my-num{
+.my-we .my-num {
     padding: 90px 0 130px 0;
     background: #ff6600;
-=======
+}
 /*we-conhead */
 .mds-we-conhead{ width: 100%;
 text-align: center;
@@ -1263,5 +1262,4 @@ body.w1200{overflow: visible;height: auto;}
     left: 780px;
     top: 50px;
     transition: all 0.5s 2.8s;
->>>>>>> origin/master
 }
