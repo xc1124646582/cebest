@@ -11,14 +11,31 @@
     right: 0;
     bottom: 0;
 }
+.my-contact .my-contact-us img{
+    transform: translate(960px);
+    transform-origin: bottom left;
+    transition: 1s;
+    animation: d_img 1s forwards;
+}
+@keyframes  d_img{
+    to{transform: translate(150px);}
+}
 .my-contact .my-contact-us .my-contact-us-n{
     position: absolute;
-    right: 80px;
     bottom: 100px;
     z-index: 9;
     width: 600px;
     text-align: right;
     color: #fff;
+    animation: d_n .8s forwards 1s;
+    right: 0;
+    opacity: 0;
+}
+@keyframes  d_n{
+    to{
+        right: 80px;
+        opacity: 1;
+    }
 }
 .my-contact .my-contact-us .my-contact-us-n h2{
     font-weight: normal;

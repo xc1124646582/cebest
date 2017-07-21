@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Chinese extends Component{
+<<<<<<< HEAD
+=======
+	   componentDidMount=function () {
+		   setTimeout(function () {
+			   $(".my-talk_window").show()
+		   },200)
+	   };
+  
+>>>>>>> origin/master
 	  render(){
   	return(
 <div className="chinese">

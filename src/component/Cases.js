@@ -29,9 +29,11 @@ class Cases extends Component{
 				'type':'get',
 				'success':function(opt){
 					this.setState({cases2:opt});
-					console.log(opt)
 				}.bind(this)
 			})
+		   setTimeout(function () {
+			   $(".my-talk_window").show()
+		   },200)
 		 };
 		 bodyScroll=function(){
 		 	console.log(document.body.scrollTop)
@@ -41,7 +43,10 @@ class Cases extends Component{
   		<div className="cases clear">
   		<div className="casescon1 clear">
   		{this.state.cases1.map(function(v,i){
-  			return <div key={i} className="casescon1-n"><img src={v.src} alt="" /></div>
+  			return <div key={i} className="casescon1-n">
+				<img src={v.src} alt="" />
+				<p>{v.con}</p>
+			</div>
   		})}
   		</div>
   		<div className="casescon2">
@@ -50,7 +55,7 @@ class Cases extends Component{
   		<p className="casescon2-title2">Service Customers</p>
   		<div className="casescon2-con clear">
   		 {this.state.cases2.map(function(v,i){
-  			return   		  		<div key={i}  className="casescon2-con-n">
+  			return   <div key={i}  className="casescon2-con-n">
   		<div className="casescon2-con-box">
   		<div className="casescon2-top">
   		<p>{v.title1}</p>
