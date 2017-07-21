@@ -4,7 +4,11 @@ import $ from 'jquery';
 
 class Serve extends Component{
 	   componentDidMount=function () {
-  };
+
+           setTimeout(function () {
+               $(".my-talk_window").show()
+           },200)
+         };
 	  render(){
   	return(
  <div className="serve"> 

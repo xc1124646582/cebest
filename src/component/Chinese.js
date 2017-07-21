@@ -3,7 +3,9 @@ import $ from 'jquery';
 
 class Chinese extends Component{
 	   componentDidMount=function () {
-		   
+		   setTimeout(function () {
+			   $(".my-talk_window").show()
+		   },200)
 	   };
   
 	  render(){

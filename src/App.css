@@ -260,3 +260,82 @@
 .my-help .my-help-join:hover h3 span{
     width: 50px;
 }
+.my-talk_window{
+    display: none;
+    width: 500px;
+    height: 260px;
+    box-sizing: border-box;
+    padding: 15px;
+    background: rgba(255,102,0,0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -130px 0 0 -250px;
+    z-index: 9999;
+}
+.my-talk_window_con{
+    border:1px solid #fff;
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.my-talk_window_con .my-t_w_close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Arial";
+    padding-top: 5px;
+}
+.my-t_w_text{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+.my-t_w_text h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.my-t_w_text p{
+    margin-top: 5px;
+}
+.my-t_w_text .p{
+    font-size: 22px;
+    margin-top: 15px;
+}
+.my-t_w_text .p a{
+    padding:0 10px;
+    color: #fff;}
+.my-t_w_btn{
+    position: absolute;
+    right: 0px;
+    bottom:0px;
+}
+.my-t_w_btn a{
+    display: inline-block;
+    box-sizing:border-box;
+    font-size: 16px;
+    float: left;
+    height: 45px;
+    line-height: 43px;
+}
+.my-t_w_btn a:first-child{
+    width: 163px;
+    text-align: center;
+    color: #f60;
+    background: #fff;
+}
+.my-t_w_btn a:first-child+a{
+    width: 115px;
+    text-align: center;
+    color: #fff;
+    border:1px solid #fff;
+    border-right: 0px;
+    border-bottom: 0;
+}

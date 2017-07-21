@@ -10,8 +10,8 @@ class Careers extends Component {
 			}
 		  };
     componentDidMount = function () {
-    	$.ajax({
-				'url':'http://localhost:8100/text/careers',
+    	/*$.ajax({
+				'url':'http://localhost:8100/cebset/careers',
 				'type':'get',
 				'success':function(opt){
 					for(var i=0;i<opt.length;i++){
@@ -21,7 +21,7 @@ class Careers extends Component {
 					}
 					console.log(opt)
 				}.bind(this)
-			})
+			})*/
         $(".my-job-r ul li").click(function () {
             $(this).find(".my-detail").stop(true).fadeToggle().parent().find("img").toggleClass("rot")
         })
@@ -34,6 +34,9 @@ class Careers extends Component {
                 e.cancelBubble=true
             }
         })
+        setTimeout(function () {
+            $(".my-talk_window").show()
+        },200)
     };
 
     render() {

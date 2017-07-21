@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class We extends Component {
+    componentDidMount(){
+        setTimeout(function () {
+            $(".my-talk_window").show()
+        },200)
+    }
     render() {
         return (
             <div className="my-we">

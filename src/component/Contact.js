@@ -47,6 +47,10 @@ class Contact extends Component {
         setTimeout(function(){
             $('.BMap_bubble_content').parent('div').next('img').eq(0).addClass('Bmap_close');
         },100);
+        
+        setTimeout(function () {
+            $(".my-talk_window").show()
+        },200)
     };
     render() {
         return (
