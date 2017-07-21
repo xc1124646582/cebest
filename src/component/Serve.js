@@ -16,7 +16,6 @@ class Serve extends Component{
 			}
 		  };
 	   componentDidMount=function () {
-<<<<<<< HEAD
 	   		   		$.ajax({
 				'url':'http://localhost:8100/cebest/gengduo',
 				'type':'get',
@@ -25,14 +24,11 @@ class Serve extends Component{
 					console.log(opt)
 				}.bind(this)
 			})
-  };
-=======
 
            setTimeout(function () {
                $(".my-talk_window").show()
            },200)
          };
->>>>>>> origin/master
 	  render(){
   	return(
   		<Router>

@@ -10,13 +10,8 @@ class Careers extends Component {
 			}
 		  };
     componentDidMount = function () {
-<<<<<<< HEAD
-    	$.ajax({
-				'url':'http://localhost:8100/cebest/careers',
-=======
     	/*$.ajax({
 				'url':'http://localhost:8100/cebset/careers',
->>>>>>> origin/master
 				'type':'get',
 				'success':function(opt){
 					for(var i=0;i<opt.length;i++){

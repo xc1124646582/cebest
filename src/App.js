@@ -93,7 +93,7 @@ class Index extends Component {
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
-                        <Route path="/careers" component={Careers}>hahahahahahaha</Route>
+                        <Route path="/careers" component={Careers}></Route>
                         <Route path="/contact" component={Contact}/>
                     </div>
 
