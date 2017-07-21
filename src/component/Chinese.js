@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Chinese extends Component{
-	   componentDidMount=function () {
-		   
-	   };
-  
 	  render(){
   	return(
 <div className="chinese">

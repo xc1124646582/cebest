@@ -25,7 +25,11 @@ class Index extends Component {
             "foot":{"foimg":"images/f_logo.png","telephone1":"010-87127888","telephone2":"400-068-0808","copyright":"© 1999-2017 中企动力科技股份有限公司 京ICP备10002622号-16","place":"北京市经济技术开发区地盛西路1号 数码庄园B1座"}}
     };
     componentDidMount=function () {
-        document.addEventListener('scroll', this.handleScroll.bind(this));
+    	if(window.addEventListener){
+    		document.addEventListener('scroll', this.handleScroll.bind(this));
+    	}else{
+    		document.attachEvent('onscroll', this.handleScroll.bind(this));
+    	}
         var navs=document.getElementById("nav").getElementsByTagName("li");
         for(var i=0;i<navs.length;i++){
             navs[i].index=i
@@ -82,7 +86,7 @@ class Index extends Component {
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
-                        <Route path="/careers" component={Careers}/>
+                        <Route path="/careers" component={Careers}>hahahahahahaha</Route>
                         <Route path="/contact" component={Contact}/>
                     </div>
 

@@ -11,6 +11,11 @@ class Cases extends Component{
 			}
 		  };
 	   componentDidMount=function () {
+	   	if(window.addEventListener){
+    		document.addEventListener('scroll', this.bodyScroll.bind(this));
+    	}else{
+    		document.attachEvent('onscroll', this.bodyScroll.bind(this));
+    	}
 	   		$.ajax({
 				'url':'http://localhost:8100/cebest/cases1',
 				'type':'get',
@@ -28,6 +33,9 @@ class Cases extends Component{
 				}.bind(this)
 			})
 		 };
+		 bodyScroll=function(){
+		 	console.log(document.body.scrollTop)
+		 }
 	  render(){
   	return(
   		<div className="cases clear">
