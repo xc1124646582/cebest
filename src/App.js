@@ -21,8 +21,8 @@ import {
 class Index extends Component {
     constructor(){
         super();
-        this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/cases"},{"tita":"中企·云","titb":"/chinese"},{"tita":"我们","titb":"/we"},{"tita":"人才","titb":"/careers"},{"tita":"联系","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"},
-            "foot":{"foimg":"","telephone1":"","telephone2":"","copyright":"","place":""}}
+        this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/cases"},{"tita":"中企·云","titb":"/chinese"},{"tita":"我们","titb":"/we"},{"tita":"人才","titb":"/careers"},{"tita":"联系","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"}}
+
     };
     componentDidMount=function () {
         document.addEventListener('scroll', this.handleScroll.bind(this));
