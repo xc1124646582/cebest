@@ -11,11 +11,17 @@ class Cases extends Component{
 			}
 		  };
 	   componentDidMount=function () {
+	   	if(window.addEventListener){
+    		document.addEventListener('scroll', this.bodyScroll.bind(this));
+    	}else{
+    		document.attachEvent('onscroll', this.bodyScroll.bind(this));
+    	}
 	   		$.ajax({
 				'url':'http://localhost:8100/cebest/cases1',
 				'type':'get',
 				'success':function(opt){
 					this.setState({cases1:opt});
+					console.log(opt)
 				}.bind(this)
 			})
 	   		$.ajax({
@@ -29,6 +35,9 @@ class Cases extends Component{
 			   $(".my-talk_window").show()
 		   },200)
 		 };
+		 bodyScroll=function(){
+		 	console.log(document.body.scrollTop)
+		 }
 	  render(){
   	return(
   		<div className="cases clear">

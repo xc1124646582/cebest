@@ -1,13 +1,36 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+<<<<<<< HEAD
 import {
     BrowserRouter as Router,
     Route,
     Link
+=======
+import More from './More';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+>>>>>>> origin/master
 } from 'react-router-dom'
 
 class Serve extends Component{
+		constructor(){
+			super();
+			this.state={
+				gengduo:[],
+				gengduotit:[]
+			}
+		  };
 	   componentDidMount=function () {
+	   		   		$.ajax({
+				'url':'http://localhost:8100/cebest/gengduo',
+				'type':'get',
+				'success':function(opt){
+					this.setState({gengduo:opt})
+					console.log(opt)
+				}.bind(this)
+			})
 
            setTimeout(function () {
                $(".my-talk_window").show()
@@ -15,6 +38,7 @@ class Serve extends Component{
          };
 	  render(){
   	return(
+  		<Router>
  <div className="serve"> 
  <div className="servecon clear">
  <div className="servetitle">
@@ -51,114 +75,27 @@ class Serve extends Component{
                         <span>More Services</span>
                     </h2>
                      <ul className="clear">
-                         <li>
-                             <a href="">
+                     {this.state.gengduo.map(function(v,i){
+  			return  <Link key={i}  to="/more">
+  			  			<li>
                                 <dl>
                                     <dt>
-                                        <img src="images/ser_ico01.png" alt=""/>
+                                        <img src={v.img} alt=""/>
                                     </dt>
                                     <dd>
-                                        <h3>域名 & IDC服务 / Domain & IDC Service</h3>
+                                        <h3>{v.title}</h3>
                                         <h4></h4>
                                         <h5>
-                                            <span>域名注册</span>
-                                            <span>域名交易</span>
-                                            <span>云服务器</span><br/>
-                                            <span>云虚拟主机</span>
-                                            <span>租用托管</span>
+                                        {
+                                        this.state.gengduo[i].sumary.split("?").map(function(con,j){
+                                        	return <span key={j}>{con}</span>
+                                        }) }
                                         </h5>
                                     </dd>
                                 </dl>
-                             </a>
                          </li>
-                         <li>
-                             <a href="">
-                                 <dl>
-                                     <dt>
-                                         <img src="images/ser_ico02.png" alt=""/>
-                                     </dt>
-                                     <dd>
-                                         <h3>增值服务 / Value-added Services</h3>
-                                         <h4></h4>
-                                         <h5>
-                                             <span>可信网站</span>
-                                             <span>短信服务</span>
-                                             <span>400电话</span>
-                                             <span>在线客服</span>
-                                         </h5>
-                                     </dd>
-                                 </dl>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="">
-                                 <dl>
-                                     <dt>
-                                         <img src="images/ser_ico03.png" alt=""/>
-                                     </dt>
-                                     <dd>
-                                         <h3>企业通信 / Enterprise Communication</h3>
-                                         <h4></h4>
-                                         <h5>
-                                             <span>企业邮箱</span>
-                                             <span>企业云盘</span>
-                                             <span>即时通讯</span>
-                                         </h5>
-                                     </dd>
-                                 </dl>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="">
-                                 <dl>
-                                     <dt>
-                                         <img src="images/ser_ico04.png" alt=""/>
-                                     </dt>
-                                     <dd>
-                                         <h3>网络整合营销 / Network Integration Marketing</h3>
-                                         <h4></h4>
-                                         <h5>
-                                             <span>DSP广告接入</span>
-                                             <span>海外营销</span>
-                                             <span>SCRM</span>
-                                         </h5>
-                                     </dd>
-                                 </dl>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="">
-                                 <dl>
-                                     <dt>
-                                         <img src="images/ser_ico05.png" alt=""/>
-                                     </dt>
-                                     <dd>
-                                         <h3>企业效率工具 / Enterprise Efficiency Tools</h3>
-                                         <h4></h4>
-                                         <h5>
-                                             <span>销售管理工具</span>
-                                         </h5>
-                                     </dd>
-                                 </dl>
-                             </a>
-                         </li>
-                         <li>
-                             <a href="">
-                                 <dl>
-                                     <dt>
-                                         <img src="images/ser_ico06.png" alt=""/>
-                                     </dt>
-                                     <dd>
-                                         <h3>线上多媒体 / Online Multimedia</h3>
-                                         <h4></h4>
-                                         <h5>
-                                             <span>企业视频</span>
-                                             <span>企业图库</span>
-                                         </h5>
-                                     </dd>
-                                 </dl>
-                             </a>
-                         </li>
+  			</Link>
+  		}.bind(this))}
                      </ul>
                  </div>
                  {/*service end*/}
@@ -180,6 +117,7 @@ class Serve extends Component{
      </div>
      {/*help end*/}
  </div>
+ </Router>
 )
   	}
 }

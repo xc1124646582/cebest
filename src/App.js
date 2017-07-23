@@ -25,7 +25,11 @@ class Index extends Component {
 
     };
     componentDidMount=function () {
-        document.addEventListener('scroll', this.handleScroll.bind(this));
+    	if(window.addEventListener){
+    		document.addEventListener('scroll', this.handleScroll.bind(this));
+    	}else{
+    		document.attachEvent('onscroll', this.handleScroll.bind(this));
+    	}
         var navs=document.getElementById("nav").getElementsByTagName("li");
         for(var i=0;i<navs.length;i++){
             navs[i].index=i;
@@ -89,7 +93,7 @@ class Index extends Component {
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
-                        <Route path="/careers" component={Careers}/>
+                        <Route path="/careers" component={Careers}></Route>
                         <Route path="/contact" component={Contact}/>
                     </div>
 
