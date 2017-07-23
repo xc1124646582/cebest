@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import More from './More';
+
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Route,
+    Link
 } from 'react-router-dom'
 
 class Serve extends Component{
@@ -31,8 +32,10 @@ class Serve extends Component{
          };
 	  render(){
   	return(
-  		<Router>
- <div className="serve"> 
+  		<div>
+    <Route path="/more" component={More}/>
+    <Route exact path="/" render={() => (
+          <div className="serve">
  <div className="servecon clear">
  <div className="servetitle">
  <h2>品牌网站</h2>
@@ -60,7 +63,7 @@ class Serve extends Component{
  </div>
  <img src="images/serv_con01_img.jpg" alt="" className="scrveconimg"/>
  </div>
- 
+
      {/*service start*/}
                  <div className="my-more-services">
                     <h2>
@@ -69,8 +72,8 @@ class Serve extends Component{
                     </h2>
                      <ul className="clear">
                      {this.state.gengduo.map(function(v,i){
-  			return  <Link key={i}  to="/more">
-  			  			<li>
+  			        return  <Link key={i}  to="/more">
+  			  			    <li>
                                 <dl>
                                     <dt>
                                         <img src={v.img} alt=""/>
@@ -82,14 +85,16 @@ class Serve extends Component{
                                         {
                                         this.state.gengduo[i].sumary.split("?").map(function(con,j){
                                         	return <span key={j}>{con}</span>
-                                        }) }
+                                        })
+                                        }
                                         </h5>
                                     </dd>
                                 </dl>
-                         </li>
-  			</Link>
-  		}.bind(this))}
+                            </li>
+                        </Link>
+                    }.bind(this))}
                      </ul>
+
                  </div>
                  {/*service end*/}
      {/*help start*/}
@@ -110,7 +115,9 @@ class Serve extends Component{
      </div>
      {/*help end*/}
  </div>
- </Router>
+     )}/>
+ </div>
+
 )
   	}
 }

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
 
 class More extends Component{
 		constructor(){
@@ -17,7 +12,7 @@ class More extends Component{
 	  render(){
   	return(
  <div className="more"> 
-
+	123123
  </div>
 )
   	}
