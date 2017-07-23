@@ -30,17 +30,6 @@ class Index extends Component {
     	}else{
     		document.attachEvent('onscroll', this.handleScroll.bind(this));
     	}
-        var navs=document.getElementById("nav").getElementsByTagName("li");
-        for(var i=0;i<navs.length;i++){
-            navs[i].index=i;
-            navs[i].onclick=function(){
-                for(var i=0;i<navs.length;i++){
-                    navs[i].children[0].style.width=0;
-                };
-                this.children[0].style.width="100%";
-                (document.body.scrollTop =0) || (document.documentElement.scrollTop=0);
-            };
-        };
         $("#top").click(function () {
             $("html,body").stop(true).animate({scrollTop:0},1000);
         });
@@ -79,10 +68,8 @@ class Index extends Component {
                         {/*nav state*/}
                         <ul className="nav clear" id="nav">
                             {this.data.nav.map(function(con,i){
-                                return <Link key={i}  to={con.titb}><li>{con.tita}
-                                    <p></p>
-                                </li></Link>
-                            })}
+                                return (<OldSchoolMenuLink key={i} activeOnlyWhenExact={i==0?true:false} to={con.titb} label={con.tita}/>
+                                )})}
                         </ul>
                         {/*nav end*/}
                     </div>
@@ -93,7 +80,7 @@ class Index extends Component {
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
-                        <Route path="/careers" component={Careers}></Route>
+                        <Route path="/careers" component={Careers}/>
                         <Route path="/contact" component={Contact}/>
                     </div>
 
@@ -155,5 +142,15 @@ class Index extends Component {
     }
 
 }
+const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
+    <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
+    <Link to={to}>
+    <li className={match ? 'active' : ''}>
+      {label}
+       <p></p>
+    </li>
+    </Link>
+  )}/>
+)
 
 export default Index

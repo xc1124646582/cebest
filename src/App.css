@@ -38,7 +38,7 @@
 .nav li:hover>p{
     width: 100%;
 }
-.nav a:nth-child(1) li p{
+.nav a li.active p{
     width: 100%;
 }
 .nav li p{
