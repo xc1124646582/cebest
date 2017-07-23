@@ -3,6 +3,7 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 118px;
+    position: relative;
     background-image: url(../images/cl_a_banner.jpg);
     background-size: 100% 100%;
 }
@@ -17,10 +18,21 @@
     height: 2px;
     background: white;
 }
+@keyframes  cn1{
+    to{
+        top: 0px;
+        opacity: 1;
+    }
+}
 .chinese-con1-text{
     text-align: center;
+    width: 100%;
     color: #C4C4C4;
     line-height: 26px;
+    position: relative;
+        top: 100px;
+        opacity: 0;
+    animation: cn1 .8s forwards;
     margin-bottom: 48px;
     font-family: "微软雅黑";
     font-size: 14px;
@@ -29,6 +41,10 @@
 .chinese-con1 img{
     display: block;
     max-width: 720px;
+        position: relative;
+        top: 100px;
+                animation: cn1 .8s forwards 0.2s;
+    opacity:0;
     margin:  0 auto;
 }
 /*chinese-con2*/
@@ -51,8 +67,10 @@
 .chinese-con2-right{
     width: 600px;
     margin-top: 100px;
+    transition: 1s;
     position: relative;
-    left: 20%;
+    opacity: 0;
+    left: 40%;
     float: left;
 }
 .chinese-con2-right>p:nth-child(1){

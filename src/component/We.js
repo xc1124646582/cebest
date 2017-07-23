@@ -3,6 +3,38 @@ import $ from 'jquery';
 
 class We extends Component {
     componentDidMount(){
+    	document.getElementById("wn1l").onmousemove=function(ev){
+		 			var divl=document.getElementById("wn1l").offsetLeft+100;
+          var divt=document.getElementById("wn1l").offsetTop+100;
+          var lo=ev.clientX
+          var to=ev.clientY
+          var lal=0;
+          var lat=0;
+          if(to>divt){
+          	lat=to-divt;
+          }else if(to<divt){
+          	lat=-(divt-to)
+          }
+          if(lo>divl){
+          	lal=lo-divl;
+          }else if(lo<divl){
+          	lal=-(divl-lo)
+          }
+          var atl=lal/24
+          var att=lat/24
+            if(att>40){
+          	att=40
+          }else if(att<-40){
+          	att=-40
+          }
+          if(atl>40){
+          	atl=40
+          }else  if(atl<-40){
+          	atl=-40
+          }
+          document.getElementById("wn1l").style.left=-atl+"px "
+          document.getElementById("wn1l").style.top=-att+"px "
+		 		}
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
@@ -12,7 +44,7 @@ class We extends Component {
             <div className="my-we">
                 <div className="my-ce-ultimate">
                     <div className="my-we-box clear">
-                        <img className="left" src="images/ly_logo37.png" alt=""/>
+                        <img className="left aa" src="images/ly_logo37.png" id="wn1l" alt=""/>
                         <div className="my-ce-ultimate-txt left">
                             <img src="images/ly_logo38.png" alt=""/>
                             <h2>CE ULTIMATE</h2>
@@ -22,21 +54,21 @@ class We extends Component {
                 </div>
                 <div className="my-num">
                     <ul className="clear">
-                        <li>
+                        <li id="wn2li1">
                             <h2>NO.1</h2>
                             <p>
                                 <span>中国企业网站服务市场占有率第一</span>
                                 <span>赛迪顾问（CCID）2017权威发布</span>
                             </p>
                         </li>
-                        <li>
+                        <li id="wn2li2">
                             <h2>300+</h2>
                             <p>
                                 <span>精英团队</span>
                                 <span>由行业各大高端定制网站公司精英组成</span>
                             </p>
                         </li>
-                        <li>
+                        <li id="wn2li3">
                             <h2>5000</h2>
                             <p>
                                 <span>5000多个经典案例，涉及120多个行业</span>
@@ -53,7 +85,7 @@ class We extends Component {
                             <p>中企高呈一直致力于成为互联网领域的创新者和创建者，通过全案整合、搭建平台等方式，为针对中国企业的互联网市场提供最专业、最具价值的应用与服务。</p>
                         </div>
                         <div className="my-future-r right">
-                            <img className="my-future-img-top" src="images//ly_img10.png" alt=""/>
+                            <img className="my-future-img-top" src="images//ly_img10.png" id="wn3img" alt=""/>
                             <img className="my-future-img-left" src="images//ly_img11.png" alt=""/>
                             <img className="my-future-img-right" src="images//ly_img12.png" alt=""/>
                         </div>
@@ -92,26 +124,26 @@ class We extends Component {
                 <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
                 </div>
                 <div className="us-char pra">
-                    <div className="us-brain"></div>
+                    <div className="us-brain" id="wn4tou"></div>
                     <div className="us-charGr1 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                        <span className="pra char-line" id="tou1lin"></span>
+                        <span className="pra char-txt"  id="tou1text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
                     </div>
                     <div className="us-charGr2 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                        <span className="pra char-line"  id="tou2lin"></span>
+                        <span className="pra char-txt" id="tou2text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
                     </div>
                     <div className="us-charGr3 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                        <span className="pra char-line" id="tou3lin"></span>
+                        <span className="pra char-txt" id="tou3text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
                     </div>
                     <div className="us-charGr4 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
+                        <span className="pra char-line" id="tou4lin"></span>
+                        <span className="pra char-txt" id="tou4text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(-60px);"></span>
                     </div>
                     <div className="us-charGr5 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                        <span className="pra char-line" id="tou5lin"></span>
+                        <span className="pra char-txt" id="tou5text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
                     </div>
                     <div className="us-charGr6 us-charBox">
                         <span className="pra char-line"></span>

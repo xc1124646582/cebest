@@ -25,6 +25,13 @@ class Index extends Component {
             "foot":{"foimg":"","telephone1":"","telephone2":"","copyright":"","place":""}}
     };
     componentDidMount=function () {
+    	/* 添加滑轮事件*/
+    			if(window.addEventListener){
+    		document.addEventListener('scroll', this.bodyScroll.bind(this));
+    	}else{
+    		document.attachEvent('onscroll', this.bodyScroll.bind(this));
+    	}
+    	
     	if(window.addEventListener){
     		document.addEventListener('scroll', this.handleScroll.bind(this));
     	}else{
@@ -68,6 +75,49 @@ class Index extends Component {
             document.getElementById("top").style.height="0"
         }
     };
+    /* 滑轮事件*/
+      bodyScroll=function(e){
+      	var ev=e||window.event
+		 	var tops=document.body.scrollTop
+		 	console.log(tops)
+		 	/* chinese */
+		 	if(window.location.href=="http://localhost:3000/chinese"){
+		 	if(tops>=400&&tops<=900){
+		 	document.getElementById("cn2r").style.left="20%"
+		 	document.getElementById("cn2r").style.opacity="1"
+		 	}
+		 	/* we*/
+		 	}else if(window.location.href=="http://localhost:3000/we"){
+		 		if(tops>=1900&&tops<=2800){
+		 		document.getElementById("wn4tou").style.opacity="1"
+		 		document.getElementById("tou1text").style.width="231px"
+		 		document.getElementById("tou1text").style.opacity="1"
+		 		document.getElementById("tou1lin").style.width="316px"
+		 		document.getElementById("tou2text").style.width="85px"
+		 		document.getElementById("tou2text").style.opacity="1"
+		 		document.getElementById("tou2lin").style.width="188px"
+		 		document.getElementById("tou3text").style.width="62px"
+		 		document.getElementById("tou3text").style.opacity="1"
+		 		document.getElementById("tou3lin").style.width="304px"
+		 		document.getElementById("tou4text").style.width="161px"
+		 		document.getElementById("tou4text").style.opacity="1"
+		 		document.getElementById("tou4lin").style.width="261px"
+		 	}
+		 	if(tops>=800&&tops<=1200){
+		 		var ww=tops-800
+		 		console.log(ww)
+		 		document.getElementById("wn3img").style.top=-(ww/9)+"px"
+		 	}
+		 	if(tops>=400&&tops<=900){
+		 		document.getElementById("wn2li1").style.top="0"
+		 		document.getElementById("wn2li1").style.opacity="1"
+		 		document.getElementById("wn2li2").style.top="0"
+		 		document.getElementById("wn2li2").style.opacity="1"
+		 		document.getElementById("wn2li3").style.top="0"
+		 		document.getElementById("wn2li3").style.opacity="1"
+		 	} 	
+		 	}
+		 }
     render(){
         return(
             <Router>

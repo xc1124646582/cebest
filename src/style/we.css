@@ -11,6 +11,7 @@
     margin: 0 auto;
     height: 590px;
 }
+.aa{ position: relative;}
 .my-we .my-ce-ultimate .my-ce-ultimate-txt{
     width: 645px;
     margin:178px 0 0 30px;
@@ -38,10 +39,16 @@
 .my-we .my-num ul li{
     float: left;
     width: 400px;
+    position: relative;
+    top: 50px;
+    opacity: 0;
     box-sizing: border-box;
     color: #fff;
     padding: 0 0 0 60px;
 }
+#wn2li1{transition: 1s ;}
+#wn2li2{transition: 1s 0.3s;}
+#wn2li3{transition: 1s 0.6s;}
 .my-we .my-num ul li:first-of-type{
     padding: 0;
 }
@@ -95,19 +102,20 @@
     position: relative;
 }
 .my-we .my-future .my-future-r img{
-    position: absolute;
+  
 }
 .my-we .my-future .my-future-r .my-future-img-top{
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+	display: block;
+	position: relative;
+	margin:  0 auto;
 }
 .my-we .my-future .my-future-r .my-future-img-left{
+	position: absolute;
     left: 0;
     bottom: 0;
 }
 .my-we .my-future .my-future-r .my-future-img-right{
+	position: absolute;
     right: 0;
     bottom: 0;
 }
@@ -406,16 +414,16 @@ body.w1200{overflow: visible;height: auto;}
 .us-design .us-char .us-brain {
     width: 100%;
     height: 100%;
+    opacity: 0;
     background: url(../images/ly_img17.png) no-repeat center;
     background-size: cover;
-    opacity: 1;
     transition: all 0.8s 1s;
 }
 .us-charGr1 .char-line.move {
     width: 316px;
 }
 .us-charGr1 .char-line {
-       width: 316px;
+       width: 0;
     height: 87px;
     background: url(../images/ly_line01.png) no-repeat right bottom;
     background-size: cover;
@@ -428,13 +436,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr1 .char-txt {
-    width: 231px;
+    width: 0;
     height: 36px;
     background: url(../images/ly_de01.png);
     background-size: cover;
     left: -243px;
     top: -25px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 1.5s,opacity 0.5s 1.5s;
 }
@@ -442,7 +450,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 188px;
 }
 .us-charGr2 .char-line {
-     width: 188px;
+     width: 0;
     height: 20px;
     background: url(../images/ly_line02.png) no-repeat right bottom;
     background-size: cover;
@@ -455,13 +463,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr2 .char-txt {
-    width: 85px;
+    width: 0;
     height: 35px;
     background: url(../images/ly_de02.png);
     background-size: cover;
     right: 350px;
     top: 50px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 2.5s,opacity 0.5s 2.5s;
 }
@@ -469,7 +477,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 304px;
 }
 .us-charGr3 .char-line {
-    width: 304px;
+    width: 0;
     height: 90px;
     background: url(../images/ly_line03.png) no-repeat right bottom;
     background-size: cover;
@@ -482,13 +490,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr3 .char-txt {
-    width: 65px;
+    width: 0;
     height: 32px;
     background: url(../images/ly_de03.png);
     background-size: cover;
     left: -274px;
     top: 178px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 3.5s,opacity 0.5s 3.5s;
 }
@@ -496,7 +504,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 261px;
 }
 .us-charGr4 .char-line {
-    width: 261px;
+    width: 0;
     height: 143px;
     background: url(../images/ly_line04.png) no-repeat right bottom;
     background-size: cover;
@@ -509,13 +517,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr4 .char-txt {
-    width: 161px;
+    width: 0;
     height: 37px;
     background: url(../images/ly_de04.png);
     background-size: cover;
     left: -200px;
     top: 256px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 4.5s,opacity 0.5s 4.5s;
 }
