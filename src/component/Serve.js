@@ -36,7 +36,7 @@ class Serve extends Component{
             <Router>
             <div>
                 <Route path="/more" component={More}/>
-                <Route exact path="/" render={() => (
+                <Route exact="false" path="/" render={() => (
                           <div className="serve">
                  <div className="servecon clear">
                  <div className="servetitle">
