@@ -23,6 +23,10 @@ import {
 class Index extends Component {
     constructor(){
         super();
+      	this.state={
+				chins:true
+				
+			}
         this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/cases"},{"tita":"中企·云","titb":"/chinese"},{"tita":"我们","titb":"/we"},{"tita":"人才","titb":"/careers"},{"tita":"联系","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"}}
 
     };
@@ -44,12 +48,13 @@ class Index extends Component {
     	}else{
     		document.attachEvent('onscroll', this.bodyScroll.bind(this));
     	}
-    	
+    	/* 添加nav事件*/
     	if(window.addEventListener){
     		document.addEventListener('scroll', this.handleScroll.bind(this));
     	}else{
     		document.attachEvent('onscroll', this.handleScroll.bind(this));
     	}
+    	/* 页面初始化*/
         $("#top").click(function () {
             $("html,body").stop(true).animate({scrollTop:0},1000);
         });
@@ -60,6 +65,7 @@ class Index extends Component {
             $(".my-talk_window").show();
         },200)
     };
+    /* 导航事件*/
     handleScroll=function (e) {
         if(document.body.scrollTop>0){
             document.getElementById("abc").src=this.data.logo.logo2
@@ -87,6 +93,54 @@ class Index extends Component {
 		 	if(tops>=400&&tops<=900){
 		 	document.getElementById("cn2r").style.left="20%"
 		 	document.getElementById("cn2r").style.opacity="1"
+		 	}
+		 	if(tops>=800&&tops<=1600){
+		 	$(".chinese-con-n").css("top","0")
+		 	$(".chinese-con-n").css("opacity","1")
+		 	}
+		 	if(tops>=1600&&tops<=2200){
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(0)).css("top","0")
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(0)).css("opacity","1")
+		 		$(".chinese-con4-left>span:nth-child(2) img").css("transform","scale(1)")
+		 		$(".chinese-con4-left>span:nth-child(2) img").css("opacity","1")
+		 		$(".chinese-con4-left>span:nth-child(3) img").css("transform","scale(1)")
+		 		$(".chinese-con4-left>span:nth-child(3) img").css("opacity","1")
+		 	}
+		 	if(tops>=1947&&tops<=2847){
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(1)).css("transition","nul")
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(1)).css("top","0")
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(1)).css("opacity","1")
+		 		var ww=tops-1947
+		 		$($(".chinese-con4-left>img:nth-child(1)").get(1)).css("marginLeft",-(ww/8)+"px")
+
+		 	}
+		 		if(tops>=2668&&tops<=3191){
+		 		if(this.state.chins==true){
+		 			this.setState({
+		 				chins:false
+		 			})
+		 			var aa=0
+		 			var bb=0
+		 			var cc=0
+		 		var	time=setInterval(function(){
+		 			aa++
+		 			bb=bb+2
+		 			cc=cc+3
+		 			if(aa>=8){
+		 			aa=8
+		 			}
+		 			if(bb>=100){
+		 			bb=100
+		 			}
+		 			if(cc>=150){
+		 			cc=150
+		 			}
+		 			$($(".chinnums").get(0)).text(aa)
+		 			$($(".chinnums").get(1)).text(bb)
+		 			$($(".chinnums").get(2)).text(cc)
+		 		},30)
+		 		}
+
 		 	}
 		 	/* we*/
 		 	}else if(window.location.href=="http://localhost:3000/we"){
@@ -168,8 +222,31 @@ class Index extends Component {
 		 		$($(".casescon1-n").get(18)).css("opacity","1")
 		 		$($(".casescon1-n").get(19)).css("opacity","1")
 		 	} 	
+		 	}else if(window.location.href=="http://localhost:3000/careers"){
+		 		if(tops>=108&&tops<=905){
+		 			$(".my-careers .my-hr ul li").css("top","0")
+		 			$(".my-careers .my-hr ul li").css("opacity","1")
+		 		}
+		 		if(tops>=800&&tops<=1400){
+		 			$(".my-careers .my-why h2").css("top","0")
+		 			$(".my-careers .my-why h2").css("opacity","1")
+		 			$(".my-careers .my-why img").css("top","0")
+		 			$(".my-careers .my-why img").css("opacity","1")
+		 			$(".my-careers .my-why p").css("top","0")
+		 			$(".my-careers .my-why p").css("opacity","1")
+		 			$(".my-careers .my-why a").css("top","0")
+		 			$(".my-careers .my-why a").css("opacity","1")
+		 		}
+		 	 if(tops>=1400){
+		 	 		$(".my-careers .my-job .my-job-l h2").css("top","0")
+		 			$(".my-careers .my-job .my-job-l h2").css("opacity","1")
+		 			$(".my-careers .my-job .my-job-l img").css("top","0")
+		 			$(".my-careers .my-job .my-job-l img").css("opacity","1")
+		 			$(".my-careers .my-job .my-job-l p").css("top","0")
+		 			$(".my-careers .my-job .my-job-l p").css("opacity","1")
+		 		}
 		 	}
-		 }
+		 }.bind(this)
     render(){
         return(
             <Router>
@@ -233,8 +310,7 @@ class Index extends Component {
                         <img className="top" id="top" src="images/t_ico.png" alt=""/>
                     </div>
                     {/*fixed end*/}
-                    {/*alert start*/}
-                    <div className="my-talk_window">
+                    {/*<div className="my-talk_window">
                         <div className="my-talk_window_con">
                             <div className="my-t_w_close">x</div>
                             <div className="my-t_w_text">
@@ -248,7 +324,9 @@ class Index extends Component {
                                 <a className="my-a_close" href="">稍后再说</a>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
+                    {/*alert start*/}
+                    
                     {/*alert end*/}
                 </div>
             </Router>

@@ -2,8 +2,22 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Chinese extends Component{
+    constructor(){
+        super();
+        this.state={
+            chinese1:[],
+            aa:"666"
+        }
+    };
 	   componentDidMount=function () {
-
+	           $.ajax({
+            'url':'http://localhost:8100/cebest/chinese1',
+            'type':'get',
+            'success':function(opt){
+                this.setState({chinese1:opt})
+                console.log(this.state.chinese1[0].title)
+            }.bind(this)
+        })
 		   
 
 	   };
@@ -11,7 +25,7 @@ class Chinese extends Component{
   	return(
 <div className="chinese">
 <div className="chinese-con1">
-<h1>中企·云</h1>
+<h1>{this.state.aa}</h1>
 <p className="chinese-x"></p>
 <div className="chinese-con1-text" id="c1text">中企 · 云基于PaaS+SaaS服务模式，将门户云、业务云、电商云、营销云、管理云、设计云整合<br/>
 为互联网智能运营服务和行业全线解决方案的云平台，以满足企业个性化、多样化的互联网转型需求，帮助企业全面实现<br/>企业数字化智能运营，打造智慧企业，持续为客户创造商业价值。</div>
@@ -89,7 +103,7 @@ class Chinese extends Component{
 
 <div className="chinese-con4 clear">
 <div className="chinese-con4-left">
-<img src="images/cl_a_img01.jpg" alt=""/>
+<img src="images/cl_a_img01.jpg" id="chinimgs" alt=""/>
 <span><img src="images/cl_a_img01_01.jpg" alt=""/></span>
 <span><img src="images/cl_a_img01_02.jpg" alt=""/></span>
 </div>
@@ -110,24 +124,24 @@ class Chinese extends Component{
 <p>功能丰富的专业设计平台和云端共享的特效组件，让每一位创意人员都可以提供高端、高品质的设计服务。</p>
 </div>
 <div className="chinese-con4-left">
-<img src="images/cl_a_img02.jpg" alt=""/>
+<img src="images/cl_a_img02.jpg"  alt=""/>
 </div>
 </div>
 
 <div className="chinese-con6" id="chinesecon6">
 <div className="chinese-con6-box clear">
 <dl className="chinese-con6-n">
-<dt><span>8</span> 年</dt>
+<dt><span className="chinnums">8</span> 年</dt>
 <dd>迭代打磨而成的产品</dd>
 </dl>
 
 <dl className="chinese-con6-n">
-<dt><span>100</span> +</dt>
+<dt><span className="chinnums">100</span> +</dt>
 <dd>迭代打磨而成的产品</dd>
 </dl>
 
 <dl className="chinese-con6-n">
-<dt><span>150</span> +</dt>
+<dt><span className="chinnums">150</span> +</dt>
 <dd>迭代打磨而成的产品</dd>
 </dl>
 </div>
