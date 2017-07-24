@@ -77,7 +77,20 @@ class Index extends Component {
 		 	}
 		 	/* we*/
 		 	}else if(window.location.href=="http://localhost:3000/we"){
-		 		if(tops>=1900&&tops<=2800){
+		 		if(tops>=3643&&tops<=3943){
+		 		$(".ser-step").css("opacity","1")
+		 		$(".step-txt").css("opacity","1")
+        $(".sers").css("width","95px")
+        $(".ser-curve6 ").css("width","230px")
+		 		}
+		 		if(tops>=3000&&tops<=3200){
+		 		document.getElementById("wns1").style.opacity="1"
+		 		document.getElementById("wns2").style.width="267px"
+		 		document.getElementById("wns3").style.width="267px"
+		 		document.getElementById("wns4").style.opacity="1"
+		 		document.getElementById("wns5").style.opacity="1"
+		 		}
+		 		if(tops>=2000&&tops<=2800){
 		 		document.getElementById("wn4tou").style.opacity="1"
 		 		document.getElementById("tou1text").style.width="231px"
 		 		document.getElementById("tou1text").style.opacity="1"
@@ -91,6 +104,24 @@ class Index extends Component {
 		 		document.getElementById("tou4text").style.width="161px"
 		 		document.getElementById("tou4text").style.opacity="1"
 		 		document.getElementById("tou4lin").style.width="261px"
+		 		document.getElementById("tou5text").style.width="143px"
+		 		document.getElementById("tou5text").style.opacity="1"
+		 		document.getElementById("tou5lin").style.width="165px"
+		 		document.getElementById("tou6text").style.width="261px"
+		 		document.getElementById("tou6text").style.opacity="1"
+		 		document.getElementById("tou6lin").style.width="276px"
+		 		document.getElementById("tou7text").style.width="125px"
+		 		document.getElementById("tou7text").style.opacity="1"
+		 		document.getElementById("tou7lin").style.width="219px"
+		 		
+		 	var ww=tops-1900
+		 	document.getElementById("tou1text").style.marginLeft=-(ww/8)+20+"px"
+		 	document.getElementById("tou2text").style.marginLeft=-(ww/8)+"px"
+		 	document.getElementById("tou3text").style.marginLeft=-(ww/10)+60+"px"
+		 	document.getElementById("tou4text").style.marginLeft=-(ww/10)+50+"px"
+		 	document.getElementById("tou5text").style.marginLeft=(ww/10)-50+"px"
+		 	document.getElementById("tou6text").style.marginLeft=(ww/10)-50+"px"
+		 	document.getElementById("tou7text").style.marginLeft=(ww/10)-50+"px"
 		 	}
 		 	if(tops>=800&&tops<=1200){
 		 		var ww=tops-800
@@ -104,6 +135,25 @@ class Index extends Component {
 		 		document.getElementById("wn2li2").style.opacity="1"
 		 		document.getElementById("wn2li3").style.top="0"
 		 		document.getElementById("wn2li3").style.opacity="1"
+		 	} 	
+		 	}else if(window.location.href=="http://localhost:3000/cases"){
+		 	if(tops>=151&&tops<=1364){
+		 		$($(".casescon1-n").get(8)).css("opacity","1")
+		 		$($(".casescon1-n").get(9)).css("opacity","1")
+		 		$($(".casescon1-n").get(10)).css("opacity","1")
+		 		$($(".casescon1-n").get(11)).css("opacity","1")
+		 	} 	
+		 	if(tops>=500&&tops<=1349){
+		 		$($(".casescon1-n").get(12)).css("opacity","1")
+		 		$($(".casescon1-n").get(13)).css("opacity","1")
+		 		$($(".casescon1-n").get(14)).css("opacity","1")
+		 		$($(".casescon1-n").get(15)).css("opacity","1")
+		 	} 	
+		 	if(tops>=812&&tops<=1667){
+		 		$($(".casescon1-n").get(16)).css("opacity","1")
+		 		$($(".casescon1-n").get(17)).css("opacity","1")
+		 		$($(".casescon1-n").get(18)).css("opacity","1")
+		 		$($(".casescon1-n").get(19)).css("opacity","1")
 		 	} 	
 		 	}
 		 }

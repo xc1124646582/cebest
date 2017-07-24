@@ -2,9 +2,19 @@
 .casescon1{
     width: 100%;
 }
+.casescon1>div{opacity: 0;}
+.casescon1>div:nth-child(1){opacity: 1;}
+.casescon1>div:nth-child(2){opacity: 1;}
+.casescon1>div:nth-child(3){opacity: 1;}
+.casescon1>div:nth-child(4){opacity: 1;}
+.casescon1>div:nth-child(5){opacity: 1;}
+.casescon1>div:nth-child(6){opacity: 1;}
+.casescon1>div:nth-child(7){opacity: 1;}
+.casescon1>div:nth-child(8){opacity: 1;}
 .casescon1-n{
     width: 25%;
     float: left;
+    transition: 1s;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -30,6 +40,9 @@
 }
 .casescon1-n:hover p{
     opacity: 1;
+}
+.casescon1-n:hover img{
+    transform: scale(1.2);
 }
 .casescon2{
     width: 100%;

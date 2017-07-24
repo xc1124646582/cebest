@@ -159,11 +159,11 @@ background: #FF6600;}
     bottom: 0;
     left: 50%;
     margin-left: -266px;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.8s 0.5s;
 }
 .us-tech .tech-img2 {
-    width: 267px;
+    width: 0;
     height: 253px;
     background: url(../images/ly_img20.png) no-repeat left bottom;
     background-size: cover;
@@ -175,7 +175,7 @@ background: #FF6600;}
     width: 279px;
 }
 .us-tech .tech-img3 {
-    width: 267px;
+    width: 0;
     height: 253px;
     background: url(../images/ly_img21.png) no-repeat right bottom;
     background-size: cover;
@@ -191,7 +191,8 @@ background: #FF6600;}
     top: 0;
     left: 50%;
     margin-left: -94px;
-    opacity: 1;
+    opacity: 0;
+    transition: opacity 0.8s 1.5s;
 }
 .us-tech .tech-img5 {
     width: 67px;
@@ -201,7 +202,7 @@ background: #FF6600;}
     top: 139px;
     left: 50%;
     margin-left: -33px;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.8s 1.5s;
 }
 
@@ -233,13 +234,13 @@ body.w1200{overflow: visible;height: auto;}
     background: url(../images/ly_serPoint.png);
     background-position: center;
     background-size: cover;
-    opacity: 1;
+    opacity: 0;
 }
 .pra {
     position: absolute;
 }
-.step-txt.move {
-    opacity: 1;
+.step-txt {
+    opacity: 0;
 }
 .step-txt1 {
     left: -78px;
@@ -250,7 +251,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 94px;
 }
 .us-service .ser-proc .ser-curve1 {
-    width: 95px;
+    width: 0;
     height: 94px;
     background: url(../images/ly_ser01.png) no-repeat ;
         background-repeat: no-repeat;
@@ -277,6 +278,7 @@ body.w1200{overflow: visible;height: auto;}
     top: 114px;
     transition: all 0.5s;
 }
+
 .step-txt2 {
     left: -58px;
     top: 110px;
@@ -286,7 +288,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 94px;
 }
 .us-service .ser-proc .ser-curve2 {
-    width: 95px;
+    width: 0;
     height: 94px;
     background: url(../images/ly_ser02.png) no-repeat left top;
     background-size: cover;
@@ -308,7 +310,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 94px;
 }
 .us-service .ser-proc .ser-curve3 {
-   width: 95px;
+   width: 0;
     height: 94px;
     background: url(../images/ly_ser03.png) no-repeat left top;
     background-size: cover;
@@ -330,7 +332,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 94px;
 }
 .us-service .ser-proc .ser-curve4 {
-    width: 95px;
+    width: 0;
     height: 94px;
     background: url(../images/ly_ser04.png) no-repeat left top;
     background-size: cover;
@@ -352,7 +354,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 93px;
 }
 .us-service .ser-proc .ser-curve5 {
-    width: 95px;
+    width: 0;
     height: 93px;
     background: url(../images/ly_ser05.png) no-repeat left top;
     background-size: cover;
@@ -374,7 +376,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 224px;
 }
 .us-service .ser-proc .ser-curve6 {
-    width: 230px;
+    width: 0;
     height: 96px;
     background: url(../images/ly_ser06.png) no-repeat left top;
     background-size: cover;
@@ -392,7 +394,6 @@ body.w1200{overflow: visible;height: auto;}
     top: 50px;
     transition: all 0.5s 2.8s;
 }
-
 
 
 
@@ -467,7 +468,7 @@ body.w1200{overflow: visible;height: auto;}
     height: 35px;
     background: url(../images/ly_de02.png);
     background-size: cover;
-    right: 350px;
+    left: -110px;
     top: 50px;
     opacity: 0;
     transform: translateY(-20px);
@@ -531,7 +532,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 165px;
 }
 .us-charGr5 .char-line {
-    width: 165px;
+    width: 0;
     height: 45px;
     background: url(../images/ly_line05.png) no-repeat left top;
     background-size: cover;
@@ -544,13 +545,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr5 .char-txt {
-    width: 143px;
+    width: 0;
     height: 33px;
     background: url(../images/ly_de05.png);
     background-size: cover;
     left: 298px;
     top: 16px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 5.5s,opacity 0.5s 5.5s;
 }
@@ -558,7 +559,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 276px;
 }
 .us-charGr6 .char-line {
-    width: 276px;
+    width: 0;
     height: 37px;
     background: url(../images/ly_line06.png) no-repeat left top;
     background-size: cover;
@@ -572,13 +573,13 @@ body.w1200{overflow: visible;height: auto;}
 }
 
 .us-charGr6 .char-txt {
-    width: 261px;
+    width: 0;
     height: 37px;
     background: url(../images/ly_de06.png);
     background-size: cover;
     left: 338px;
     top: 83px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 6.5s,opacity 0.5s 6.5s;
 }
@@ -586,7 +587,7 @@ body.w1200{overflow: visible;height: auto;}
     width: 219px;
 }
 .us-charGr7 .char-line {
-    width: 219px;
+    width: 0;
     height: 90px;
     background: url(../images/ly_line07.png) no-repeat left top;
     background-size: cover;
@@ -599,13 +600,13 @@ body.w1200{overflow: visible;height: auto;}
     opacity: 1;
 }
 .us-charGr7 .char-txt {
-    width: 125px;
+    width: 0;
     height: 35px;
     background: url(../images/ly_de07.png);
     background-size: cover;
     left: 278px;
     top: 245px;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-20px);
     transition: translateY 0.5s 7.5s,opacity 0.5s 7.5s;
 }

@@ -146,12 +146,12 @@ class We extends Component {
                         <span className="pra char-txt" id="tou5text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
                     </div>
                     <div className="us-charGr6 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                        <span className="pra char-line" id="tou6lin"></span>
+                        <span className="pra char-txt" id="tou6text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
                     </div>
                     <div className="us-charGr7 us-charBox">
-                        <span className="pra char-line"></span>
-                        <span className="pra char-txt" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
+                        <span className="pra char-line" id="tou7lin"></span>
+                        <span className="pra char-txt" id="tou7text" data-center-center="transform:translateX(0px);" data-top="transform:translateX(60px);"></span>
                     </div>
                 </div>
             </div> 
@@ -170,11 +170,11 @@ class We extends Component {
                 <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
                 </div>
                     <div className="tech-imgGr pra">
-                    <div className="tech-img1 pra tech-img"></div>
-                    <div className="tech-img2 pra tech-img"></div>
-                    <div className="tech-img3 pra tech-img"></div>
-                    <div className="tech-img4 pra tech-img"></div>
-                    <div className="tech-img5 pra tech-img"></div>
+                    <div className="tech-img1 pra tech-img" id="wns1"></div>
+                    <div className="tech-img2 pra tech-img" id="wns2"></div>
+                    <div className="tech-img3 pra tech-img" id="wns3"></div>
+                    <div className="tech-img4 pra tech-img" id="wns4"></div>
+                    <div className="tech-img5 pra tech-img" id="wns5"></div>
                 </div>
                 </div>
                 </div>
@@ -199,7 +199,7 @@ class We extends Component {
                             <dt className="cn fnt_16">品牌策略</dt>
                             <dd className="en">Brand  Strategy</dd>
                         </dl>
-                        <div className="ser-curve1 pra ser-curve"></div>
+                        <div className="ser-curve1 pra ser-curve sers"></div>
                     </div>
                     <div className="ser-moveBox">
                         <div className="ser-step2 pra ser-step"></div>
@@ -207,7 +207,7 @@ class We extends Component {
                             <dt className="cn fnt_16">需求调研</dt>
                             <dd className="en">Requirement Survey</dd>
                         </dl>
-                        <div className="ser-curve2 pra ser-curve"></div>
+                        <div className="ser-curve2 pra ser-curve sers"></div>
                     </div>
                     <div className="ser-moveBox">
                         <div className="ser-step3 pra ser-step"></div>
@@ -215,7 +215,7 @@ class We extends Component {
                             <dt className="cn fnt_16">视觉设计</dt>
                             <dd className="en">Visual Design</dd>
                         </dl>
-                        <div className="ser-curve3 pra ser-curve"></div>
+                        <div className="ser-curve3 pra ser-curve sers"></div>
                     </div>
                     <div className="ser-moveBox">
                         <div className="ser-step4 pra ser-step"></div>
@@ -223,7 +223,7 @@ class We extends Component {
                             <dt className="cn fnt_16">技术实现</dt>
                             <dd className="en">Technological Realization</dd>
                         </dl>
-                        <div className="ser-curve4 pra ser-curve"></div>
+                        <div className="ser-curve4 pra ser-curve sers"></div>
                     </div>
                     <div className="ser-moveBox">
                         <div className="ser-step5 pra ser-step"></div>
@@ -231,7 +231,7 @@ class We extends Component {
                             <dt className="cn fnt_16">项目上线</dt>
                             <dd className="en">Website Launch</dd>
                         </dl>
-                        <div className="ser-curve5 pra ser-curve"></div>
+                        <div className="ser-curve5 pra ser-curve sers"></div>
                     </div>
                     <div className="ser-moveBox">
                         <div className="ser-step6 pra ser-step"></div>
