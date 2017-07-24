@@ -30,6 +30,9 @@ class Index extends Component {
         $("#nav a").click(function () {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
             $(this).children().addClass('active').parent().siblings().children().removeClass('active')
+            if($(this).index()==0){
+                window.location="http://localhost:3000"
+            }
         })
         
         if(window.location.href.indexOf('more')!=-1){
@@ -187,8 +190,8 @@ class Index extends Component {
                     <div className="center">
                         <p className="cen-head"></p>
                         <Route exact path="/" component={Serve}/>
-                        <Route path="/cases" component={Cases}/>
                         <Route path="/more" component={More}/>
+                        <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
                         <Route path="/careers" component={Careers}/>

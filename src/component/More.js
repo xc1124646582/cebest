@@ -8,6 +8,7 @@ class More extends Component{
 		}
 	};
 	componentDidMount=function () {
+
 		setTimeout(function () {
 			$(".my-talk_window").show()
 		},200)
@@ -22,8 +23,15 @@ class More extends Component{
 					<p>Domain & IDC Services</p>
 				</div>
 				{/*icd end*/}
-				<div>
-
+				<div className="my-our-customers">
+					<div className="my-more-box">
+						<h2>服务的客户</h2>
+						<h3></h3>
+						<p>Our Customers</p>
+						<ul className="clear">
+							<li><img src="images/ly_logo01.png" alt=""/></li>
+						</ul>
+					</div>
 				</div>
 				{/*help start*/}
 				<div className="my-help">
