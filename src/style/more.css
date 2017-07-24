@@ -1,0 +1,28 @@
+.my-more .my-icd{
+    background: url("../images/ly_bg01.jpg") no-repeat center bottom;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 650px;
+}
+.my-more .my-icd h2{
+    padding-top: 100px;
+    color: #f6f6f6;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+    font-size: 24px;
+}
+.my-more .my-icd h3{
+    background: #FFF;
+    width: 100px;
+    height: 1px;
+    margin: 25px auto 0 auto;
+}
+.my-more .my-icd p{
+    color: #a7a7a7;
+    margin-top: 25px;
+    text-align: center;
+    font-family: Arial;
+    line-height: 1;
+    font-size: 18px;
+}

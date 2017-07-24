@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
 import Serve from './component/Serve';
+import More from './component/More';
 import Cases from './component/Cases';
 import Chinese from './component/Chinese';
 import We from './component/We'
 import Careers from './component/Careers';
 import Contact from './component/Contact'
 import './style/serve.css';
+import './style/more.css';
 import './style/cases.css';
 import './style/chinese.css';
 import './style/we.css';
@@ -25,8 +27,15 @@ class Index extends Component {
 
     };
     componentDidMount=function () {
+        $("#nav a").click(function () {
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
+            $(this).children().addClass('active').parent().siblings().children().removeClass('active')
+        })
+        if(window.location.href.indexOf('more')!=-1){
+            $("#nav a:first-of-type li").addClass('active')
+        }
     	/* 添加滑轮事件*/
-    			if(window.addEventListener){
+    	if(window.addEventListener){
     		document.addEventListener('scroll', this.bodyScroll.bind(this));
     	}else{
     		document.attachEvent('onscroll', this.bodyScroll.bind(this));
@@ -128,6 +137,7 @@ class Index extends Component {
                         <p className="cen-head"></p>
                         <Route exact path="/" component={Serve}/>
                         <Route path="/cases" component={Cases}/>
+                        <Route path="/more" component={More}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
                         <Route path="/careers" component={Careers}/>
