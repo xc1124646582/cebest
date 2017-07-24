@@ -10,6 +10,7 @@ class Careers extends Component {
 			}
 		  };
     componentDidMount = function () {
+
     	/*$.ajax({
 				'url':'http://localhost:8100/cebset/careers',
 				'type':'get',

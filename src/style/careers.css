@@ -3,16 +3,30 @@
     height: 500px;
     background: url("../images/ly_bg12.jpg") no-repeat center top;
 }
+@keyframes  cn1{
+    to{
+        top: 0px;
+        opacity: 1;
+    }
+}
 .my-careers .my-work h1{
     padding-top: 130px;
     text-align: center;
+    position: relative;
+    top: -60px;
+    opacity: 0;
     color: #fff;
+        animation: cn1 0.8s forwards;
     font-size: 24px;
     font-weight: normal;
 }
 .my-careers .my-work img{
     display: block;
     margin: 0 auto;
+        position: relative;
+            opacity: 0;
+    top: -60px;
+            animation: cn1 1s forwards;
     width: 99px;
 }
 .my-careers .my-work p{
@@ -20,6 +34,10 @@
     line-height: 30px;
     text-align: center;
     width: 785px;
+        opacity: 0;
+            position: relative;
+    top: -60px;
+            animation: cn1 1.2s forwards;
     margin: 0 auto 20px;
     font-size: 14px;
 }
@@ -30,6 +48,10 @@
     font-size: 12px;
     margin: 0 auto;
     overflow: hidden;
+    opacity: 0;
+            position: relative;
+    top: -60px;
+            animation: cn1 1.3s forwards;
     display: block;
     border:1px solid #fff;
     text-align: center;
@@ -65,16 +87,23 @@
 .my-careers .my-hr ul li{
     width: 340px;
     margin: 0 45px;
+            position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.3s  0.2s;
     float: left;
 }
 .my-careers .my-hr ul li:first-of-type{
+	            transition:  1s ;
     margin-left: 0;
 }
 .my-careers .my-hr ul li:last-of-type{
+	            transition:  1.6s  0.4s;
     margin-right: 0;
 }
 .my-careers .my-hr ul li img{
     display: block;
+    height: 65px;
 }
 .my-careers .my-hr ul li h2{
     font-weight: normal;
@@ -113,17 +142,29 @@
 .my-careers .my-why h2{
     padding-top: 135px;
     font-size: 24px;
+                position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1s;
     font-weight: normal;
     color: #FFF;
 }
 .my-careers .my-why img{
     width: 99px;
     margin: 0 auto;
+                    position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.2s  0.2s;
     display: block;
 }
 .my-careers .my-why p{
     color: #e4e4e4;
     width: 560px;
+                    position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.4s  0.4s;
     line-height: 30px;
     text-align: center;
     margin: 0 auto;
@@ -134,8 +175,11 @@
     width: 160px;
     height: 40px;
     overflow: hidden;
+                    position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.4s  0.6s;
     border: 1px solid #fff;
-    transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
 }
 .my-careers .my-why a span{
     display: block;
@@ -169,14 +213,26 @@
 }
 .my-careers .my-job .my-job-l h2{
     color: #000;
+                        position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1s ;
     font-size: 18px;
     font-weight: normal;
 }
 .my-careers .my-job .my-job-l img{
     display: block;
+                            position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.2s  0.2s;
 }
 .my-careers .my-job .my-job-l p{
     color: #7d7d7d;
+                                position: relative;
+            opacity: 0;
+    top: -60px;
+            transition:  1.4s  0.4s;
     line-height: 30px;
 }
 .my-careers .my-job .my-job-r{
