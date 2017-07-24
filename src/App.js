@@ -31,6 +31,7 @@ class Index extends Component {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
             $(this).children().addClass('active').parent().siblings().children().removeClass('active')
         })
+        
         if(window.location.href.indexOf('more')!=-1){
             $("#nav a:first-of-type li").addClass('active')
         }
