@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Know from './Know';
 import More from './More';
+import './../style/know.css';
 import './../style/more.css';
 
 import {
@@ -19,14 +21,19 @@ class Serve extends Component{
     };
     componentDidMount=function () {
         $.ajax({
-            'url':'http://localhost:8100/cebest/gengduo',
+            'url':'http://192.168.43.25:8100/cebest/gengduo',
             'type':'get',
             'success':function(opt){
                 this.setState({gengduo:opt})
                 console.log(opt)
+                $(".my-more-services ul a").click(function () {
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
+                })
             }.bind(this)
         })
-
+        $(".scrvebtn").click(function () {
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
+        })
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
@@ -35,10 +42,12 @@ class Serve extends Component{
         return(
             <Router>
             <div>
+                <Route path="/know" component={Know}/>
                 <Route path="/more" component={More}/>
                 
                 <Route exact path="/" render={() => (
                     <div className="serve">
+                        {/*Brand Website start*/}
                         <div className="servecon clear">
                             <div className="servetitle">
                                 <h2>品牌网站</h2>
@@ -62,11 +71,13 @@ class Serve extends Component{
                                     <p>品牌网站</p>
                                     </li>
                                 </ul>
-                                <a href="" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></a>
+                                <Link to="/know" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                         <img src="images/serv_con01_img.jpg" alt="" className="scrveconimg"/>
                     </div>
+                    {/*Brand Website end*/}
 
+                    {/*E-Commerce start*/}
                     <div className="my-servecon-two clear">
                         <div className="my-scrvecon-l">
                             <img className="my-img-one" src="images/serv_con02_img01.png" alt=""/>
@@ -99,9 +110,13 @@ class Serve extends Component{
                                 <p>移动应用</p>
                                 </li>
                             </ul>
-                            <a href="" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></a>
+                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
+                    {/*E-Commerce end*/}
+
+
+                    {/*Event Marketing start*/}
                     <div className="my-servecon-three clear">
                         <div className="my-servecon-l">
                             <h2>活动营销</h2>
@@ -126,12 +141,16 @@ class Serve extends Component{
                                 <p>互动传播</p>
                                 </li>
                             </ul>
-                            <a href="" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></a>
+                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                         <div className="my-servecon-r">
                             <img src="images/serv_con03_img.png" alt=""/>
                         </div>
                     </div>
+                    {/*Event Marketing end*/}
+
+
+                    {/*Business System start*/}
                     <div className="my-serve-p-four clear">
                         <div className="my-servecon-l">
                             <img className="my-img-one" src="images/serv_con04_img1.png" alt=""/>
@@ -156,9 +175,10 @@ class Serve extends Component{
                                 <p>技术运维</p>
                                 </li>
                             </ul>
-                            <a href="" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></a>
+                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
+                    {/*Business System end*/}
                     {/*service start*/}
                      <div className="my-more-services">
                         <h2>

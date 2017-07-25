@@ -1,0 +1,125 @@
+.my-know-one{
+    height:700px;
+    background: #f6f6f6 url(../images/cl_c01_bg.jpg) no-repeat center top;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 90px;
+    z-index: -5;
+}
+.my-know-one h2{
+    text-align: center;
+    padding: 170px 0 0;
+    font-size: 32px;
+    font-weight: normal;
+    color: #000;
+}
+.my-know-one h3{
+    width: 100px;
+    height: 1px;
+    margin: 40px auto 30px;
+    background: #262626;
+
+}
+.my-know-one p{
+    text-align: center;
+    width: 840px;
+    margin: 0 auto;
+    color: #7d7d7d;
+    font-size: 14px;
+    line-height: 2.1;
+}
+.my-know-two{
+    margin-top: 700px;
+    height:700px;
+    background: #262626 url(../images/cl_logo_bg.jpg) no-repeat center;
+}
+.my-know-two .my-know-box{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.my-know-two img{
+    width: 450px;
+    position: absolute;
+    left:0;
+    top: -60px;
+}
+.my-know-two .my-know600{
+    width: 600px;
+    float: right;
+ }
+.my-know-two .my-know600 h2{
+    padding-top: 70px;
+    color: #fff;
+    line-height: 1;
+    font-weight: normal;
+    font-size: 24px;
+}
+.my-know-two .my-know600 h2 span{
+    color: #cecece;
+    padding-left: 15px;
+    font-size: 18px;
+}
+.my-know-two .my-know600 h3{
+    background: #7d7d7d;
+    width: 100px;
+    height: 1px;
+    margin: 40px 0 30px;
+}
+.my-know-two .my-know600 p{
+    font-size: 14px;
+    color: #cecece;
+}
+.my-know-three{
+    height: 700px;
+    background: #e4e4e4;
+}
+.my-know-three h2{
+    text-align: center;
+    font-weight: normal;
+    color: #262626;
+    line-height: 0.9;
+    font-size: 24px;
+    padding-top: 90px;
+}
+.my-know-three h3{
+    background: #383838;
+    width: 100px;
+    height: 1px;
+    margin: 40px auto 30px;
+}
+.my-know-three p{
+    text-align: center;
+    color: #7d7d7d;
+    font-size: 14px;
+}
+.my-know-four{
+    height: 700px;
+    background:url(../images/cl_case02.jpg) no-repeat center top;
+    position: relative;
+}
+.my-know-four h2{
+    position: absolute;
+    width: 180px;
+    left: 10%;
+    top: 50%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 30px;
+    font-weight: normal;
+}
+.my-know-four h2 h3{
+    font-size: 18px;
+    font-weight: normal;
+}
+.my-know-four h2 p{
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+.my-know-four h2 p span{
+    margin: 0 10px 0 0;
+}
+
+
+
