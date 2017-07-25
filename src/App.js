@@ -26,9 +26,8 @@ class Index extends Component {
     constructor(){
         super();
       	this.state={
-				chins:true
-				
-			}
+			chins:true
+		}
         this.data={"nav":[{"tita":"服务","titb":"/"},{"tita":"案例","titb":"/cases"},{"tita":"中企·云","titb":"/chinese"},{"tita":"我们","titb":"/we"},{"tita":"人才","titb":"/careers"},{"tita":"联系","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"}}
 
     };

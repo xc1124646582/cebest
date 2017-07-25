@@ -12,7 +12,7 @@ class Careers extends Component {
 		  };
     componentDidMount = function () {
     	$.ajax({
-				'url':'http://localhost:8100/cebest/careers1',
+				'url':'http://192.168.43.25:8100/cebest/careers1',
 				'type':'get',
 				'success':function(opt){
 					
@@ -30,7 +30,7 @@ class Careers extends Component {
     	
     	
     	$.ajax({
-				'url':'http://localhost:8100/cebest/careers2',
+				'url':'http://192.168.43.25:8100/cebest/careers2',
 				'type':'get',
 				'success':function(opt){
 					

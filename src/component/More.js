@@ -13,7 +13,7 @@ class More extends Component{
 		(document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
 		var href=window.location.href.split("?")[1]
         $.ajax({
-            'url':'http://localhost:8100/cebest/gengduo',
+            'url':'http://192.168.43.25:8100/cebest/gengduo',
             'type':'get',
             'success':function(opt){
                 this.setState({gengduo:opt[href-1]})
@@ -24,7 +24,7 @@ class More extends Component{
             }.bind(this)
         })
         $.ajax({
-            'url':'http://localhost:8100/cebest/more',
+            'url':'http://192.168.43.25:8100/cebest/more',
             'type':'get',
             'success':function(opt){
                 this.setState({img:opt})
