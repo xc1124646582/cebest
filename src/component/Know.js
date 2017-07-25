@@ -20,6 +20,7 @@ class Know extends Component{
                     <h2>品牌网站，不止于设计</h2>
                     <h3></h3>
                     <p>今天，任何企业都可以通过品牌网站的建设或改良，在一段时间内取得成就。但是，许多服务提供商只关注于<br/>网站设计本身，忽略了企业希望了解通过网站如何改善品牌运营以及它们所提供的业务机遇。中企高呈能够与您协作，了解您的业务状况以及适合的改善模式，持续提供网络整合营销及增值服务，让您的品牌网站更有意义。</p>
+                <div className="know-bank"></div>
                 </div>
                 <div className="my-know-two">
                     <div className="my-know-box clear">
