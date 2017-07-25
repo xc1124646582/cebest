@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
 import Serve from './component/Serve';
-import Know from './component/Know';
 import More from './component/More';
 import Cases from './component/Cases';
 import Chinese from './component/Chinese';
@@ -10,7 +9,6 @@ import We from './component/We'
 import Careers from './component/Careers';
 import Contact from './component/Contact'
 import './style/serve.css';
-import './style/know.css';
 import './style/more.css';
 import './style/cases.css';
 import './style/chinese.css';
@@ -41,11 +39,11 @@ class Index extends Component {
             }
         })
         
-        if(window.location.href.indexOf('more')!=-1||window.location.href.indexOf('know')!=-1){
+        if(window.location.href.indexOf('more')!=-1){
             $("#nav a:first-of-type li").addClass('active')
         }
     	/* 添加滑轮事件*/
-    	if(window.addEventListener){
+    			if(window.addEventListener){
     		document.addEventListener('scroll', this.bodyScroll.bind(this));
     	}else{
     		document.attachEvent('onscroll', this.bodyScroll.bind(this));
@@ -88,7 +86,7 @@ class Index extends Component {
     /* 滑轮事件*/
       bodyScroll=function(e){
       	var ev=e||window.event
-		 	var tops=(document.body.scrollTop)||(document.documentElement.scrollTop)
+		 	var tops=document.body.scrollTop
 		 	console.log(tops)
 		 	if(window.location.href=="http://localhost:3000/"){
 		 		if(tops<=500){
@@ -249,7 +247,8 @@ class Index extends Component {
 		 			$(".my-careers .my-why img").css("opacity","1")
 		 			$(".my-careers .my-why p").css("top","0")
 		 			$(".my-careers .my-why p").css("opacity","1")
-		 			$(".my-careers .my-why a").css("animation-play-state","running")
+		 			$(".my-careers .my-why a").css("top","0")
+		 			$(".my-careers .my-why a").css("opacity","1")
 		 		}
 		 	 if(tops>=1400){
 		 	 		$(".my-careers .my-job .my-job-l h2").css("top","0")
@@ -298,7 +297,6 @@ class Index extends Component {
                     <div className="center">
                         <p className="cen-head"></p>
                         <Route exact path="/" component={Serve}/>
-						<Route path="/know" component={Know}/>
                         <Route path="/more" component={More}/>
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>

@@ -11,12 +11,32 @@
     text-align: center;
     padding: 170px 0 0;
     font-size: 32px;
+    z-index: 99;
     font-weight: normal;
     color: #000;
 }
+@keyframes  animateOne{
+    to{
+        width: 87%;
+    }
+}
+.know-bank{
+	    position: absolute;
+    z-index: 1;
+    width: 0;
+        clip: rect(0px, 1920px, 1000px, 0px);
+    height: 450px;
+    bottom: 0;
+    left: 0px;
+    padding-bottom: 20%;
+    background-repeat: no-repeat;
+    	background-image: url(../images/brand_bg.png);
+    background-size: cover 40%;
+        animation: animateOne linear 3s forwards;}
 .my-know-one h3{
     width: 100px;
     height: 1px;
+        z-index: 99;
     margin: 40px auto 30px;
     background: #262626;
 
@@ -27,6 +47,7 @@
     margin: 0 auto;
     color: #7d7d7d;
     font-size: 14px;
+        z-index: 99;
     line-height: 2.1;
 }
 .my-know-two{
