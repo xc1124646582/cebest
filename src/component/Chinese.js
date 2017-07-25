@@ -6,16 +6,39 @@ class Chinese extends Component{
         super();
         this.state={
             chinese1:[],
-            aa:"666"
+            chinese2:"",
+            chinese3:"",
+            chinese4:"",
+            chinese5:"",
+            chinesebox:[]
         }
     };
 	   componentDidMount=function () {
 	           $.ajax({
-            'url':'http://localhost:8100/cebest/chinese1',
+            'url':'http://192.168.43.25:8100/cebest/chinese1',
             'type':'get',
             'success':function(opt){
-                this.setState({chinese1:opt})
-                console.log(this.state.chinese1[0].title)
+                this.setState({
+                chinese1:opt[0],
+                chinese2:opt[1],
+                chinese3:opt[2],
+                chinese4:opt[3],
+                chinese5:opt[4]
+                })
+                document.getElementById("c1text").innerHTML=this.state.chinese1.con
+                
+            }.bind(this)
+        })
+        
+        
+    $.ajax({
+            'url':'http://192.168.43.25:8100/cebest/chinese2',
+            'type':'get',
+            'success':function(opt){
+                this.setState({
+                chinesebox:opt
+                })
+                console.log(this.state.chinesebox)
             }.bind(this)
         })
 		   
@@ -25,18 +48,17 @@ class Chinese extends Component{
   	return(
 <div className="chinese">
 <div className="chinese-con1">
-<h1>{this.state.aa}</h1>
+<h1>{this.state.chinese1.title}</h1>
 <p className="chinese-x"></p>
-<div className="chinese-con1-text" id="c1text">中企 · 云基于PaaS+SaaS服务模式，将门户云、业务云、电商云、营销云、管理云、设计云整合<br/>
-为互联网智能运营服务和行业全线解决方案的云平台，以满足企业个性化、多样化的互联网转型需求，帮助企业全面实现<br/>企业数字化智能运营，打造智慧企业，持续为客户创造商业价值。</div>
+<div className="chinese-con1-text" id="c1text"></div>
 <img src="images/cl_ba_text.png" alt="" id="c1img"/>
 </div>
 <div className="chinese-con2 clear">
-<div className="chinese-con2-left">为什么选择中企·云？</div>
+<div className="chinese-con2-left">{this.state.chinese2.fottext}</div>
 <div className="chinese-con2-right" id="cn2r">
-<p >简单 随需 开放</p>
+<p >{this.state.chinese2.title}</p>
 <p className="chinese-con2-x" ></p>
-<p className="chinese-con2-text">企业无需单独进行物理配置，操作简单，降低了使用成本。只需接入网络，便可获得互联网相关产品与服务，并随云端版本迭代及时使用最新功能，令信息管理更加安全高效。</p>
+<p className="chinese-con2-text">{this.state.chinese2.con}</p>
 </div>
 </div>
 
@@ -44,58 +66,29 @@ class Chinese extends Component{
 <div className="chinese-con3">
 
 {/*con3 head */}
-<h2>PaaS + SaaS开启企业的云时代</h2>
+<h2>{this.state.chinese5.title}</h2>
 <p className="chinese-x black"></p>
 <div className="chinese-con-box clear">
 
 {/*chinese-con-n */}
-<div className="chinese-con-n">
-<img src="images/cloud_a_ico01.png" alt=""/>
-<div><h4>门户云</h4>
-<p>PORTAL CLOUD</p></div>
+
+                        {this.state.chinesebox.map(function(v,i){
+                        return  <div key={i} className="chinese-con-n">
+<img src={v.img} alt=""/>
+<div><h4>{v.titl1}</h4>
+<p>{v.titl2}</p></div>
 <ul className="chinese-con-n-ul clear">
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
+                                            {
+                                            this.state.chinesebox[i].cons.split("?").map(function(con,j){
+                                                return <li key={j}>{con}</li>
+                                            })
+                                            }
 </ul>
 </div>
-{/*chinese-con-n */}
-<div className="chinese-con-n">
-<img src="images/cloud_a_ico01.png" alt=""/>
-<div><h4>门户云</h4>
-<p>PORTAL CLOUD</p></div>
-<ul className="chinese-con-n-ul clear">
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-</ul>
-</div>
-{/*chinese-con-n */}
-<div className="chinese-con-n">
-<img src="images/cloud_a_ico01.png" alt=""/>
-<div><h4>门户云</h4>
-<p>PORTAL CLOUD</p></div>
-<ul className="chinese-con-n-ul clear">
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-</ul>
-</div>
-{/*chinese-con-n */}
-<div className="chinese-con-n">
-<img src="images/cloud_a_ico01.png" alt=""/>
-<div><h4>门户云</h4>
-<p>PORTAL CLOUD</p></div>
-<ul className="chinese-con-n-ul clear">
-<li>企业门户</li>
-<li>企业门户</li>
-<li>企业门户</li>
-<li>{this.props.prp}</li>
-</ul>
-</div>
+                        }.bind(this))}
+
+
+
 </div>
 <div className="scrvebtn margin" id="servebtn"><p>+了解更多</p><p>+了解更多</p></div>
 </div>
@@ -108,20 +101,20 @@ class Chinese extends Component{
 <span><img src="images/cl_a_img01_02.jpg" alt=""/></span>
 </div>
 <div className="chinese-con4-right">
-<p>设计开放云</p>
-<p>独有的设计云，让更多智慧参与创意 </p>
+<p>{this.state.chinese3.title}</p>
+<p>{this.state.chinese3.fottext} </p>
 <p className="chinese-con4-x"></p>
-<p>功能丰富的专业设计平台和云端共享的特效组件，让每一位创意人员都可以提供高端、高品质的设计服务。</p>
+<p>{this.state.chinese3.con}</p>
 </div>
 </div>
 
 
 <div className="chinese-con4 chinese-con5 clear">
 <div className="chinese-con4-right chinese-con5-left">
-<p>设计开放云</p>
-<p>独有的设计云，让更多智慧参与创意 </p>
+<p>{this.state.chinese4.title}</p>
+<p>{this.state.chinese4.fottext}</p>
 <p className="chinese-con4-x chinese-con5-x"></p>
-<p>功能丰富的专业设计平台和云端共享的特效组件，让每一位创意人员都可以提供高端、高品质的设计服务。</p>
+<p>{this.state.chinese4.con}</p>
 </div>
 <div className="chinese-con4-left">
 <img src="images/cl_a_img02.jpg"  alt=""/>

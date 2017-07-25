@@ -34,6 +34,9 @@ class Index extends Component {
         $("#nav a").click(function () {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
             $(this).children().addClass('active').parent().siblings().children().removeClass('active')
+            if($(this).index()==0){
+                window.location="http://localhost:3000"
+            }
         })
         
         if(window.location.href.indexOf('more')!=-1){
@@ -85,8 +88,21 @@ class Index extends Component {
       	var ev=e||window.event
 		 	var tops=document.body.scrollTop
 		 	console.log(tops)
+		 	if(window.location.href=="http://localhost:3000/"){
+		 		if(tops<=500){
+		 			$(".scrveconimg").css("top",tops/3+"px")
+		 		}
+		 		if(tops>=200&&tops<=1200){
+		 			var ww=tops-560
+		 			$(".scrvecon2img").css("transform", "translateY("+ww/3+"px)")
+		 		}
+		 		if(tops>=1800&&tops<=2300){
+		 			var ww=tops-1800
+		 			$(".scrvecon4img").css("marginLeft", ww/5+"px")
+		 		}
+		 	}
 		 	/* chinese */
-		 	if(window.location.href=="http://localhost:3000/chinese"){
+		  else	if(window.location.href=="http://localhost:3000/chinese"){
 		 	if(tops>=400&&tops<=900){
 		 	document.getElementById("cn2r").style.left="20%"
 		 	document.getElementById("cn2r").style.opacity="1"
@@ -264,8 +280,8 @@ class Index extends Component {
                     <div className="center">
                         <p className="cen-head"></p>
                         <Route exact path="/" component={Serve}/>
-                        <Route path="/cases" component={Cases}/>
                         <Route path="/more" component={More}/>
+                        <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
                         <Route path="/we" component={We}/>
                         <Route path="/careers" component={Careers}/>
