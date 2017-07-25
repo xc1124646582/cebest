@@ -11,7 +11,7 @@ class Contact extends Component {
     componentDidMount () {
         $.ajax({
             type:"get",
-            url:"http://localhost:8100/cebest/contact",
+            url:"http://192.168.43.25:8100/cebest/contact",
             success:function(data){
                 this.setState({
                     contact:data[0]

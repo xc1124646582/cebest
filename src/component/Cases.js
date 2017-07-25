@@ -12,7 +12,7 @@ class Cases extends Component{
 		  };
 	   componentDidMount=function () {
 	   		$.ajax({
-				'url':'http://localhost:8100/cebest/cases1',
+				'url':'http://192.168.43.25:8100/cebest/cases1',
 				'type':'get',
 				'success':function(opt){
 					this.setState({cases1:opt});
@@ -20,7 +20,7 @@ class Cases extends Component{
 				}.bind(this)
 			})
 	   		$.ajax({
-				'url':'http://localhost:8100/cebest/cases2',
+				'url':'http://192.168.43.25:8100/cebest/cases2',
 				'type':'get',
 				'success':function(opt){
 					this.setState({cases2:opt});

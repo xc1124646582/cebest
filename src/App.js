@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
 import Serve from './component/Serve';
+import Know from './component/Know';
 import More from './component/More';
 import Cases from './component/Cases';
 import Chinese from './component/Chinese';
@@ -9,6 +10,7 @@ import We from './component/We'
 import Careers from './component/Careers';
 import Contact from './component/Contact'
 import './style/serve.css';
+import './style/know.css';
 import './style/more.css';
 import './style/cases.css';
 import './style/chinese.css';
@@ -39,11 +41,11 @@ class Index extends Component {
             }
         })
         
-        if(window.location.href.indexOf('more')!=-1){
+        if(window.location.href.indexOf('more')!=-1||window.location.href.indexOf('know')!=-1){
             $("#nav a:first-of-type li").addClass('active')
         }
     	/* 添加滑轮事件*/
-    			if(window.addEventListener){
+    	if(window.addEventListener){
     		document.addEventListener('scroll', this.bodyScroll.bind(this));
     	}else{
     		document.attachEvent('onscroll', this.bodyScroll.bind(this));
@@ -86,7 +88,7 @@ class Index extends Component {
     /* 滑轮事件*/
       bodyScroll=function(e){
       	var ev=e||window.event
-		 	var tops=document.body.scrollTop
+		 	var tops=(document.body.scrollTop)||(document.documentElement.scrollTop)
 		 	console.log(tops)
 		 	/* chinese */
 		 	if(window.location.href=="http://localhost:3000/chinese"){
@@ -234,8 +236,7 @@ class Index extends Component {
 		 			$(".my-careers .my-why img").css("opacity","1")
 		 			$(".my-careers .my-why p").css("top","0")
 		 			$(".my-careers .my-why p").css("opacity","1")
-		 			$(".my-careers .my-why a").css("top","0")
-		 			$(".my-careers .my-why a").css("opacity","1")
+		 			$(".my-careers .my-why a").css("animation-play-state","running")
 		 		}
 		 	 if(tops>=1400){
 		 	 		$(".my-careers .my-job .my-job-l h2").css("top","0")
@@ -245,7 +246,24 @@ class Index extends Component {
 		 			$(".my-careers .my-job .my-job-l p").css("top","0")
 		 			$(".my-careers .my-job .my-job-l p").css("opacity","1")
 		 		}
-		 	}
+		 	}else if(window.location.href.indexOf('know')!=-1){
+				if (tops>=710){
+					$(".my-know-two").css({"position":"fixed","z-index":"-4","top":"90px","left":"0","right":"0","margin":"0"})
+					$(".my-know-three").css({"margin-top":"1400px"})
+				}
+				if(tops<710){
+					$(".my-know-two").css({"position":"static","margin-top":"700px"})
+					$(".my-know-three").css({"margin-top":"0"})
+				}
+				/*if(tops>=1410){
+					$(".my-know-three").css({"position":"fixed","z-index":"-3","top":"90px","left":"0","right":"0","margin":"0"})
+					$(".my-know-four").css({"margin-top":"2100px"})
+				}
+				if(tops>=710&&tops<1410){
+					$(".my-know-three").css({"position":"static","margin":"0"})
+					$(".my-know-four").css({"margin-top":"0"})
+				}*/
+			}
 		 }.bind(this)
     render(){
         return(
@@ -267,6 +285,7 @@ class Index extends Component {
                     <div className="center">
                         <p className="cen-head"></p>
                         <Route exact path="/" component={Serve}/>
+						<Route path="/know" component={Know}/>
                         <Route path="/more" component={More}/>
                         <Route path="/cases" component={Cases}/>
                         <Route path="/chinese" component={Chinese}/>
