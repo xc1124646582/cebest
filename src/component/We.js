@@ -2,7 +2,50 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class We extends Component {
+    constructor(){
+        super()
+        this.state={
+            data:{
+                data_one:[],
+                data_two:[],
+                data_three:[],
+                data_four:[],
+                data_five:[],
+                data_six:[]
+            },
+            arr:[]
+        }
+    }
     componentDidMount(){
+        $.ajax({
+            // url:"http://192.168.43.25:8100/cebest/we",
+            url:"http://127.0.0.1:8100/cebest/we",
+            type:"get",
+            success:function (data) {
+                // console.log(data)
+                this.setState({
+                    data:{
+                        data_one:data[0],
+                        data_two:data[1],
+                        data_three:data[2],
+                        data_four:data[3],
+                        data_five:data[4],
+                        data_six:data[5]
+                    }
+                })
+            }.bind(this)
+        })
+        $.ajax({
+            // url:"http://192.168.43.25:8100/cebest/we_n",
+            url:"http://127.0.0.1:8100/cebest/we_n",
+            type:"get",
+            success:function (data) {
+                // console.log(data)
+                this.setState({
+                    arr:data
+                })
+            }.bind(this)
+        })
     	document.getElementById("wn1l").onmousemove=function(ev){
 		 			var divl=document.getElementById("wn1l").offsetLeft+100;
           var divt=document.getElementById("wn1l").offsetTop+100;
@@ -47,42 +90,32 @@ class We extends Component {
                         <img className="left aa" src="images/ly_logo37.png" id="wn1l" alt=""/>
                         <div className="my-ce-ultimate-txt left">
                             <img src="images/ly_logo38.png" alt=""/>
-                            <h2>CE ULTIMATE</h2>
-                            <p>中企高呈隶属于上市公司中国数码(00250.HK)旗下中企动力科技股份有限公司的高端定制品牌。成立至今，我们一直服务于世界500强、国内百强等行业巨头，从品牌梳理到客户转化，从需求分析到落地运营，由外及内，为高端客户提供纵深全线的互联网产品与服务</p>
+                            <h2>{this.state.data.data_one.titEn}</h2>
+                            <p>{this.state.data.data_one.con}</p>
                         </div>
                     </div>
                 </div>
                 <div className="my-num">
                     <ul className="clear">
-                        <li id="wn2li1">
-                            <h2>NO.1</h2>
-                            <p>
-                                <span>中国企业网站服务市场占有率第一</span>
-                                <span>赛迪顾问（CCID）2017权威发布</span>
-                            </p>
-                        </li>
-                        <li id="wn2li2">
-                            <h2>300+</h2>
-                            <p>
-                                <span>精英团队</span>
-                                <span>由行业各大高端定制网站公司精英组成</span>
-                            </p>
-                        </li>
-                        <li id="wn2li3">
-                            <h2>5000</h2>
-                            <p>
-                                <span>5000多个经典案例，涉及120多个行业</span>
-                                <span>30多家世界500强企业和200多家中国五百强企业</span>
-                            </p>
-                        </li>
+                        {
+                            this.state.arr.map(function (v,i) {
+                                return <li key={i} id={`wnli${v.id}`}>
+                                    <h2>{v.title}</h2>
+                                    <p>
+                                        <span>{v.con1}</span>
+                                        <span>{v.con2}</span>
+                                    </p>
+                                </li>
+                            })
+                        }
                     </ul>
                 </div>
                 <div className="my-future">
                     <div className="my-future-box clear">
                         <div className="my-future-l left">
-                            <h2>我们的愿景</h2>
+                            <h2>{this.state.data.data_two.tit}</h2>
                             <img src="images/ly_img08.png" alt=""/>
-                            <p>中企高呈一直致力于成为互联网领域的创新者和创建者，通过全案整合、搭建平台等方式，为针对中国企业的互联网市场提供最专业、最具价值的应用与服务。</p>
+                            <p>{this.state.data.data_two.con}</p>
                         </div>
                         <div className="my-future-r right">
                             <img className="my-future-img-top" src="images//ly_img10.png" id="wn3img" alt=""/>
@@ -102,10 +135,10 @@ class We extends Component {
                     <div className="pra cloud-img4" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-60px);"></div>
                 </div> 
                 <div className="ibox head-box">
-                    <div className="head-cn fnt_30 wow-cloud fadeInDown"  data-wow-duration="0.5s">中企 · 云</div>
+                    <div className="head-cn fnt_30 wow-cloud fadeInDown"  data-wow-duration="0.5s">{this.state.data.data_three.tit}</div>
                     <div className="bt-line wow-cloud fadeInDown" data-wow-duration="1s"><img src="images/ly_img07.png" alt=""/></div>
-                    <div className="head-en fnt_48 wow-cloud fadeInDown" data-wow-duration="1.5s">8 years</div>
-                    <div className="head-txt fnt_16 wow-cloud fadeInDown" data-wow-duration="2s">八年持续不断的研发与迭代，200人的PaaS+SaaS研发团队，使中企高呈拥有真正落地的云应用平台产品：中企云。为企业线上品牌落地，产品营销提供云服务与大数据支持。</div>
+                    <div className="head-en fnt_48 wow-cloud fadeInDown" data-wow-duration="1.5s">{this.state.data.data_three.titEn}</div>
+                    <div className="head-txt fnt_16 wow-cloud fadeInDown" data-wow-duration="2s">{this.state.data.data_three.con}</div>
                 </div>
                 <div className="ibox verti-box"></div>
             </div>
@@ -118,10 +151,10 @@ class We extends Component {
             <div className="w1200 prz">
                 {/* we-conhead*/}
                 <div className="mds-we-conhead">
-                <h2>服务优势</h2>
-                <p>Service Advantages</p>
+                <h2>{this.state.data.data_four.tit}</h2>
+                <p>{this.state.data.data_four.titEn}</p>
                 <p><img src="images/ly_img07.png" alt=""/></p>
-                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                <p>{this.state.data.data_four.con}</p>
                 </div>
                 <div className="us-char pra">
                     <div className="us-brain" id="wn4tou"></div>
@@ -164,10 +197,10 @@ class We extends Component {
                 <div className="w1200 prz">
                  {/* we-conhead*/}
                 <div className="mds-we-conhead">
-                <h2>服务优势</h2>
-                <p>Service Advantages</p>
+                <h2>{this.state.data.data_five.tit}</h2>
+                <p>{this.state.data.data_five.titEn}</p>
                 <p><img src="images/ly_img07.png" alt=""/></p>
-                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                <p>{this.state.data.data_five.con}</p>
                 </div>
                     <div className="tech-imgGr pra">
                     <div className="tech-img1 pra tech-img" id="wns1"></div>
@@ -183,10 +216,10 @@ class We extends Component {
                 <div className="mds-we-con7">
                 {/* we-conhead*/}
                 <div className="mds-we-conhead">
-                <h2>服务优势</h2>
-                <p>Service Advantages</p>
+                <h2>{this.state.data.data_six.tit}</h2>
+                <p>{this.state.data.data_six.titEN}</p>
                 <p><img src="images/ly_img06.png" alt=""/></p>
-                <p>以客户为中心，极致的客户体验<br/>在每个项目中都运用专业的项目管理知识及项目管理经验</p>                
+                <p>{this.state.data.data_six.con}</p>
                 </div>
                 
              {/*we-con7 */}   

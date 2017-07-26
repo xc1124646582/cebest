@@ -265,7 +265,7 @@
     cursor: pointer;
     color: #7d7d7d;
 }
-.my-careers .my-job .my-job-r ul li>span{
+.my-careers .my-job .my-job-r ul li h2>span{
     margin: 0 10px;
     color: #000;
 }

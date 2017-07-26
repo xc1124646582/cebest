@@ -33,15 +33,38 @@ class Careers extends Component {
 				'url':'http://192.168.43.25:8100/cebest/careers2',
 				'type':'get',
 				'success':function(opt){
-					
+                    // console.log(opt)
 					this.setState({
 						con2:opt
 					})
-					console.log(this.state.con2)
+
 				}.bind(this)
 			})
 
-
+        $.ajax({
+            // 'url':'http://192.168.43.25:8100/cebest/careers',
+            'url':'http://127.0.0.1:8100/cebest/careers',
+            'type':'get',
+            'success':function(data){
+                var arr=[]
+                // console.log(data)
+                this.setState({
+                    work:data
+                })
+                $(".my-job-r ul li").click(function () {
+                    $(this).find(".my-detail").stop(true).fadeToggle().parent().find("img").toggleClass("rot")
+                })
+                $(".my-job-r ul li").children(".my-detail").click(function (ev) {
+                    var e=ev||window.event
+                    if(e.stopPropagation){
+                        //非ie
+                        e.stopPropagation()
+                    }else{
+                        e.cancelBubble=true
+                    }
+                })
+            }.bind(this)
+        })
 
 
     	/*$.ajax({
@@ -56,18 +79,6 @@ class Careers extends Component {
 					console.log(opt)
 				}.bind(this)
 			})*/
-        $(".my-job-r ul li").click(function () {
-            $(this).find(".my-detail").stop(true).fadeToggle().parent().find("img").toggleClass("rot")
-        })
-        $(".my-job-r ul li").children(".my-detail").click(function (ev) {
-            var e=ev||window.event
-            if(e.stopPropagation){
-                //非ie
-                e.stopPropagation()
-            }else{
-                e.cancelBubble=true
-            }
-        })
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
@@ -127,50 +138,77 @@ class Careers extends Component {
                     <div className="my-job-r left">
                         <div>
                             <ul>
-                                <li>
-                                    <h2><span>大客户经理</span>Account Manager <img src="images/ly_icon38.png" alt=""/></h2>
-                                    <div className="my-detail">
-                                        <h3>岗位职责：</h3>
-                                        <div>
-                                            <p>1、<span>负责中企高呈大客户的直销项目开拓，商务沟通，并根据战略发展目标，制订年度、季度销售方案，并实施；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>2、<span>负责知名企业的客户关系维护和跟进；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>3、<span>对客户提出的需求能快速寻找相应的解决方案或专业意见，并推动和落实方案的处理结果；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>4、<span>负责商务谈判、合同签订工作等商务工作；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>5、<span>协调内部团队如策划部、创意部、项目管理部、产品部等部门为客户提供策略及实施服务。</span></p>
-                                        </div>
-                                        <h3>任职资格：</h3>
-                                        <div>
-                                            <p>1、<span>本科及以上学历，有网站建设销售经验，有销售管理工作经历；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>2、<span>有大项目销售经验，政府网站建设销售经验、大型企业集团销售经验者优先；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>3、<span>熟悉互联网市场和企业商业模式概念，有企业信息化策划分析经验；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>4、<span>能熟练撰写起草各种项目方案策划书，具备优秀的文案编辑、润色、组织、整理和撰写的能力；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>5、<span>具有丰富的客户资源和客户关系，业绩优秀；曾完成年度百万以上销售额优先；</span></p>
-                                        </div>
-                                        <div>
-                                            <p>6、<span>具备提案能力，有大型项目经验或知名品牌服务经验优先。</span></p>
-                                        </div>
-                                        <a href="">
-                                            <span className="">我要应聘</span>
-                                            <span>我要应聘</span>
-                                        </a>
-                                    </div>
-                                </li>
+                                {
+                                    this.state.work.map(function (v,i) {
+                                        return <li key={i}>
+                                            <h2><span>{v.work}</span>{v.duty}<img src="images/ly_icon38.png" alt=""/></h2>
+                                            <div className="my-detail">
+                                                <h3>岗位职责：</h3>
+                                                 {v.titlea.split("?").map(function (v,i) {
+                                                     return <div key={i}>
+                                                         <p>{i+1}、<span>{v}</span></p>
+                                                     </div>
+                                                 })}
+                                                <h3>任职资格：</h3>
+                                                {v.titleb.split("?").map(function (v,i) {
+                                                    return <div key={i}>
+                                                        <p>{i+1}、<span>{v}</span></p>
+                                                    </div>
+                                                })}
+                                                <a href="">
+                                                    <span className="">我要应聘</span>
+                                                    <span>我要应聘</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    })
+                                }
+                                {/*
+                                 <li>
+                                 <h2><span>大客户经理</span>Account Manager <img src="images/ly_icon38.png" alt=""/></h2>
+                                 <div className="my-detail">
+                                 <h3>岗位职责：</h3>
+                                 <div>
+                                 <p>1、<span>负责中企高呈大客户的直销项目开拓，商务沟通，并根据战略发展目标，制订年度、季度销售方案，并实施；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>2、<span>负责知名企业的客户关系维护和跟进；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>3、<span>对客户提出的需求能快速寻找相应的解决方案或专业意见，并推动和落实方案的处理结果；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>4、<span>负责商务谈判、合同签订工作等商务工作；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>5、<span>协调内部团队如策划部、创意部、项目管理部、产品部等部门为客户提供策略及实施服务。</span></p>
+                                 </div>
+                                 <h3>任职资格：</h3>
+                                 <div>
+                                 <p>1、<span>本科及以上学历，有网站建设销售经验，有销售管理工作经历；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>2、<span>有大项目销售经验，政府网站建设销售经验、大型企业集团销售经验者优先；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>3、<span>熟悉互联网市场和企业商业模式概念，有企业信息化策划分析经验；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>4、<span>能熟练撰写起草各种项目方案策划书，具备优秀的文案编辑、润色、组织、整理和撰写的能力；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>5、<span>具有丰富的客户资源和客户关系，业绩优秀；曾完成年度百万以上销售额优先；</span></p>
+                                 </div>
+                                 <div>
+                                 <p>6、<span>具备提案能力，有大型项目经验或知名品牌服务经验优先。</span></p>
+                                 </div>
+                                 <a href="">
+                                 <span className="">我要应聘</span>
+                                 <span>我要应聘</span>
+                                 </a>
+                                 </div>
+                                 </li>
+                                */}
                             </ul>
                         </div>
                     </div>

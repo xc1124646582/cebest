@@ -46,9 +46,9 @@
     color: #fff;
     padding: 0 0 0 60px;
 }
-#wn2li1{transition: 1s ;}
-#wn2li2{transition: 1s 0.3s;}
-#wn2li3{transition: 1s 0.6s;}
+#wnli1{transition: 1s ;}
+#wnli2{transition: 1s 0.3s;}
+#wnli3{transition: 1s 0.6s;}
 .my-we .my-num ul li:first-of-type{
     padding: 0;
 }
@@ -705,6 +705,7 @@ body.w1200{overflow: visible;height: auto;}
     color: #ff6600;
     text-transform: uppercase;
     font-family: 'Arial';
+    font-size: 34px;
     font-weight: bold;
 }
 .us-cloud .head-txt {
