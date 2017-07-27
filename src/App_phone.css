@@ -1,0 +1,323 @@
+@media screen and (max-width:414px){
+    /*最外层元素*/
+    .main{
+        width: 100%;
+    }
+    /*head*/
+    .head{
+        width: 100%;
+        height:2.70531rem;
+        position: fixed;
+        background: #000;
+        z-index: 99;
+    }
+    .logo{
+        display: none;
+    }
+    .logo_phone{
+        float: left;
+        display: block;
+        width: 4.9855rem;
+        height: 1.54589rem;
+        margin: 0.57971rem 0 0 0.77294rem;
+    }
+    .nav{
+        display: none;
+        position: fixed;
+        top: 2.70531rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        background: #000;
+    }
+    .nav li{
+        margin: 0;
+        width: 100%;
+        height: 2.85990rem;
+        line-height: 2.85990rem;
+        font-size: 0.61835rem;
+        border-top: 1px solid #181818;
+    }
+    .nav li span{
+        display: inline;
+        margin: 0 0 0 0.19323rem;
+        color: #c4c4c4;
+    }
+    .nav li p{
+        display: none;
+    }
+    .nav_btn{
+        display: block;
+        margin: 0.77294rem 0.77294rem 0 0;
+        float: right;
+        cursor: pointer;
+        height: 1.23671rem;
+        width: 1.15942rem;
+        position: relative;
+    }
+    .nav_btn span{
+        display: inline-block;
+        width: 1.15942rem;
+        height: 0.07729rem;
+        background-color: #fff;
+        position: absolute;
+        top: 0.61835rem;
+        left: 0;
+        transition: background-color 0.3s ease-out 0.1s;
+    }
+    .nav_btn span:before{
+        content: '';
+        display: inline-block;
+        width: 1.15942rem;
+        height: 0.07729rem;
+        background-color: #fff;
+        position: absolute;
+        top: -0.30917rem;
+        left: 0;
+        transition: transform 0.3s ease-out,top 0.5s ease 0.4s;
+        transform: rotate(0deg);
+    }
+    .nav_btn span:after{
+        content: '';
+        display: inline-block;
+        width: 1.15942rem;
+        height: 0.07729rem;
+        background-color: #fff;
+        position: absolute;
+        top: 0.30917rem;
+        left: 0;
+        transition: transform 0.3s ease-out,top 0.5s ease 0.4s;
+        transform: rotate(0deg);
+    }
+    .nav_btn .toggl{
+        background:transparent;
+    }
+    .nav_btn .toggl:before{
+        transition: top 0.5s ease, transform 0.3s ease-out 0.4s;
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav_btn .toggl:after{
+        transition: top 0.5s ease, transform 0.3s ease-out 0.4s;
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .cen-head{
+        width: 100%;
+        height: 2.70531rem;
+    }
+    /*foot top*/
+    .my-help{
+        height: 12.01932rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .my-help .my-help-mask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.7);
+    }
+    .my-help-join{
+        margin-top: 2.31884rem;
+    }
+    .my-help .my-help-mask h3{
+        height: 1.73913rem;
+        font-weight: normal;
+        color: #fff;
+        font-size: 0.77294rem;
+        text-align: center;
+        position: relative;
+    }
+    .my-help .my-help-mask h3 span{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width:3.86473rem;
+        height: 1px;
+        background: #fff;
+        margin: 0 auto;
+        transition: width 0.5s ease-out;
+    }
+    .my-help .my-help-mask h4{
+        font-weight: normal;
+        margin: 0.57971rem auto 0.77294rem;
+        line-height: 1.5;
+        font-size: 0.54106rem;
+        width: 14.454106rem;
+        color: #fff;
+        text-align: center;
+    }
+    .my-help .my-serve{
+        cursor: pointer;
+        width: 4.63768rem;
+        height: 1.15942rem;
+        line-height: 1.15942rem;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        color: #fff;
+        overflow: hidden;
+    }
+    .my-help .my-serve-p-one{
+        transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+    }
+    .my-help .my-serve-p-two{
+        transition: all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+        background: #fff;
+        color: #000;
+    }
+    .my-help .my-serve:hover .my-serve-p-one{
+        transform: translateY(-100%);
+    }
+    .my-help .my-serve:hover .my-serve-p-two{
+        transform: translateY(-100%);
+    }
+    .my-help .my-help-join:hover h3 span{
+        width: 1.93236rem;
+    }
+    /*foot*/
+    .my-footer{
+        background:#131313;
+        height: 10.89855rem;
+    }
+    .my-box{
+        width: 14.454106rem;
+        margin: 0 auto;
+    }
+    .my-footer-con{
+        border-bottom: 1px solid #7d7d7d;
+        height: 4.328502rem;
+        padding: 0.77294rem 0 0;
+        margin: 0 0 0.38647rem;
+        text-align: center;
+    }
+    .my-footer-con img{
+        width: 1.93236rem;
+    }
+    .my-copyright{
+        position: relative;
+    }
+    .my-copyright p{
+        color:#8f8f8f;
+        display: block;
+        float: none;
+        font-size: 0.46376rem;
+        height: 1.15942rem;
+        line-height: 1.15942rem;
+    }
+    .my-copyright p img{
+        margin: 0 0.19323rem 0 0;
+        width: 0.57971rem;
+    }
+    .my-copyright .my-copyright-center{
+        position: absolute;
+        top: 2.31884rem;
+        left: 0;
+        text-align: left;
+    }
+    .my-copyright .my-copyright-center span{
+        display: block;
+    }
+    /*侧栏 咨询*/
+    .fixed{
+        width: 2.31884rem;
+        position: fixed;
+        right: 0;
+        bottom: 0.19323rem;
+        z-index: 10;
+    }
+    .fixed .ly{
+        width: 2.31884rem;
+        height: 2.31884rem;
+        position: relative;
+        background: rgba(255,102,0,0.8);
+        text-align: center;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .fixed .ly img{
+        margin-top: 0.57971rem;
+        transition: all 0.5s;
+    }
+    .fixed .ly p{
+        color: #fff;
+        font-size: 0.46376rem;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    .fixed .ly:hover{
+        width: 3.09178rem;
+        height: 3.09178rem;
+        margin-top:-0.77294rem;
+        margin-left: -0.77294rem;
+    }
+    .fixed .ly:hover img{
+        margin-top: 0.57971rem;
+        opacity: 1;
+    }
+    .fixed .ly:hover p{
+        opacity: 1;
+    }
+    .fixed .tel{
+        background: rgba(0,0,0,0.8);
+        width: 2.31884rem;
+    }
+    .fixed .tel div{
+        position: relative;
+        transition: all 0.5s;
+        height: 2.70531rem;
+        text-align: center;
+        line-height: 2.70531rem;
+    }
+    .fixed .tel div p{
+        position: absolute;
+        color:#fff;
+        width: 0;
+        top: 0;
+        right: 2.31884rem;
+        background: rgba(0,0,0,0.8);
+        opacity: 0;
+    }
+    .fixed .tel div img{
+        vertical-align: middle;
+    }
+    .fixed .tel .tel_one{
+        height: 0;
+    }
+    .fixed .tel .tel_one img{
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    .fixed .tel .tel_two{
+
+    }
+    .fixed .tel:hover .tel_one{
+        height: 2.70531rem;
+    }
+    .fixed .tel:hover .tel_one img{
+        opacity: 1;
+    }
+    .fixed .tel:hover div p{
+        transition: all 0.5s 0.5s;
+        color:#fff;
+        width: 8.88888rem;
+        opacity: 1;
+    }
+    .fixed .top{
+        display: block;
+        cursor: pointer;
+        width: 2.31884rem;
+        height: 0;
+        transition: .7s all;
+        position: relative;
+        z-index: 15;
+    }
+}

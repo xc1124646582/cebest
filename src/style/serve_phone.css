@@ -1,0 +1,538 @@
+@media screen and (max-width:414px){
+    /*服务页*/
+    .servecon{
+        width: 100%;
+        overflow: hidden;
+        padding: 0 0 1.93236rem;
+    }
+    .servetitle{
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+        float: left;
+        width: 100%;
+    }
+    .servetitle h2{
+        margin-top: 0.77294rem;
+        margin-bottom: 0.38647rem;
+        font-size: 0.77294rem;
+        line-height: 1;
+    }
+    .servetitle>p:nth-child(2){
+        font-size: 0.54106rem;
+        color: #7D7D7D;
+    }
+    .servetitle>p:nth-child(4){
+        font-size: 0.46376rem;
+        color: #7D7D7D;
+    }
+    .servex{
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.46376rem 0 0.38647rem 0;
+        background: black;
+    }
+    .servelist {
+        margin-top: 0.57971rem;
+        width: 100%;
+    }
+    .servelist>li{
+        width: 33.3%;
+        height: 3.47826rem;
+        padding-right: 5%;
+        box-sizing: border-box;
+        float: left;
+        margin: 0;
+        position: relative;
+    }
+    .servelist>li>img{
+        display: block;
+        margin: 0 0 0 0.19323rem;
+    }
+    .servelist>li>p{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.73913rem;
+        margin: 0;
+        color: #7D7D7D;
+        font-size: 0.46376rem;
+    }
+    .scrvebtn{
+        width: 4.63768rem;
+        height: 1.15942rem;
+        margin-top: 0.77294rem;
+        display:block;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 1.15942rem;
+        overflow: hidden;
+    }
+    .scrvebtn>p{
+        width: 4.63768rem;
+        color: #000;
+        text-align: center;
+        transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+        line-height: 1.15942rem;
+        height: 1.15942rem;
+    }
+    .scrvebtn>p:nth-child(2){
+        background: #FF6600;
+        color: white;
+        opacity: 0;
+    }
+    .scrvebtn:hover>p:nth-child(1){
+        margin-top: -1.15942rem;
+        opacity: 0;
+    }
+    .scrvebtn:hover>p:nth-child(2){
+        opacity: 1;
+    }
+    .scrveconimg{
+        float: right;
+        width: 100%;
+        position: static;
+    }
+    .my-servecon-two{
+        width: 100%;
+        height: auto;
+        padding: 0 0 1.93236rem;
+        overflow: hidden;
+        background: #f60;
+    }
+    .my-servecon-two .my-scrvecon-l{
+        float: left;
+        width: 100%;
+        height: 100%;
+        padding: 0.38647rem;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .my-servecon-two .my-scrvecon-l .my-img-one{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .my-servecon-two .my-scrvecon-l .my-img-two{
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+    .my-servecon-two .my-scrvecon-r{
+        float: left;
+        width: 100%;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+    }
+    .my-servecon-two .my-scrvecon-r h2{
+        padding: 0.77294rem 0 0 0;
+        color:#fff;
+        font-weight: normal;
+        font-size: 0.77294rem;
+        line-height: 0.8;
+    }
+    .my-servecon-two .my-scrvecon-r h3{
+        margin: 0.38647rem 0 0 0;
+        color:#fff;
+        line-height: 1;
+        font-weight: normal;
+        font-size: 0.54106rem;
+    }
+    .my-servecon-two .my-scrvecon-r h4{
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.46376rem 0 0.38647rem 0;
+        background: #fff;
+    }
+    .my-servecon-two .my-scrvecon-r h5{
+        margin: 0;
+        color:#fff;
+        font-weight: normal;
+        font-size: 0.46376rem;
+    }
+    .my-servecon-two .my-scrvecon-r ul{
+        margin: 0.57971rem 0 0 0;
+        width: 100%;
+    }
+    .my-servecon-two .my-scrvecon-r ul li{
+        width: 33.3%;
+        height: 3.47826rem;
+        padding-right: 5%;
+        box-sizing: border-box;
+        float: left;
+        margin: 0;
+        position: relative;
+    }
+    .my-servecon-two .my-scrvecon-r ul li img{
+        display: block;
+        margin: 0 0 0 0.19323rem;
+    }
+    .my-servecon-two .my-scrvecon-r ul li p{
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.73913rem;
+        margin: 0;
+        font-size: 0.46376rem;
+    }
+    .my-servecon-two .my-scrvecon-r .scrvebtn{
+        width: 4.63768rem;
+        height: 1.15942rem;
+        margin: 0.77294rem 0 0;
+        display:block;
+        border: 1px solid #fff;
+        text-align: center;
+        overflow: hidden;
+        line-height: 1.15942rem;
+    }
+    .my-servecon-two .my-scrvecon-r .scrvebtn>p{
+        color: #fff;
+        text-align: center;
+        width: 4.63768rem;
+        transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+        line-height: 1.15942rem;
+        height: 1.15942rem;
+    }
+    .my-servecon-two .my-scrvecon-r .scrvebtn>p:nth-child(2){
+        background: #fff;
+        color: #f9771d;
+        opacity: 0;
+    }
+    .my-servecon-two .my-scrvecon-r .scrvebtn:hover>p:nth-child(1){
+        margin-top: -1.15942rem;
+        opacity: 0;
+    }
+    .my-servecon-two .my-scrvecon-r .scrvebtn:hover>p:nth-child(2){
+        opacity: 1;
+    }
+    .my-servecon-three{
+        width: 100%;
+        height: auto;
+        padding: 0 0 1.93236rem;
+        overflow: hidden;
+        background: #000;
+    }
+    .my-servecon-three .my-servecon-l{
+        width: 100%;
+        height: auto;
+        float: left;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+    }
+    .my-servecon-three .my-servecon-l h2{
+        color:#fff;
+        padding: 0.77294rem 0 0 0;
+        font-weight: normal;
+        font-size: 0.77294rem;
+        line-height: 0.8;
+    }
+    .my-servecon-three .my-servecon-l h3{
+        color: #7d7d7d;
+        margin: 0.38647rem 0 0 0;
+        line-height: 1;
+        font-weight: normal;
+        font-size: 0.54106rem;
+    }
+    .my-servecon-three .my-servecon-l h4{
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.46376rem 0 0.38647rem 0;
+        background: #fff;
+    }
+    .my-servecon-three .my-servecon-l h5{
+        color: #7d7d7d;
+        margin: 0;
+        font-weight: normal;
+        font-size: 0.46376rem;
+    }
+    .my-servecon-three .my-servecon-l ul{
+        margin: 0.57971rem 0 0 0;
+        width: 100%;
+    }
+    .my-servecon-three .my-servecon-l ul li{
+        width: 33.3%;
+        height: 3.47826rem;
+        padding-right: 5%;
+        box-sizing: border-box;
+        float: left;
+        margin: 0;
+        position: relative;
+    }
+    .my-servecon-three .my-servecon-l ul li img{
+        display: block;
+        margin: 0 0 0 0.19323rem;
+    }
+    .my-servecon-three .my-servecon-l ul li p{
+        color: #7d7d7d;position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.73913rem;
+        margin: 0;
+        font-size: 0.46376rem;
+    }
+    .my-servecon-three .my-servecon-l .scrvebtn{
+        width: 4.63768rem;
+        height: 1.15942rem;
+        margin: 0.77294rem 0 0;
+        border: 1px solid #fff;
+        display:block;
+        text-align: center;
+        overflow: hidden;
+        line-height: 1.15942rem;
+    }
+    .my-servecon-three .my-servecon-l .scrvebtn>p{
+        width: 4.63768rem;
+        color: #fff;
+        text-align: center;
+        transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+        line-height: 1.15942rem;
+        height: 1.15942rem;
+    }
+    .my-servecon-three .my-servecon-l .scrvebtn>p:nth-child(2){
+        background: #fff;
+        color: #f9771d;
+        opacity: 0;
+    }
+    .my-servecon-three .my-servecon-l .scrvebtn:hover>p:nth-child(1){
+        margin-top: -1.15942rem;
+        opacity: 0;
+    }
+    .my-servecon-three .my-servecon-l .scrvebtn:hover>p:nth-child(2){
+        opacity: 1;
+    }
+    .my-servecon-three .my-servecon-r{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.77294rem 0 0 0.77294rem;
+        float: left;
+    }
+    .my-servecon-three .my-servecon-r img{
+        width: 100%;
+        height: 100%;
+        position: static;
+        transform: translateY(0);
+    }
+    .my-serve-p-four{
+        width: 100%;
+        height: auto;
+        padding: 0 0 1.93236rem;
+        overflow: hidden;
+        background: #333;
+    }
+    .my-serve-p-four .my-servecon-l{
+        width: 100%;
+        height: 100%;
+        padding: 0.77294rem 0.38647rem 0 1.15942rem;
+        box-sizing: border-box;
+        float: left;
+        position: relative;
+    }
+    .my-serve-p-four .my-servecon-l img{
+        position: static;
+    }
+    .my-serve-p-four .my-servecon-l img:first-of-type{
+        width: 9.81642rem;
+        position: absolute;
+        left: 3.89855rem;
+        top: 0.78323rem;
+    }
+    .my-serve-p-four .my-servecon-l img:last-of-type{
+        width: 8.657004rem;
+    }
+    .my-serve-p-four .my-servecon-r{
+        width: 100%;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+        height: 100%;
+        float: left;
+    }
+    .my-serve-p-four .my-servecon-r h2{
+        color:#fff;
+        padding: 0.77294rem 0 0 0;
+        font-weight: normal;
+        font-size: 0.77294rem;
+        line-height: 0.8;
+    }
+    .my-serve-p-four .my-servecon-r h3{
+        margin: 0.38647rem 0 0 0;
+        color: #7d7d7d;
+        line-height: 1;
+        font-weight: normal;
+        font-size: 0.54106rem;
+    }
+    .my-serve-p-four .my-servecon-r h4{
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.46376rem 0 0.38647rem 0;
+        background: #fff;
+    }
+    .my-serve-p-four .my-servecon-r h5{
+        color: #7d7d7d;
+        margin: 0;
+        font-weight: normal;
+        font-size: 0.46376rem;
+    }
+    .my-serve-p-four .my-servecon-r ul{
+        margin: 0.57971rem 0 0 0;
+        width: 100%;
+    }
+    .my-serve-p-four .my-servecon-r ul li{
+        float:left;
+        width: 33.3%;
+        height: 3.47826rem;
+        padding-right: 5%;
+        color: #7d7d7d;
+        box-sizing: border-box;
+        margin: 0;
+        position: relative;
+    }
+    .my-serve-p-four .my-servecon-r ul li img{
+        display: block;
+        margin: 0 0 0 0.19323rem;
+    }
+    .my-serve-p-four .my-servecon-r ul li p{
+        color: #7d7d7d;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.73913rem;
+        margin: 0;
+        font-size: 0.46376rem;
+    }
+    .my-serve-p-four .my-servecon-r .scrvebtn{
+        width: 4.63768rem;
+        height: 1.15942rem;
+        margin: 0.77294rem 0 0;
+        display:block;
+        border: 1px solid #fff;
+        text-align: center;
+        overflow: hidden;
+        line-height: 1.15942rem;
+    }
+    .my-serve-p-four .my-servecon-r .scrvebtn>p{
+        width: 4.63768rem;
+        line-height: 1.15942rem;
+        height: 1.15942rem;
+        color: #fff;
+        text-align: center;
+        transition:all 0.6s cubic-bezier(0.785,0.135,0.150,0.860);
+    }
+    .my-serve-p-four .my-servecon-r .scrvebtn>p:nth-child(2){
+        background: #fff;
+        color: #f9771d;
+        opacity: 0;
+    }
+    .my-serve-p-four .my-servecon-r .scrvebtn:hover>p:nth-child(1){
+        margin-top: -1.15942rem;
+        opacity: 0;
+    }
+    .my-serve-p-four .my-servecon-r .scrvebtn:hover>p:nth-child(2){
+        opacity: 1;
+    }
+
+
+
+    .my-more-services{
+        height: auto;
+        font-family: "微软雅黑";
+        padding-top: 1.93236rem;
+        padding-bottom: 1.15942rem;
+        background: url("../images/ser_ico_bg.jpg") no-repeat;
+    }
+    .my-more-services h2{
+        text-align: center;
+        font-weight: normal;
+    }
+    .my-more-services h2 p{
+        width: 3.86473rem;
+        height: 0.77294rem;
+        margin: 0 auto 0.38647rem;
+        border-bottom: 1px solid #000;
+        color: #333;
+        font-size: 0.77294rem;
+        padding: 0 0 0.57971rem;
+    }
+    .my-more-services h2 span{
+        color: #7d7d7d;
+        font-size: 0.54106rem;
+        line-height: 0.54106rem;
+    }
+    .my-more-services ul{
+        width: 100%;
+        margin: 1.54589rem auto 0;
+    }
+    .my-more-services ul a{
+        float: left;
+        width: 50%;
+        height: 6.95652rem;
+        box-sizing: border-box;
+        margin: 0.77294rem 0 0 0;
+        padding-left: 5%;
+    }
+    .my-more-services ul li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .my-more-services ul li dt{
+        width: 100%;
+        height: 1.50724rem;
+        margin: 0 auto;
+        position: relative;
+    }
+    .my-more-services ul li dt img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .my-more-services ul li dd{
+        margin: 0.38647rem 0 0;
+    }
+    .my-more-services ul li dd h3{
+        text-align: center;
+        height: 2.525603rem;
+        line-height: 1.2;
+        color: #2e2d33;
+        font-weight: normal;
+        font-size: 0.54106rem;
+    }
+    .my-more-services ul li dd h3 .my-g{
+        display: none;
+    }
+    .my-more-services ul li dd h3 span{
+        display: block;
+        margin-top: 0.19323rem;
+    }
+    .my-more-services ul li dd h4{
+        width: 1.15942rem;
+        height: 1px;
+        background: #2e2d33;
+        margin: -1px auto 0.46376rem;
+    }
+    .my-more-services ul li dd h5{
+        text-align: center;
+        opacity: 0;
+        font-weight: normal;
+        line-height: 1.8;
+        transition: opacity 0.3s ease-out;
+    }
+    .my-more-services ul li dd h5 span{
+        padding: 0 0.19323rem;
+        color: #7d7d7d;
+        font-size: 14px;
+    }
+    .my-more-services ul li:hover dd h5{
+        opacity: 1;
+    }
+}
+
+
+

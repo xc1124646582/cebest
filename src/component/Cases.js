@@ -15,8 +15,8 @@ class Cases extends Component{
 				'url':'http://192.168.43.25:8100/cebest/cases1',
 				'type':'get',
 				'success':function(opt){
-					this.setState({cases1:opt});
 					console.log(opt)
+					this.setState({cases1:opt});
 				}.bind(this)
 			})
 	   		$.ajax({

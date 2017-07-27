@@ -18,8 +18,8 @@ class We extends Component {
     }
     componentDidMount(){
         $.ajax({
-            // url:"http://192.168.43.25:8100/cebest/we",
-            url:"http://127.0.0.1:8100/cebest/we",
+            url:"http://192.168.43.25:8100/cebest/we",
+            // url:"http://127.0.0.1:8100/cebest/we",
             type:"get",
             success:function (data) {
                 // console.log(data)
@@ -36,8 +36,8 @@ class We extends Component {
             }.bind(this)
         })
         $.ajax({
-            // url:"http://192.168.43.25:8100/cebest/we_n",
-            url:"http://127.0.0.1:8100/cebest/we_n",
+            url:"http://192.168.43.25:8100/cebest/we_n",
+            // url:"http://127.0.0.1:8100/cebest/we_n",
             type:"get",
             success:function (data) {
                 // console.log(data)

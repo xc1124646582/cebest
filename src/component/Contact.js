@@ -18,10 +18,21 @@ class Contact extends Component {
                 })
             }.bind(this)
         })
+        var po_cun,pr_zoom;
+        $(window).resize(function(){
+            if(window.screen.width>414){
+                //地图坐标
+                po_cun=39.789;
+                pr_zoom=18;
+            }else{
+                po_cun=39.7892;
+                pr_zoom=12;
+            }
+        }).resize();
         var BMap = window.BMap
         var map = new BMap.Map("allmap",{enableMapClick:false});//关闭底图可点功能
-        var point = new BMap.Point(116.5085,39.789);
-        map.centerAndZoom(point,18);
+        var point = new BMap.Point(116.5085,po_cun);
+        map.centerAndZoom(point,pr_zoom);
 
         map.enableScrollWheelZoom(true);
         map.setMapStyle({style:'googlelite'});
@@ -66,9 +77,9 @@ class Contact extends Component {
                             <span>{this.state.contact.addressEn}</span>
                         </h5>
                         <br/>
-                        <p>{this.state.contact.hotlineOne}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.contact.web}</p>
-                        <p>{this.state.contact.hotlineTwo}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.state.contact.emailOne}</p>
-                        <p>{this.state.contact.emailTwo}</p>
+                        <p><span>{this.state.contact.hotlineOne}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>{this.state.contact.web}</span></p>
+                        <p><span>{this.state.contact.hotlineTwo}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>{this.state.contact.emailOne}</span></p>
+                        <p><span>{this.state.contact.emailTwo}</span></p>
                     </div>
                     <img draggable="false" src="images/case_con01_bg2.png" alt=""/>
                 </div>
