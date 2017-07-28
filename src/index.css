@@ -1,4 +1,7 @@
-*{ margin: 0;padding: 0;}
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     overflow-x: hidden;
     font-size: 14px;
@@ -6,12 +9,40 @@ body{
     color: #333;
     font-family: "Microsoft Yahei","微软雅黑",arial,"\5b8b\4f53";
 }
-.left{float:left; display:inline;}
-.right{float:right; display:inline;}
-.clear:after{content:""; clear:both; display:block;}
-.clear{zoom: 1;}
-li{ list-style: none;}
-a:link{color: white;text-decoration: none;}
-a:visited{color: white;text-decoration: none;}
-a:hover{color: white;text-decoration: none;}
-a:active{color: white;text-decoration: none;}
+.left{
+    float:left;
+    display:inline;
+}
+.right{
+    float:right;
+    display:inline;
+}
+.clear:after{
+    content:"";
+    clear:both;
+    display:block;}
+.clear{
+    zoom: 1;
+}
+li{
+    list-style: none;
+}
+img{
+    border:none;
+}
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+a:active{
+    color: white;
+    text-decoration: none;
+}

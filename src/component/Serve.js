@@ -49,6 +49,7 @@ class Serve extends Component{
                     <div className="serve">
                         {/*Brand Website start*/}
                         <div className="servecon clear">
+                            <img src="images/serv_con01_img.jpg" alt="" className="scrveconimg"/>
                             <div className="servetitle">
                                 <h2>品牌网站</h2>
                                 <p>Brand Website</p>
@@ -72,9 +73,8 @@ class Serve extends Component{
                                     </li>
                                 </ul>
                                 <Link to="/know" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
+                            </div>
                         </div>
-                        <img src="images/serv_con01_img.jpg" alt="" className="scrveconimg"/>
-                    </div>
                     {/*Brand Website end*/}
 
                     {/*E-Commerce start*/}
@@ -118,6 +118,9 @@ class Serve extends Component{
 
                     {/*Event Marketing start*/}
                     <div className="my-servecon-three clear">
+                        <div className="my-servecon-r">
+                            <img src="images/serv_con03_img.png" alt=""/>
+                        </div>
                         <div className="my-servecon-l">
                             <h2>活动营销</h2>
                             <h3>Event Marketing</h3>
@@ -142,9 +145,6 @@ class Serve extends Component{
                                 </li>
                             </ul>
                             <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
-                        </div>
-                        <div className="my-servecon-r">
-                            <img src="images/serv_con03_img.png" alt=""/>
                         </div>
                     </div>
                     {/*Event Marketing end*/}
@@ -194,7 +194,7 @@ class Serve extends Component{
                                             <img src={v.img} alt=""/>
                                         </dt>
                                         <dd>
-                                            <h3>{v.title1}  /  {v.title2}</h3>
+                                            <h3>{v.title1}  <span className="my-g">/</span>  <span>{v.title2}</span></h3>
                                             <h4></h4>
                                             <h5>
                                             {

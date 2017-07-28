@@ -2,15 +2,33 @@
 .casescon1{
     width: 100%;
 }
-.casescon1>div{opacity: 0;}
-.casescon1>div:nth-child(1){opacity: 1;}
-.casescon1>div:nth-child(2){opacity: 1;}
-.casescon1>div:nth-child(3){opacity: 1;}
-.casescon1>div:nth-child(4){opacity: 1;}
-.casescon1>div:nth-child(5){opacity: 1;}
-.casescon1>div:nth-child(6){opacity: 1;}
-.casescon1>div:nth-child(7){opacity: 1;}
-.casescon1>div:nth-child(8){opacity: 1;}
+.casescon1>div{
+    opacity: 0;
+}
+.casescon1>div:nth-child(1){
+    opacity: 1;
+}
+.casescon1>div:nth-child(2){
+    opacity: 1;
+}
+.casescon1>div:nth-child(3){
+    opacity: 1;
+}
+.casescon1>div:nth-child(4){
+    opacity: 1;
+}
+.casescon1>div:nth-child(5){
+    opacity: 1;
+}
+.casescon1>div:nth-child(6){
+    opacity: 1;
+}
+.casescon1>div:nth-child(7){
+    opacity: 1;
+}
+.casescon1>div:nth-child(8){
+    opacity: 1;
+}
 .casescon1-n{
     width: 25%;
     float: left;
@@ -51,6 +69,7 @@
 }
 .casescon2-title{
     text-align: center;
+    font-weight: normal;
 }
 .casescon2x{
     margin: 0 auto;

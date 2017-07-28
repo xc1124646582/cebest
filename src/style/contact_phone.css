@@ -1,0 +1,110 @@
+@media screen and (max-width:414px){
+    /*contact css*/
+    .my-contact{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin-top: -2.70531rem;
+    }
+    .my-contact .my-contact-us{
+        width: 100%;
+        position: static;
+        padding: 0.77294rem;
+        box-sizing: border-box;
+        background-color: #303030;
+        text-align: left;
+    }
+    .my-contact .my-contact-us img{
+        display: none;
+        transform: translate(150px);
+        transform-origin: bottom left;
+        transition: 1s;
+        animation: d_img 1s forwards;
+    }
+    @keyframes  d_img{
+        to{transform: translate(150px);}
+    }
+    .my-contact .my-contact-us .my-contact-us-n{
+        position: static;
+        z-index: 9;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        animation: d_n .8s forwards 1s;
+        opacity: 1;
+    }
+    @keyframes  d_n{
+        to{
+            right: 80px;
+            opacity: 1;
+        }
+    }
+    .my-contact .my-contact-us .my-contact-us-n h2{
+        font-weight: normal;
+        line-height: 0.9;
+        font-size: 0.77294rem;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h3{
+        width: 3.86473rem;
+        height: 1px;
+        background: #f60;
+        display: block;
+        margin: 0.57971rem auto 0.57971rem 0;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h4{
+        font-weight: normal;
+        line-height: 0.8;
+        font-size: 0.54106rem;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h5{
+        margin: 0.77294rem 0;
+        font-size: 0.46376rem;
+        font-weight: normal;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h5 span{
+        color: #e4e4e4;
+        display: block;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h5 span:first-of-type+span{
+        font-size: 0.46376rem;
+        color: #c4c4c4;
+    }
+    .my-contact .my-contact-us .my-contact-us-n h5:after{
+        content: "";
+        display: block;
+        width: 19.32367rem;
+        height: 1px;
+        background: #3b3b3f;
+        float: right;
+        margin-top: 0.77294rem;
+    }
+    .my-contact .my-contact-us .my-contact-us-n p{
+        color: #e4e4e4;
+    }
+    .my-contact .my-contact-us .my-contact-us-n p span{
+        display: block;
+        margin: 0 0 0.38647rem;
+    }
+    .my-contact-us img{
+        position: absolute;
+        transform: translateX(150px);
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+    }
+    #allmap{
+        width: 100%;
+        height: 17.391304rem;
+        overflow: hidden;
+        position: relative;
+        z-index: 8;
+        background-color: rgb(243, 241, 236);
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    #allmap .anchorBL,#allmap .BMap_cpyCtrl{
+        display: none;
+    }
+
+
+}

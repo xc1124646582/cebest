@@ -15,7 +15,7 @@ class Careers extends Component {
 				'url':'http://192.168.43.25:8100/cebest/careers1',
 				'type':'get',
 				'success':function(opt){
-					
+					// console.log(opt)
 					this.setState({
 						title:opt
 					})
@@ -43,8 +43,8 @@ class Careers extends Component {
     	
 
         $.ajax({
-            // 'url':'http://192.168.43.25:8100/cebest/careers',
-            'url':'http://127.0.0.1:8100/cebest/careers',
+            'url':'http://192.168.43.25:8100/cebest/careers',
+            // 'url':'http://127.0.0.1:8100/cebest/careers',
             'type':'get',
             'success':function(data){
                 var arr=[]
@@ -143,7 +143,7 @@ class Careers extends Component {
                             {
                                     this.state.work.map(function (v,i) {
                                         return <li key={i}>
-                                            <h2><span>{v.work}</span>{v.duty}<img src="images/ly_icon38.png" alt=""/></h2>
+                                            <h2><span>{v.work}</span><span>{v.duty}</span><img src="images/ly_icon38.png" alt=""/></h2>
                                             <div className="my-detail">
                                                 <h3>岗位职责：</h3>
                                                  {v.titlea.split("?").map(function (v,i) {
