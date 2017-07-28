@@ -40,6 +40,7 @@ class Careers extends Component {
 
 				}.bind(this)
 			})
+    	
 
         $.ajax({
             // 'url':'http://192.168.43.25:8100/cebest/careers',
@@ -64,7 +65,8 @@ class Careers extends Component {
                     }
                 })
             }.bind(this)
-        })
+        }) 
+
 
 
     	/*$.ajax({
@@ -138,7 +140,7 @@ class Careers extends Component {
                     <div className="my-job-r left">
                         <div>
                             <ul>
-                                {
+                            {
                                     this.state.work.map(function (v,i) {
                                         return <li key={i}>
                                             <h2><span>{v.work}</span>{v.duty}<img src="images/ly_icon38.png" alt=""/></h2>
@@ -163,6 +165,7 @@ class Careers extends Component {
                                         </li>
                                     })
                                 }
+                                
                                 {/*
                                  <li>
                                  <h2><span>大客户经理</span>Account Manager <img src="images/ly_icon38.png" alt=""/></h2>
