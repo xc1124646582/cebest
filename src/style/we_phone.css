@@ -1,0 +1,766 @@
+@media screen and (max-width:414px){
+    /*we css*/
+    .my-we .my-ce-ultimate{
+        height: 16.23188rem;
+        background: url(../images/ly_bg10.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .my-we .my-ce-ultimate .my-we-box{
+        max-width: 85%;
+        width: 85%;
+        padding: 0.38647rem 0.77294rem 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        height: 15.84541rem;
+    }
+    .my-we .my-ce-ultimate .my-we-box>img{
+        width: 3.78743rem;
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .aa{
+        position: relative;
+    }
+    .my-we .my-ce-ultimate .my-ce-ultimate-txt{
+        width: 100%;
+        margin:0.77294rem 0 0 0;
+    }
+    .my-we .my-ce-ultimate .my-ce-ultimate-txt img{
+        width: 4.63768rem;
+        display: block;
+        margin: 0 auto;
+    }
+    .my-we .my-ce-ultimate .my-ce-ultimate-txt h2{
+        color: #FFF;
+        margin: 0.38647rem 0 0.57971rem;
+        font-size: 0.54106rem;
+        text-align: center;
+        font-weight: normal;
+    }
+    .my-we .my-ce-ultimate .my-ce-ultimate-txt p{
+        font-size: 0.46376rem;
+        color: #e4e4e4;
+        line-height: 1.00483rem;
+    }
+    .my-we .my-num {
+        padding: 1.15942rem 0 0.96618rem 0;
+        background: #ff6600;
+    }
+    .my-we .my-num ul{
+        max-width: 90%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+    }
+    .my-we .my-num ul li{
+        float: left;
+        width: 11.67149rem;
+        height: 5.797101rem;
+        position: relative;
+        top: 0;
+        opacity: 1;
+        box-sizing: border-box;
+        color: #fff;
+        padding: 0;
+    }
+    #wnli1{
+        transition: 1s ;
+    }
+    #wnli2{
+        transition: 1s 0.3s;
+    }
+    #wnli3{
+        transition: 1s 0.6s;
+    }
+    .my-we .my-num ul li:first-of-type{
+        padding: 0;
+    }
+    .my-we .my-num ul li:last-of-type p{
+        border: none;
+    }
+    .my-we .my-num ul li h2{
+        font-size: 1.85507rem;
+        line-height: 1.5;
+    }
+    .my-we .my-num ul li p{
+        border: none;
+    }
+    .my-we .my-num ul li p span{
+        display: block;
+        font-size: 0.51rem;
+    }
+    .my-we .my-num ul li p span:first-of-type{
+        margin: 0.38647rem 0 0.19323rem;
+        font-size: 0.54106rem;
+    }
+    .my-we .my-future{
+        height: 15.45893rem;
+        background: url(../images/ly_bg11.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .my-we .my-future .my-future-box{
+        max-width: 1200px;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+    }
+    .my-we .my-future .my-future-l{
+        margin: 1.54589rem 0 0;
+        width: 11.98067rem;
+    }
+    .my-we .my-future .my-future-l h2{
+        color: #000;
+        font-size: 0.77294rem;
+        font-weight: normal;
+    }
+    .my-we .my-future .my-future-l img{
+        display: block;
+        width: 2.782608rem;
+        height: 1.391304rem;
+    }
+    .my-we .my-future .my-future-l p{
+        color: #7d7d7d;
+        font-size: 0.46376rem;
+        line-height: 1.00483rem;
+    }
+    .my-we .my-future .my-future-r{
+        width: 7.42028rem;
+        height: 5.60386rem;
+        margin: 0.9rem 3rem 0 0;
+        position: relative;
+    }
+    .my-we .my-future .my-future-r img{
+        width: 3.28502rem;
+        height: 3.28502rem;
+    }
+    .my-we .my-future .my-future-r .my-future-img-top{
+        display: block;
+        position: static;
+        margin:  0 auto;
+    }
+    .my-we .my-future .my-future-r .my-future-img-left{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .my-we .my-future .my-future-r .my-future-img-right{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    /*we-conhead */
+    .mds-we-conhead{
+        width: 100%;
+        text-align: center;
+        padding-top: 64px;
+    }
+    .mds-we-conhead>p:nth-child(4){
+        line-height: 26px;
+    }
+
+    /*we-con6*/
+    .mds-we-con6{
+        width: 100%;
+        color: white;
+        height: 600px;
+        background: #FF6600;}
+    .w1200 {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        overflow: hidden;
+    }
+    .prz {
+        position: relative;
+        zoom: 1;
+    }
+    .us-tech .tech-imgGr {
+        width: 788px;
+        height: 340px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -394px;
+    }
+
+    .pra {
+        position: absolute;
+    }
+    .us-tech .tech-img1 {
+        width: 532px;
+        height: 155px;
+        background: url(../images/ly_img19.png) no-repeat left bottom;
+        background-size: cover;
+        bottom: 0;
+        left: 50%;
+        margin-left: -266px;
+        opacity: 0;
+        transition: opacity 0.8s 0.5s;
+    }
+    .us-tech .tech-img2 {
+        width: 0;
+        height: 253px;
+        background: url(../images/ly_img20.png) no-repeat left bottom;
+        background-size: cover;
+        left: 0;
+        bottom: 0;
+        transition: opacity 0.8s 0.8s,width 0.8s 0.8s;
+    }
+    .us-tech .tech-img3.move {
+        width: 279px;
+    }
+    .us-tech .tech-img3 {
+        width: 0;
+        height: 253px;
+        background: url(../images/ly_img21.png) no-repeat right bottom;
+        background-size: cover;
+        right: 0;
+        bottom: 0;
+        transition: opacity 0.8s 0.8s,width 0.8s 0.8s;
+    }
+    .us-tech .tech-img4 {
+        width: 188px;
+        height: 143px;
+        background: url(../images/ly_img18.png) no-repeat center;
+        background-size: cover;
+        top: 0;
+        left: 50%;
+        margin-left: -94px;
+        opacity: 0;
+        transition: opacity 0.8s 1.5s;
+    }
+    .us-tech .tech-img5 {
+        width: 67px;
+        height: 12px;
+        background: url(../images/ly_img22.png) no-repeat center;
+        background-size: cover;
+        top: 139px;
+        left: 50%;
+        margin-left: -33px;
+        opacity: 0;
+        transition: opacity 0.8s 1.5s;
+    }
+
+
+
+    .mds-we-con7{
+        width: 100%;
+        padding-bottom: 113px;
+    }
+    body.w1200{
+        overflow: visible;
+        height: auto;
+    }
+    .us-service .ser-proc {
+        width: 830px;
+        height: 330px;
+        margin: 140px auto 0 auto;
+    }
+    .prz {
+        position: relative;
+        zoom: 1;
+    }
+    .us-service .ser-proc .ser-step.move {
+        opacity: 1;
+    }
+    .us-service .ser-proc .ser-step1 {
+        left: 0;
+        top: 0;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step {
+        width: 43px;
+        height: 43px;
+        background: url(../images/ly_serPoint.png);
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+    }
+    .pra {
+        position: absolute;
+    }
+    .step-txt {
+        opacity: 0;
+    }
+    .step-txt1 {
+        left: -78px;
+        top: -60px;
+        transition: all 0.5s 0.4s;
+    }
+    .us-service .ser-proc .ser-curve1.move {
+        width: 94px;
+    }
+    .us-service .ser-proc .ser-curve1 {
+        width: 0;
+        height: 94px;
+        background: url(../images/ly_ser01.png) no-repeat ;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        left: 43px;
+        top: 22px;
+        transition: all 0.5s;
+    }
+    .step-txt .cn {
+        color: #000;
+    }
+    .fnt_16 {
+        font-size: 14px;
+    }
+    .step-txt .en {
+        color: #969696;
+        font-size: 14px;
+        margin-top: 5px;
+        white-space: nowrap;
+    }
+    .us-service .ser-proc .ser-step2 {
+        left: 114px;
+        top: 114px;
+        transition: all 0.5s;
+    }
+
+    .step-txt2 {
+        left: -58px;
+        top: 110px;
+        transition: all 0.5s 0.8s;
+    }
+    .us-service .ser-proc .ser-curve2.move {
+        width: 94px;
+    }
+    .us-service .ser-proc .ser-curve2 {
+        width: 0;
+        height: 94px;
+        background: url(../images/ly_ser02.png) no-repeat left top;
+        background-size: cover;
+        left: 133px;
+        top: 155px;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step3 {
+        left: 223px;
+        top: 224px;
+        transition: all 0.5s;
+    }
+    .step-txt3 {
+        left: 216px;
+        top: 286px;
+        transition: all 0.5s 1.2s;
+    }
+    .us-service .ser-proc .ser-curve3.move {
+        width: 94px;
+    }
+    .us-service .ser-proc .ser-curve3 {
+        width: 0;
+        height: 94px;
+        background: url(../images/ly_ser03.png) no-repeat left top;
+        background-size: cover;
+        left: 261px;
+        top: 155px;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step4 {
+        left: 334px;
+        top: 114px;
+        transition: all 0.5s;
+    }
+    .step-txt4 {
+        left: 382px;
+        top: 170px;
+        transition: all 0.5s 1.6s;
+    }
+    .us-service .ser-proc .ser-curve4.move {
+        width: 94px;
+    }
+    .us-service .ser-proc .ser-curve4 {
+        width: 0;
+        height: 94px;
+        background: url(../images/ly_ser04.png) no-repeat left top;
+        background-size: cover;
+        left: 356px;
+        top: 23px;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step5 {
+        left: 446px;
+        top: 1px;
+        transition: all 0.5s;
+    }
+    .step-txt5 {
+        left: 438px;
+        top: -65px;
+        transition: all 0.5s 2s;
+    }
+    .us-service .ser-proc .ser-curve5.move {
+        width: 93px;
+    }
+    .us-service .ser-proc .ser-curve5 {
+        width: 0;
+        height: 93px;
+        background: url(../images/ly_ser05.png) no-repeat left top;
+        background-size: cover;
+        left: 487px;
+        top: 23px;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step6 {
+        left: 560px;
+        top: 112px;
+        transition: all 0.5s;
+    }
+    .step-txt6 {
+        left: 618px;
+        top: 108px;
+        transition: all 0.5s 2.4s;
+    }
+    .us-service .ser-proc .ser-curve6.move {
+        width: 224px;
+    }
+    .us-service .ser-proc .ser-curve6 {
+        width: 0;
+        height: 96px;
+        background: url(../images/ly_ser06.png) no-repeat left top;
+        background-size: cover;
+        left: 580px;
+        top: 152px;
+        transition: all 0.5s;
+    }
+    .us-service .ser-proc .ser-step7 {
+        left: 782px;
+        top: 112px;
+        transition: all 0.5s;
+    }
+    .step-txt7 {
+        left: 780px;
+        top: 50px;
+        transition: all 0.5s 2.8s;
+    }
+
+
+
+
+    .us-design .us-char {
+        width: 265px;
+        height: 314px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -132px;
+    }
+    .pra {
+        position: absolute;
+    }
+    .us-design {
+        width: 100%;
+        height: 600px;
+    }
+    .us-design .us-char .us-brain {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: url(../images/ly_img17.png) no-repeat center;
+        background-size: cover;
+        transition: all 0.8s 1s;
+    }
+    .us-charGr1 .char-line.move {
+        width: 316px;
+    }
+    .us-charGr1 .char-line {
+        width: 0;
+        height: 87px;
+        background: url(../images/ly_line01.png) no-repeat right bottom;
+        background-size: cover;
+        right: 193px;
+        top: 2px;
+        transition: all 0.5s 1.5s;
+    }
+    .us-charGr1 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr1 .char-txt {
+        width: 0;
+        height: 36px;
+        background: url(../images/ly_de01.png);
+        background-size: cover;
+        left: -243px;
+        top: -25px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 1.5s,opacity 0.5s 1.5s;
+    }
+    .us-charGr2 .char-line.move {
+        width: 188px;
+    }
+    .us-charGr2 .char-line {
+        width: 0;
+        height: 20px;
+        background: url(../images/ly_line02.png) no-repeat right bottom;
+        background-size: cover;
+        right: 248px;
+        top: 76px;
+        transition: all 0.5s 2.5s;
+    }
+    .us-charGr2 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr2 .char-txt {
+        width: 0;
+        height: 35px;
+        background: url(../images/ly_de02.png);
+        background-size: cover;
+        left: -110px;
+        top: 50px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 2.5s,opacity 0.5s 2.5s;
+    }
+    .us-charGr3 .char-line.move {
+        width: 304px;
+    }
+    .us-charGr3 .char-line {
+        width: 0;
+        height: 90px;
+        background: url(../images/ly_line03.png) no-repeat right bottom;
+        background-size: cover;
+        right: 236px;
+        top: 115px;
+        transition: all 0.5s 3.5s;
+    }
+    .us-charGr3 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr3 .char-txt {
+        width: 0;
+        height: 32px;
+        background: url(../images/ly_de03.png);
+        background-size: cover;
+        left: -274px;
+        top: 178px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 3.5s,opacity 0.5s 3.5s;
+    }
+    .us-charGr4 .char-line.move {
+        width: 261px;
+    }
+    .us-charGr4 .char-line {
+        width: 0;
+        height: 143px;
+        background: url(../images/ly_line04.png) no-repeat right bottom;
+        background-size: cover;
+        right: 204px;
+        top: 146px;
+        transition: all 0.5s 4.5s;
+    }
+    .us-charGr4 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr4 .char-txt {
+        width: 0;
+        height: 37px;
+        background: url(../images/ly_de04.png);
+        background-size: cover;
+        left: -200px;
+        top: 256px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 4.5s,opacity 0.5s 4.5s;
+    }
+    .us-charGr5 .char-line.move {
+        width: 165px;
+    }
+    .us-charGr5 .char-line {
+        width: 0;
+        height: 45px;
+        background: url(../images/ly_line05.png) no-repeat left top;
+        background-size: cover;
+        left: 254px;
+        top: 41px;
+        transition: all 0.5s 5.5s;
+    }
+    .us-charGr5 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr5 .char-txt {
+        width: 0;
+        height: 33px;
+        background: url(../images/ly_de05.png);
+        background-size: cover;
+        left: 298px;
+        top: 16px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 5.5s,opacity 0.5s 5.5s;
+    }
+    .us-charGr6 .char-line.move {
+        width: 276px;
+    }
+    .us-charGr6 .char-line {
+        width: 0;
+        height: 37px;
+        background: url(../images/ly_line06.png) no-repeat left top;
+        background-size: cover;
+        left: 249px;
+        top: 109px;
+        transition: all 0.5s 6.5s;
+    }
+    .us-charGr6 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .us-charGr6 .char-txt {
+        width: 0;
+        height: 37px;
+        background: url(../images/ly_de06.png);
+        background-size: cover;
+        left: 338px;
+        top: 83px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 6.5s,opacity 0.5s 6.5s;
+    }
+    .us-charGr7 .char-line.move {
+        width: 219px;
+    }
+    .us-charGr7 .char-line {
+        width: 0;
+        height: 90px;
+        background: url(../images/ly_line07.png) no-repeat left top;
+        background-size: cover;
+        left: 213px;
+        top: 182px;
+        transition: all 0.5s 7.5s;
+    }
+    .us-charGr7 .char-txt.move {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .us-charGr7 .char-txt {
+        width: 0;
+        height: 35px;
+        background: url(../images/ly_de07.png);
+        background-size: cover;
+        left: 278px;
+        top: 245px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: translateY 0.5s 7.5s,opacity 0.5s 7.5s;
+    }
+
+
+
+
+
+
+    .us-cloud {
+        width: 100%;
+        height: 21.64251rem;
+        background: #323232;
+    }
+    .us-cloud-box {
+        height: 9.73913rem;
+        width: 9.73913rem;
+        margin-top:2.259rem;
+        left: 50%;
+        margin-left: -4.86956rem;
+        bottom: 0.38647rem;
+    }
+    .prz {
+        position: relative;
+        zoom: 1;
+    }
+    .fl {
+        float: left;
+        display: inline;
+    }
+    .us-cloud-box div.move {
+        opacity: 1;
+    }
+    .us-cloud-box .cloud-img1 {
+        width: 4.328502rem;
+        height: 2.47342rem;
+        background: url(../images/ly_img13.png) no-repeat center;
+        background-size: cover;
+        z-index: 2;
+        right: -0.11594rem;
+        bottom: 2.24154rem;
+        transition: opacity 0.8s 0.5s;
+    }
+    .us-cloud-box div.move {
+        opacity: 1;
+    }
+    .us-cloud-box .cloud-img2 {
+        width: 3.32367rem;
+        height: 0.57971rem;
+        background: url(../images/ly_img14.png) no-repeat center;
+        background-size: 150% auto;
+        bottom: 1.19806rem;
+        right: 0.38647rem;
+        transition: opacity 0.8s 1s;
+    }
+    .us-cloud-box div.move {
+        opacity: 1;
+    }
+    .us-cloud-box .cloud-img3 {
+        width: 6.76328rem;
+        height: 5.56521rem;
+        background: url(../images/ly_img15.png) no-repeat center;
+        background-size: cover;
+        bottom: 1.97101rem;
+        left: 2.70531rem;
+        transition: opacity 0.8s 1.5s;
+    }
+    .us-cloud-box div.move {
+        opacity: 1;
+    }
+    .us-cloud-box .cloud-img4 {
+        width: 9.73913rem;
+        height: 8.03864rem;
+        background: url(../images/ly_img16.png) no-repeat center;
+        background-size: cover;
+        left: 0;
+        top: 0;
+        transition: opacity 0.8s 2s;
+    }
+    .us-cloud .head-box {
+        margin-left: 1.46859rem;
+        margin-top: 2.31884rem;
+    }
+    .ibox {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.46376rem;
+        letter-spacing: normal;
+    }
+    .us-cloud .head-cn {
+        font-size: 0.77294rem;
+        color: #FFF;
+    }
+    .us-cloud .bt-line {
+        width: 2.47342rem;
+        height: 1.391304rem;
+    }
+    .us-cloud .head-en {
+        color: #ff6600;
+        text-transform: uppercase;
+        font-family: 'Arial';
+        font-size: 1.15942rem;
+        font-weight: bold;
+    }
+    .us-cloud .head-txt {
+        color: #d6d6d6;
+        font-size: 0.46376rem;
+        line-height: 1.8;
+        width: 90%;
+        padding: 0 2% 0 0;
+        box-sizing: border-box;
+    }
+
+}

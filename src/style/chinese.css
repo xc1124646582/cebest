@@ -9,6 +9,7 @@
 }
 .chinese-con1 h1{
     color: white;
+    font-weight: normal;
     margin-bottom: 35px;
     text-align: center;
 }
@@ -141,13 +142,21 @@
     margin-top: 60px;
     line-height: 21px;
 }
+.chinese-con-n>div:nth-child(2) h4{
+    font-weight: normal;
+    color: #333;
+}
 .chinese-con-n>div:nth-child(2) p{
-    color: #858579;
-    font-size: 14px;}
-.chinese-con-n-ul { border-top: 1px solid #C3C3BA;
+    color: #7d7d7d;
+    font-size: 14px;
+}
+.chinese-con-n-ul {
+    border-top: 1px solid #C3C3BA;
     padding-top: 28px;
-    margin-top: 30px;}
-.chinese-con-n-ul li{ float: left;
+    margin-top: 30px;
+}
+.chinese-con-n-ul li{
+    float: left;
     background: url(../images/dian.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -203,7 +212,8 @@
     right: 80px;
     bottom: 73px;
 }
-.chinese-con4-right{ width: 35%;
+.chinese-con4-right{
+    width: 35%;
     float: left;
     margin-left: 5%;
     margin-top: 150px;
@@ -223,14 +233,17 @@
     background: #262626;
     color: white;
 }
+.chinese-con5 .chinese-con4-left{
+    float: right;
+}
 .chinese-con5-x{
     background: white;
     display: inline-block;
 }
 .chinese-con5-left{
     text-align: right;
-    margin-right: 5px;
-    margin-left: 0;
+    margin-right: 0;
+    margin-left: 5%;
 }
 .chinese-con6{
     width: 100%;
