@@ -236,8 +236,8 @@
     .my-careers .my-job .my-job-l h2{
         color: #000;
         position: relative;
-        opacity: 0;
-        top: -2.31884rem;
+        opacity: 1;
+        top: 0;
         transition:  1s ;
         font-size: 0.54106rem;
         font-weight: normal;
@@ -247,22 +247,22 @@
         width: 3.82608rem;
         height: 1.89371rem;
         position: relative;
-        opacity: 0;
-        top: -2.31884rem;
+        opacity: 1;
+        top: 0;
         transition:  1.2s  0.2s;
     }
     .my-careers .my-job .my-job-l p{
         color: #7d7d7d;
         position: relative;
-        opacity: 0;
-        top: -2.31884rem;
+        opacity: 1;
+        top: 0;
         transition:  1.4s  0.4s;
         line-height: 1.15942rem;
     }
     .my-careers .my-job .my-job-r{
         margin: 1.15942rem 0 0;
         width: 100%;
-        height: 19.32367rem;
+        height: auto;
         border-left: none;
     }
     .my-careers .my-job .my-job-r>div{
@@ -284,14 +284,13 @@
         color: #7d7d7d;
     }
     .my-careers .my-job .my-job-r ul li h2>span{
-        display: block;
-        margin: 0 0 0 0.38647rem;
+        margin: 0 0 0 0.38647;
         color: #000;
     }
     .my-careers .my-job .my-job-r ul li img{
         float: right;
-        margin-right: 0.38647rem;
-        margin-top: -0.96618rem;
+        margin-right: 30px;
+        margin-top: 6px;
         transition: all 0.5s;
     }
     .my-careers .my-job .my-job-r ul li .rot{

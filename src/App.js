@@ -17,7 +17,9 @@ import './style/more.css';
 import './style/cases.css';
 import './style/cases_phone.css';
 import './style/chinese.css';
+import './style/chinese_phone.css';
 import './style/we.css';
+import './style/we_phone.css';
 import './style/careers.css';
 import './style/careers_phone.css';
 import './style/contact.css';
@@ -110,10 +112,28 @@ class Index extends Component {
 			document.getElementById("head").style.height="2.70531rem";
 			$(".scrvecon2img").css("transform","translateY(0)")
 			$(".scrvecon4img").css("marginLeft",0)
+			$($(".chinese-con4-left>img:nth-child(1)").get(1)).css("marginLeft","0");
 			if (tops>0){
 				document.getElementById("top").style.height="2.31884rem";
 			}else{
 				document.getElementById("top").style.height="0";
+			}
+			if(window.location.href=="http://localhost:3000/chinese"){
+				if(tops>=0){
+					document.getElementById("cn2r").style.left="0";
+					document.getElementById("cn2r").style.opacity="1";
+				}
+			}else if(window.location.href=="http://localhost:3000/careers"){
+				if(tops>=400){
+					$(".my-careers .my-why h2").css("top","0");
+					$(".my-careers .my-why h2").css("opacity","1");
+					$(".my-careers .my-why img").css("top","0");
+					$(".my-careers .my-why img").css("opacity","1");
+					$(".my-careers .my-why p").css("top","0");
+					$(".my-careers .my-why p").css("opacity","1");
+					$(".my-careers .my-why a").css("top","0");
+					$(".my-careers .my-why a").css("opacity","1");
+				}
 			}
 		}
 

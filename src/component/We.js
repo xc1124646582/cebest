@@ -128,12 +128,7 @@ class We extends Component {
                 
                 <div className="us-cloud">
             <div className="w1200 cleargap">
-                <div className="fl us-cloud-box prz">
-                    <div className="pra cloud-img1" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-20px);"></div>
-                    <div className="pra cloud-img2" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-30px);"></div>
-                    <div className="pra cloud-img3" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-50px);"></div>
-                    <div className="pra cloud-img4" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-60px);"></div>
-                </div> 
+
                 <div className="ibox head-box">
                     <div className="head-cn fnt_30 wow-cloud fadeInDown"  data-wow-duration="0.5s">{this.state.data.data_three.tit}</div>
                     <div className="bt-line wow-cloud fadeInDown" data-wow-duration="1s"><img src="images/ly_img07.png" alt=""/></div>
@@ -141,6 +136,12 @@ class We extends Component {
                     <div className="head-txt fnt_16 wow-cloud fadeInDown" data-wow-duration="2s">{this.state.data.data_three.con}</div>
                 </div>
                 <div className="ibox verti-box"></div>
+                <div className="fl us-cloud-box prz">
+                    <div className="pra cloud-img1" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-20px);"></div>
+                    <div className="pra cloud-img2" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-30px);"></div>
+                    <div className="pra cloud-img3" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-50px);"></div>
+                    <div className="pra cloud-img4" data-center-center="transform:translateY(0px);" data-top="transform:translateY(-60px);"></div>
+                </div>
             </div>
         </div>
                 

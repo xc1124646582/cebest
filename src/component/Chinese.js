@@ -74,17 +74,17 @@ class Chinese extends Component{
 
                         {this.state.chinesebox.map(function(v,i){
                         return  <div key={i} className="chinese-con-n">
-<img src={v.img} alt=""/>
-<div><h4>{v.titl1}</h4>
-<p>{v.titl2}</p></div>
-<ul className="chinese-con-n-ul clear">
-                                            {
-                                            this.state.chinesebox[i].cons.split("?").map(function(con,j){
-                                                return <li key={j}>{con}</li>
-                                            })
-                                            }
-</ul>
-</div>
+                            <img src={v.img} alt=""/>
+                            <div><h4>{v.titl1}</h4>
+                            <p>{v.titl2}</p></div>
+                            <ul className="chinese-con-n-ul clear">
+                                {
+                                this.state.chinesebox[i].cons.split("?").map(function(con,j){
+                                    return <li key={j}>{con}</li>
+                                })
+                                }
+                            </ul>
+                            </div>
                         }.bind(this))}
 
 
@@ -110,15 +110,15 @@ class Chinese extends Component{
 
 
 <div className="chinese-con4 chinese-con5 clear">
-<div className="chinese-con4-right chinese-con5-left">
-<p>{this.state.chinese4.title}</p>
-<p>{this.state.chinese4.fottext}</p>
-<p className="chinese-con4-x chinese-con5-x"></p>
-<p>{this.state.chinese4.con}</p>
-</div>
-<div className="chinese-con4-left">
-<img src="images/cl_a_img02.jpg"  alt=""/>
-</div>
+    <div className="chinese-con4-left">
+        <img src="images/cl_a_img02.jpg"  alt=""/>
+    </div>
+    <div className="chinese-con4-right chinese-con5-left">
+        <p>{this.state.chinese4.title}</p>
+        <p>{this.state.chinese4.con}</p>
+        <p className="chinese-con4-x chinese-con5-x"></p>
+        <p>{this.state.chinese4.fottext}</p>
+    </div>
 </div>
 
 <div className="chinese-con6" id="chinesecon6">
