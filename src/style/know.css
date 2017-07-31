@@ -21,22 +21,22 @@
     }
 }
 .know-bank{
-	    position: absolute;
+    position: absolute;
     z-index: 1;
     width: 0;
-        clip: rect(0px, 1920px, 1000px, 0px);
+    clip: rect(0px, 1920px, 1000px, 0px);
     height: 450px;
     bottom: 0;
     left: 0px;
     padding-bottom: 20%;
+    background-image: url(../images/brand_bg.png);
     background-repeat: no-repeat;
-    	background-image: url(../images/brand_bg.png);
-    background-size: cover 40%;
-        animation: animateOne linear 3s forwards;}
+    background-size: cover;
+    animation: animateOne linear 3s forwards;}
 .my-know-one h3{
     width: 100px;
     height: 1px;
-        z-index: 99;
+    z-index: 99;
     margin: 40px auto 30px;
     background: #262626;
 
@@ -120,7 +120,7 @@
     background:url(../images/cl_case02.jpg) no-repeat center top;
     position: relative;
 }
-.my-know-four h2{
+.my-know-four .h2{
     position: absolute;
     width: 180px;
     left: 10%;
@@ -130,15 +130,15 @@
     padding: 30px;
     font-weight: normal;
 }
-.my-know-four h2 h3{
+.my-know-four .h2 h3{
     font-size: 18px;
     font-weight: normal;
 }
-.my-know-four h2 p{
+.my-know-four .h2 p{
     margin: 10px 0 0;
     font-size: 14px;
 }
-.my-know-four h2 p span{
+.my-know-four .h2 p span{
     margin: 0 10px 0 0;
 }
 

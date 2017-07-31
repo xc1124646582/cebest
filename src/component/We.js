@@ -128,7 +128,6 @@ class We extends Component {
                 
                 <div className="us-cloud">
             <div className="w1200 cleargap">
-
                 <div className="ibox head-box">
                     <div className="head-cn fnt_30 wow-cloud fadeInDown"  data-wow-duration="0.5s">{this.state.data.data_three.tit}</div>
                     <div className="bt-line wow-cloud fadeInDown" data-wow-duration="1s"><img src="images/ly_img07.png" alt=""/></div>
@@ -154,7 +153,7 @@ class We extends Component {
                 <div className="mds-we-conhead">
                 <h2>{this.state.data.data_four.tit}</h2>
                 <p>{this.state.data.data_four.titEn}</p>
-                <p><img src="images/ly_img07.png" alt=""/></p>
+                <p><img src="images/ly_img08.png" alt=""/></p>
                 <p>{this.state.data.data_four.con}</p>
                 </div>
                 <div className="us-char pra">
@@ -218,7 +217,7 @@ class We extends Component {
                 {/* we-conhead*/}
                 <div className="mds-we-conhead">
                 <h2>{this.state.data.data_six.tit}</h2>
-                <p>{this.state.data.data_six.titEN}</p>
+                <p>{this.state.data.data_six.titEn}</p>
                 <p><img src="images/ly_img06.png" alt=""/></p>
                 <p>{this.state.data.data_six.con}</p>
                 </div>

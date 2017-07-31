@@ -14,6 +14,7 @@ import './style/serve.css';
 import './style/serve_phone.css';
 import './style/know.css';
 import './style/more.css';
+import './style/more_phone.css';
 import './style/cases.css';
 import './style/cases_phone.css';
 import './style/chinese.css';
@@ -134,7 +135,63 @@ class Index extends Component {
 					$(".my-careers .my-why a").css("top","0");
 					$(".my-careers .my-why a").css("opacity","1");
 				}
+			}else if(window.location.href=="http://localhost:3000/we"){
+				if(tops>=1300){
+					document.getElementById("wn4tou").style.opacity="1";
+					document.getElementById("tou1text").style.width="5.719806rem";
+					document.getElementById("tou1text").style.opacity="1";
+					document.getElementById("tou1lin").style.width="5.41062rem";
+					document.getElementById("tou2text").style.width="2.125603rem";
+					document.getElementById("tou2text").style.opacity="1";
+					document.getElementById("tou2lin").style.width="4.09661rem";
+					document.getElementById("tou3text").style.width="1.62318rem";
+					document.getElementById("tou3text").style.opacity="1";
+					document.getElementById("tou3lin").style.width="5.21739rem";
+					document.getElementById("tou4text").style.width="4.01932rem";
+					document.getElementById("tou4text").style.opacity="1";
+					document.getElementById("tou4lin").style.width="6.99516rem";
+					document.getElementById("tou5text").style.width="3.55555rem";
+					document.getElementById("tou5text").style.opacity="1";
+					document.getElementById("tou5lin").style.width="3.94202rem";
+					document.getElementById("tou6text").style.width="5.21739rem";
+					document.getElementById("tou6text").style.opacity="1";
+					document.getElementById("tou6lin").style.width="5.17874rem";
+					document.getElementById("tou7text").style.width="3.09178rem";
+					document.getElementById("tou7text").style.opacity="1";
+					document.getElementById("tou7lin").style.width="4.251207rem";
+
+					document.getElementById("tou1text").style.marginLeft=0;
+					document.getElementById("tou2text").style.marginLeft=0;
+					document.getElementById("tou3text").style.marginLeft=0;
+					document.getElementById("tou4text").style.marginLeft=0;
+					document.getElementById("tou5text").style.marginLeft=0;
+					document.getElementById("tou6text").style.marginLeft=0;
+					document.getElementById("tou7text").style.marginLeft=0;
+				}
+				if(tops>=1950){
+					document.getElementById("wns1").style.opacity="1";
+					document.getElementById("wns2").style.width="4.251207rem";
+					document.getElementById("wns3").style.width="4.251207rem";
+					document.getElementById("wns4").style.opacity="1";
+					document.getElementById("wns5").style.opacity="1";
+				}
+				if(tops>=2200){
+					$(".ser-step").css("opacity","1");
+					$(".step-txt").css("opacity","1");
+					$(".sers").css("width","1.27536rem");
+					$(".ser-curve6 ").css("width","3.09178rem");
+				}
+			}else if(window.location.href.indexOf('know')!=-1){
+				if (tops>=710){
+					$(".my-know-two").css({"position":"static","z-index":"-4","top":"90px","left":"0","right":"0","margin":"0"});
+					$(".my-know-three").css({"margin-top":"0"});
+				}
+				if(tops<710){
+					$(".my-know-two").css({"position":"static","margin-top":"0"});
+					$(".my-know-three").css({"margin-top":"0"});
+				}
 			}
+
 		}
 
     };
