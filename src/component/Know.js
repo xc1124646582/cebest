@@ -38,10 +38,10 @@ class Know extends Component{
                     <p>从品牌定位出发，分析品牌特性及业务需求，<br/>从互联网角度制定品牌的全线策略，并提供全套技术支持及网站延展服务。</p>
                 </div>
                 <div className="my-know-four">
-                    <h2>
+                    <div className="h2">
                         <h3>方正集团</h3>
                         <p><span>集团官网</span><span>响应式</span></p>
-                    </h2>
+                    </div>
                 </div>
                 {/*help start*/}
                 <div className="my-help">

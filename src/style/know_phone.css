@@ -1,0 +1,167 @@
+@media screen and (max-width:414px){
+    .my-know-one{
+        height:auto;
+        background: #f6f6f6 url(../images/cl_c01_bg.jpg) no-repeat center top;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -5;
+        padding-bottom: 1.93236rem;
+    }
+    .my-know-one h2{
+        text-align: center;
+        padding: 1.93236rem 0 0;
+        font-size: 0.77294rem;
+        z-index: 99;
+        line-height: 0.9;
+        font-weight: normal;
+        color: #000;
+    }
+    @keyframes  animateOne{
+        to{
+            width: 87%;
+        }
+    }
+    .know-bank{
+        position: absolute;
+        z-index: 1;
+        width: 0;
+        clip: rect(0px, 1920px, 1000px, 0px);
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        padding-bottom:0;
+        background-repeat: no-repeat;
+        background-image: url(../images/brand_bg.png);
+        background-size: cover;
+        animation: animateOne linear 3s forwards;
+    }
+    .my-know-one h3{
+        width: 3.86473rem;
+        height: 1px;
+        z-index: 99;
+        margin: 0.77294rem auto 0.57971rem;
+        background: #262626;
+    }
+    .my-know-one p{
+        text-align: center;
+        width: 100%;
+        padding: 0 0.77294rem;
+        box-sizing: border-box;
+        margin: 0;
+        color: #7d7d7d;
+        font-size: 0.46376rem;
+        z-index: 99;
+        line-height: 2.1;
+    }
+    .my-know-one p br{
+        display: none;
+    }
+    .my-know-two{
+        margin-top: 0;
+        padding-bottom: 1.15942rem;
+        height:auto;
+        background: #262626 url(../images/cl_logo_bg.jpg) no-repeat center;
+    }
+    .my-know-two .my-know-box{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .my-know-two img{
+        width: 50%;
+        display: block;
+        position: static;
+        left:0;
+        top: 0;
+    }
+    .my-know-two .my-know600{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.77294rem;
+        float: right;
+    }
+    .my-know-two .my-know600 h2{
+        padding-top: 1.15942rem;
+        color: #fff;
+        line-height: 1;
+        font-weight: normal;
+        font-size: 0.77294rem;
+    }
+    .my-know-two .my-know600 h2 span{
+        color: #cecece;
+        padding-left: 0.57971rem;
+        font-size: 0.54106rem;
+    }
+    .my-know-two .my-know600 h3{
+        background: #7d7d7d;
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.77294rem 0 0.57971rem;
+    }
+    .my-know-two .my-know600 p{
+        font-size: 0.46376rem;
+        color: #cecece;
+    }
+    .my-know-three{
+        height: auto;
+        padding-bottom: 1.15942rem;
+        background: #e4e4e4;
+    }
+    .my-know-three h2{
+        text-align: center;
+        font-weight: normal;
+        color: #262626;
+        line-height: 0.9;
+        font-size: 0.77294rem;
+        padding-top: 1.93236rem;
+    }
+    .my-know-three h3{
+        background: #383838;
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.77294rem auto 0.57971rem;
+    }
+    .my-know-three p{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.77294rem;
+        text-align: center;
+        color: #7d7d7d;
+        font-size: 0.46376rem;
+        line-height: 1.5;
+    }
+    .my-know-four{
+        height: 9.66183rem;
+        background:url(../images/cl_case02.jpg) no-repeat center top;
+        position: relative;
+        background-size: cover;
+    }
+    .my-know-four .h2{
+        position: absolute;
+        width: 25%;
+        left: 0;
+        top: 35%;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 0.38647rem;
+        font-weight: normal;
+    }
+    .my-know-four .h2 h3{
+        font-size: 0.54106rem;
+        font-weight: normal;
+    }
+    .my-know-four .h2 p{
+        margin: 0;
+        font-size: 0.46376rem;
+    }
+    .my-know-four .h2 p span{
+        display: block;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+
+

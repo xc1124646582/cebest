@@ -1,0 +1,91 @@
+@media screen and (max-width:414px){
+    .my-more .my-icd{
+        background: url("../images/ly_bg01.jpg") no-repeat center bottom;
+        background-size: cover;
+        overflow-x: hidden;
+        height: 17.3913043rem;
+    }
+    .my-more .my-icd h2{
+        padding-top: 1.93236rem;
+        color: #f6f6f6;
+        font-weight: normal;
+        text-align: center;
+        line-height: 1;
+        font-size: 0.77294rem;
+    }
+    .my-more .my-icd h3{
+        background: #FFF;
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.57971rem auto 0 auto;
+    }
+    .my-more .my-icd p{
+        color: #a7a7a7;
+        margin-top: 0.57971rem;
+        text-align: center;
+        font-family: Arial;
+        line-height: 1;
+        font-size: 0.54106rem;
+    }
+    .my-more .my-icd div{
+        text-align: center;
+        margin-top: 0.8rem;
+        padding: 0 0.6rem;
+        opacity: 0.85;
+        line-height: 1.5;
+        font-size: 0.61835rem;
+        color: white;
+    }
+    .my-more .my-our-customers{
+        background: #fff;
+        padding-bottom: 1.93236rem;
+    }
+    .my-more .my-more-box{
+        max-width: 1200px;
+        width: 96%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 0.77294rem;
+    }
+    .my-more .my-our-customers h2{
+        padding-top: 1.93236rem;
+        color: #000;
+        font-weight: normal;
+        text-align: center;
+        line-height: 1;
+        font-size: 0.77294rem;
+    }
+    .my-more .my-our-customers h3{
+        background: #000;
+        width: 3.86473rem;
+        height: 1px;
+        margin: 0.57971rem auto 0 auto;
+    }
+    .my-more .my-our-customers p{
+        color: #a7a7a7;
+        margin-top: 0.57971rem;
+        text-align: center;
+        font-family: Arial;
+        line-height: 1;
+        font-size: 0.54106rem;
+    }
+    .my-more .my-our-customers ul li{
+        float: left;
+        width: 50%;
+        text-align: center;
+        position: relative;
+        border-bottom: 1px solid #dadada;
+    }
+    .my-more .my-our-customers ul li:last-of-type{
+        border: none;
+    }
+    .my-more .my-our-customers ul li img{
+        vertical-align: middle;
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+}

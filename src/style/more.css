@@ -26,12 +26,14 @@
     line-height: 1;
     font-size: 18px;
 }
-.my-more .my-icd div{ text-align: center;
-margin-top: 48px;
-opacity: 0.85;
-line-height: 48px;
-font-size: 18px;
-color: white;}
+.my-more .my-icd div{
+    text-align: center;
+    margin-top: 48px;
+    opacity: 0.85;
+    line-height: 48px;
+    font-size: 18px;
+    color: white;
+}
 .my-more .my-our-customers{
     background: #fff;
     padding-bottom: 50px;

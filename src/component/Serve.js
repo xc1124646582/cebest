@@ -3,7 +3,9 @@ import $ from 'jquery';
 import Know from './Know';
 import More from './More';
 import './../style/know.css';
+import './../style/know_phone.css';
 import './../style/more.css';
+import './../style/more_phone.css';
 
 import {
     BrowserRouter as Router,

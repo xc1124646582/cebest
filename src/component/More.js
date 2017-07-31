@@ -16,7 +16,9 @@ class More extends Component{
             'url':'http://192.168.43.25:8100/cebest/gengduo',
             'type':'get',
             'success':function(opt){
-                this.setState({gengduo:opt[href-1]})
+                this.setState({
+					gengduo:opt[href-1]
+				})
                 console.log(opt)
                 $(".my-icd h2").text(this.state.gengduo.title1)
                 $(".my-icd p").text(this.state.gengduo.title2)
@@ -45,8 +47,7 @@ class More extends Component{
 					<p id="mtext"></p>
 					<div>
 
-
-</div>
+					</div>
 				</div>
 				{/*icd end*/}
 				<div className="my-our-customers">
