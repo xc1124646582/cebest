@@ -33,13 +33,15 @@
 }
 .servelist>li{
     list-style: none;
-    margin-bottom: 34px;
-    margin-right: 122px;
+    margin-top: 10px;
+    margin-right: 50px;
+    width:130px;
     float: left;
 }
 .servelist>li>img{
+    margin-left: 13px;
     display: block;
-    margin: 0 auto;
+    margin-bottom: 25px;
 }
 .servelist>li>p{
     margin-top: 9px;

@@ -18,7 +18,11 @@ class Serve extends Component{
         super();
         this.state={
             gengduo:[],
-            gengduotit:[]
+            gengduotit:[],
+            know_one:[],
+            know_two:[],
+            know_three:[],
+            know_four:[]
         }
     };
     componentDidMount=function () {
@@ -26,16 +30,43 @@ class Serve extends Component{
             'url':'http://192.168.43.25:8100/cebest/gengduo',
             'type':'get',
             'success':function(opt){
-                this.setState({gengduo:opt})
-                console.log(opt)
+                // console.log(opt);
+                this.setState({
+                    gengduo:opt
+                });
                 $(".my-more-services ul a").click(function () {
                     (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
                 })
             }.bind(this)
-        })
+        });
+        $.ajax({
+            // 'url':'http://127.0.0.1:8100/cebest/know',
+            'url':'http://192.168.43.25:8100/cebest/know',
+            'type':'get',
+            'success':function(opt) {
+                // console.log(opt);
+                for (var i in opt) {
+                    if (opt[i].con=='1') {
+                        this.state.know_one.push(opt[i])
+                    }else if (opt[i].con=='2'){
+                        this.state.know_two.push(opt[i])
+                    }else if (opt[i].con=='3'){
+                        this.state.know_three.push(opt[i])
+                    }else if (opt[i].con=='4'){
+                        this.state.know_four.push(opt[i])
+                    }
+                };
+                this.setState({
+                    know_one:this.state.know_one,
+                    know_two:this.state.know_two,
+                    know_three:this.state.know_three,
+                    know_four:this.state.know_four
+                });
+            }.bind(this)
+        });
         $(".scrvebtn").click(function () {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
-        })
+        });
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
@@ -58,23 +89,16 @@ class Serve extends Component{
                                 <p className="servex"></p>
                                 <p>以营销为导向，让品牌网站更有意义。</p>
                                 <ul className="servelist clear">
-                                    <li><img src="images/serv_con01_ico01.png" alt=""/>
-                                    <p>品牌网站</p>
-                                    </li>
-                                    <li><img src="images/serv_con01_ico02.png" alt=""/>
-                                    <p>品牌网站</p>
-                                    </li>
-                                    <li><img src="images/serv_con01_ico03.png" alt=""/>
-                                    <p>品牌网站</p>
-                                    </li>
-                                    <li><img src="images/serv_con01_ico04.png" alt=""/>
-                                    <p>品牌网站</p>
-                                    </li>
-                                    <li><img src="images/serv_con01_ico05.png" alt=""/>
-                                    <p>品牌网站</p>
-                                    </li>
+                                    {
+                                        this.state.know_one.map(function(v,i) {
+                                            return <li key={i}>
+                                                 <img src={v.img} alt=""/>
+                                                 <p>{v.tit}</p>
+                                            </li>
+                                        })
+                                    }
                                 </ul>
-                                <Link to="/know" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
+                                <Link to="/know?1" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
                             </div>
                         </div>
                     {/*Brand Website end*/}
@@ -91,28 +115,16 @@ class Serve extends Component{
                             <h4></h4>
                             <h5>以用户为中心，数据分析为基础的电商平台，让您的客户在体验时更满意。</h5>
                             <ul className="clear">
-                                <li>
-                                <img src="images/serv_con02_ico01.png" alt=""/>
-                                <p>B2B平台</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con02_ico02.png" alt=""/>
-                                <p>B2C商城</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con02_ico03.png" alt=""/>
-                                <p>企业供销平台</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con02_ico04.png" alt=""/>
-                                <p>电商整体解决方案</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con02_ico05.png" alt=""/>
-                                <p>移动应用</p>
-                                </li>
+                                {
+                                    this.state.know_two.map(function(v,i) {
+                                        return <li key={i}>
+                                             <img src={v.img} alt=""/>
+                                             <p>{v.tit}</p>
+                                        </li>
+                                    })
+                                }
                             </ul>
-                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?2" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*E-Commerce end*/}
@@ -129,24 +141,16 @@ class Serve extends Component{
                             <h4></h4>
                             <h5>符合客户整体营销策略，开放式、联结型的线上营销落地介质的规划与建设。</h5>
                             <ul className="clear">
-                                <li>
-                                <img src="images/serv_con03_ico01.png" alt=""/>
-                                <p>活动Minisite</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con03_ico02.png" alt=""/>
-                                <p>H5制作</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con03_ico03.png" alt=""/>
-                                <p>会员营销</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con03_ico04.png" alt=""/>
-                                <p>互动传播</p>
-                                </li>
+                                {
+                                    this.state.know_three.map(function(v,i) {
+                                        return <li key={i}>
+                                             <img src={v.img} alt=""/>
+                                             <p>{v.tit}</p>
+                                        </li>
+                                    })
+                                }
                             </ul>
-                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?3" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*Event Marketing end*/}
@@ -164,20 +168,16 @@ class Serve extends Component{
                             <h4></h4>
                             <h5>便捷沟通、高效协作，通过互联网力量提升企业运营效率。</h5>
                             <ul className="clear">
-                                <li>
-                                <img src="images/serv_con04_ico01.png" alt=""/>
-                                <p>企业协同</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con04_ico02.png" alt=""/>
-                                <p>APP设计与开发</p>
-                                </li>
-                                <li>
-                                <img src="images/serv_con04_ico03.png" alt=""/>
-                                <p>技术运维</p>
-                                </li>
+                                {
+                                    this.state.know_four.map(function(v,i) {
+                                        return <li key={i}>
+                                             <img src={v.img} alt=""/>
+                                             <p>{v.tit}</p>
+                                        </li>
+                                    })
+                                }
                             </ul>
-                            <Link to="/know" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?4" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*Business System end*/}

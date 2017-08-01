@@ -5,10 +5,27 @@ class Know extends Component{
     constructor(){
         super();
         this.state={
+            know:[]
         }
     };
     componentDidMount=function () {
-        
+        var con=window.location.href.split("?")[1]
+        $.ajax({
+            // 'url':'http://127.0.0.1:8100/cebest/know',
+            'url':'http://192.168.43.25:8100/cebest/know',
+            'type':'get',
+            'success':function(opt) {
+                // console.log(opt);
+                for (var i in opt) {
+                    if (opt[i].con==con) {
+                        this.state.know.push(opt[i]);
+                    }
+                };
+                this.setState({
+                    know:this.state.know
+                });
+            }.bind(this)
+        })
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
@@ -36,6 +53,15 @@ class Know extends Component{
                     <h2>专业视角，规范流程</h2>
                     <h3></h3>
                     <p>从品牌定位出发，分析品牌特性及业务需求，<br/>从互联网角度制定品牌的全线策略，并提供全套技术支持及网站延展服务。</p>
+                    <ul>
+                        {
+                            this.state.know.map(function (v,i) {
+                                return <li key={i}>
+                                    <img src={v.img} alt=""/>
+                                </li>
+                            })
+                        }
+                    </ul>
                 </div>
                 <div className="my-know-four">
                     <div className="h2">

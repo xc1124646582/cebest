@@ -132,6 +132,14 @@
         font-size: 0.46376rem;
         line-height: 1.5;
     }
+    .my-know-three ul{
+        margin: 2.23rem 0 0 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .my-know-three ul li{
+
+    }
     .my-know-four{
         height: 9.66183rem;
         background:url(../images/cl_case02.jpg) no-repeat center top;
