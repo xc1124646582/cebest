@@ -18,21 +18,23 @@ class More extends Component{
             'success':function(opt){
                 this.setState({
 					gengduo:opt[href-1]
-				})
-                console.log(opt)
-                $(".my-icd h2").text(this.state.gengduo.title1)
-                $(".my-icd p").text(this.state.gengduo.title2)
-                $(".my-icd div").html(this.state.gengduo.content)
+				});
+                console.log(opt);
+                $(".my-icd h2").text(this.state.gengduo.title1);
+                $(".my-icd p").text(this.state.gengduo.title2);
+                $(".my-icd div").html(this.state.gengduo.content);
             }.bind(this)
-        })
+        });
         $.ajax({
             'url':'http://192.168.43.25:8100/cebest/more',
             'type':'get',
             'success':function(opt){
-                this.setState({img:opt})
-                console.log(opt)
+                this.setState({
+					img:opt
+				});
+                // console.log(opt)
             }.bind(this)
-        })
+        });
 		setTimeout(function () {
 			$(".my-talk_window").show()
 		},200)
