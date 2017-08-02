@@ -34,12 +34,27 @@ class Index extends Component {
     constructor(){
         super();
       	this.state={
-			chins:true
+			chins:true,
+			logo1:null,
+			logo2:null
 		};
         this.data={"nav":[{"tita":"服务","titEn":"Service","titb":"/"},{"tita":"案例","titEn":"Cases","titb":"/cases"},{"tita":"中企·云","titEn":"Cloud","titb":"/chinese"},{"tita":"我们","titEn":"About","titb":"/we"},{"tita":"人才","titEn":"Careers","titb":"/careers"},{"tita":"联系","titEn":"Contact","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"}}
 
     };
     componentDidMount=function () {
+    					$.ajax({
+							type: "get",
+							url: "http://localhost:8100/cebest/logos",
+							success: function(e) {
+								this.setState({
+									logo1:e[0].src,
+									logo2:e[1].src
+								})
+							}.bind(this),
+							error: function() {
+								alert("失败")
+							}
+						});
         $("#nav a").click(function () {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
             $(this).children().addClass('active').parent().siblings().children().removeClass('active');
@@ -95,14 +110,14 @@ class Index extends Component {
 		var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
 		if(window.screen.width>414){
 			if(tops>0){
-				document.getElementById("abc").src=this.data.logo.logo2;
+				document.getElementById("abc").src=this.state.logo2;
 				document.getElementById("abc").style.marginLeft="40px";
 				document.getElementById("head").style.height="90px";
 				document.getElementById("head").style.backgroundColor="rgba(0,0,0,0.8)";
 				document.getElementById("nav").style.marginTop="0";
 				document.getElementById("top").style.height="70px";
 			}else{
-				document.getElementById("abc").src=this.data.logo.logo;
+				document.getElementById("abc").src=this.state.logo1;
 				document.getElementById("abc").style.marginLeft="30px";
 				document.getElementById("head").style.height="100px";
 				document.getElementById("head").style.backgroundColor="black";
@@ -401,8 +416,8 @@ class Index extends Component {
                     {/*head start*/}
                     <div className="head clear" id="head">
                         {/*logo*/}
-                        <img src={this.data.logo.logo} id="abc" className="logo" alt=""/>
-						<img src={this.data.logo.logo2} className="logo_phone" alt=""/>
+                        <img src={this.state.logo1} id="abc" className="logo" alt=""/>
+						<img src={this.state.logo2} className="logo_phone" alt=""/>
                         {/*nav state*/}
                         <ul className="nav clear" id="nav">
                             {

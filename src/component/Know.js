@@ -57,7 +57,8 @@ class Know extends Component{
                         {
                             this.state.know.map(function (v,i) {
                                 return <li key={i}>
-                                    <img src={v.img} alt=""/>
+                                <p><img src={v.img} alt=""/></p>
+                                    <p>{v.tit}</p>
                                 </li>
                             })
                         }
