@@ -69,6 +69,9 @@ class Index extends Component {
 				});
 				$("#nav a").click(function () {
 					(document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+					if($(this).index()==0){
+						window.location="http://localhost:3000";
+					}
 				});
 			}.bind(this)
 		})
