@@ -44,27 +44,31 @@ class Index extends Component {
 
     };
     componentDidMount=function () {
-    					$.ajax({
-							type: "get",
-							url: "http://localhost:8100/cebest/logos",
-							success: function(e) {
-								this.setState({
-									logo1:e[0].src,
-									logo2:e[1].src
-								})
-							}.bind(this),
-							error: function() {
-								alert("失败")
-							}
-						});
 		$.ajax({
-			'url':'http://127.0.0.1:8100/cebest/home',
-			// 'url':'http://192.168.43.25:8100/cebest/home',
+			type: "get",
+			// 'url':'http://127.0.0.1:8100/cebest/home',
+			url: "http://192.168.43.25:8100/cebest/logos",
+			success: function(e) {
+				this.setState({
+					logo1:e[0].src,
+					logo2:e[1].src
+				})
+			}.bind(this),
+			error: function() {
+				alert("失败")
+			}
+		});
+		$.ajax({
+			// 'url':'http://127.0.0.1:8100/cebest/home',
+			'url':'http://192.168.43.25:8100/cebest/home',
 			'type':'get',
 			'success':function(opt) {
 				// console.log(opt);
 				this.setState({
 					nav:opt
+				});
+				$("#nav a").click(function () {
+					(document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
 				});
 			}.bind(this)
 		})
