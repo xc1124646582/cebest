@@ -36,7 +36,9 @@ class Index extends Component {
       	this.state={
 			chins:true,
 			logo1:null,
-			logo2:null
+			logo2:null,
+			nav:[],
+			logo:[]
 		};
         this.data={"nav":[{"tita":"服务","titEn":"Service","titb":"/"},{"tita":"案例","titEn":"Cases","titb":"/cases"},{"tita":"中企·云","titEn":"Cloud","titb":"/chinese"},{"tita":"我们","titEn":"About","titb":"/we"},{"tita":"人才","titEn":"Careers","titb":"/careers"},{"tita":"联系","titEn":"Contact","titb":"/contact"}],"logo":{"logo":"images/logo.png","logo2":"images/logo2.png"}}
 
@@ -55,6 +57,17 @@ class Index extends Component {
 								alert("失败")
 							}
 						});
+		$.ajax({
+			'url':'http://127.0.0.1:8100/cebest/home',
+			// 'url':'http://192.168.43.25:8100/cebest/home',
+			'type':'get',
+			'success':function(opt) {
+				// console.log(opt);
+				this.setState({
+					nav:opt
+				});
+			}.bind(this)
+		})
         $("#nav a").click(function () {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
             $(this).children().addClass('active').parent().siblings().children().removeClass('active');
@@ -421,7 +434,7 @@ class Index extends Component {
                         {/*nav state*/}
                         <ul className="nav clear" id="nav">
                             {
-								this.data.nav.map(function(con,i){
+								this.state.nav.map(function(con,i){
                                 return (<OldSchoolMenuLink key={i} activeOnlyWhenExact={i==0?true:false} to={con.titb} label={con.tita} labelEn={con.titEn}/>
                                 )})
 							}
