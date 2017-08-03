@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 
 class Cases extends Component{
@@ -12,7 +13,7 @@ class Cases extends Component{
 		  };
 	   componentDidMount=function () {
 	   		$.ajax({
-				'url':'http://192.168.43.25:8100/cebest/cases1',
+				'url':conf.url+'/cebest/cases1',
 				'type':'get',
 				'success':function(opt){
 					console.log(opt)
@@ -20,7 +21,7 @@ class Cases extends Component{
 				}.bind(this)
 			})
 	   		$.ajax({
-				'url':'http://192.168.43.25:8100/cebest/cases2',
+				'url':conf.url+'/cebest/cases2',
 				'type':'get',
 				'success':function(opt){
 					this.setState({cases2:opt});

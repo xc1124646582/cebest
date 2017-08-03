@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 class Know extends Component{
     constructor(){
@@ -24,7 +25,7 @@ class Know extends Component{
         }
         $.ajax({
             // 'url':'http://127.0.0.1:8100/cebest/know',
-            'url':'http://192.168.43.25:8100/cebest/know',
+            'url':conf.url+'/cebest/know',
             'type':'get',
             'success':function(opt) {
                 // console.log(opt);

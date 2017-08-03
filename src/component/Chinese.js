@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 class Chinese extends Component{
     constructor(){
@@ -15,7 +16,7 @@ class Chinese extends Component{
     };
 	   componentDidMount=function () {
 	           $.ajax({
-            'url':'http://192.168.43.25:8100/cebest/chinese1',
+            'url':conf.url+'/cebest/chinese1',
             'type':'get',
             'success':function(opt){
                 this.setState({
@@ -32,7 +33,7 @@ class Chinese extends Component{
         
         
     $.ajax({
-            'url':'http://192.168.43.25:8100/cebest/chinese2',
+            'url':conf.url+'/cebest/chinese2',
             'type':'get',
             'success':function(opt){
                 this.setState({

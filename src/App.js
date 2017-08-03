@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './config'
 import './App.css';
 import './App_phone.css';
 import Serve from './component/Serve';
@@ -47,7 +48,7 @@ class Index extends Component {
 		$.ajax({
 			type: "get",
 			// 'url':'http://127.0.0.1:8100/cebest/home',
-			url: "http://192.168.43.25:8100/cebest/logos",
+			url: conf.url+"/cebest/logos",
 			success: function(e) {
 				this.setState({
 					logo1:e[0].src,
@@ -60,7 +61,7 @@ class Index extends Component {
 		});
 		$.ajax({
 			// 'url':'http://127.0.0.1:8100/cebest/home',
-			'url':'http://192.168.43.25:8100/cebest/home',
+			'url':conf.url+'/cebest/home',
 			'type':'get',
 			'success':function(opt) {
 				// console.log(opt);

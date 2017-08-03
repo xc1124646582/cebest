@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 class We extends Component {
     constructor(){
@@ -18,7 +19,7 @@ class We extends Component {
     }
     componentDidMount(){
         $.ajax({
-            url:"http://192.168.43.25:8100/cebest/we",
+            url:conf.url+"/cebest/we",
             // url:"http://127.0.0.1:8100/cebest/we",
             type:"get",
             success:function (data) {
@@ -36,7 +37,7 @@ class We extends Component {
             }.bind(this)
         })
         $.ajax({
-            url:"http://192.168.43.25:8100/cebest/we_n",
+            url:conf.url+"/cebest/we_n",
             // url:"http://127.0.0.1:8100/cebest/we_n",
             type:"get",
             success:function (data) {
@@ -47,7 +48,7 @@ class We extends Component {
             }.bind(this)
         })
     	document.getElementById("weasr").onmousemove=function(ev){
-		 			var divl=document.getElementById("wn1l").offsetLeft+100;
+          var divl=document.getElementById("wn1l").offsetLeft+100;
           var divt=document.getElementById("wn1l").offsetTop+100;
           var lo=ev.clientX
           var to=ev.clientY

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 class More extends Component{
 	constructor(){
@@ -13,7 +14,7 @@ class More extends Component{
 		(document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
 		var href=window.location.href.split("?")[1]
         $.ajax({
-            'url':'http://192.168.43.25:8100/cebest/gengduo',
+            'url':conf.url+'/cebest/gengduo',
             'type':'get',
             'success':function(opt){
                 this.setState({
@@ -26,7 +27,7 @@ class More extends Component{
             }.bind(this)
         });
         $.ajax({
-            'url':'http://192.168.43.25:8100/cebest/more',
+            'url':conf.url+'/cebest/more',
             'type':'get',
             'success':function(opt){
                 this.setState({

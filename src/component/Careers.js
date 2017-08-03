@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import conf from './../config'
 
 class Careers extends Component {
 	constructor(){
@@ -12,7 +13,7 @@ class Careers extends Component {
 		  };
     componentDidMount = function () {
     	$.ajax({
-				'url':'http://192.168.43.25:8100/cebest/careers1',
+				'url':conf.url+'/cebest/careers1',
 				'type':'get',
 				'success':function(opt){
 					// console.log(opt)
@@ -30,7 +31,7 @@ class Careers extends Component {
     	
     	
     	$.ajax({
-				'url':'http://192.168.43.25:8100/cebest/careers2',
+				'url':conf.url+'/cebest/careers2',
 				'type':'get',
 				'success':function(opt){
                     // console.log(opt)
@@ -43,7 +44,7 @@ class Careers extends Component {
     	
 
         $.ajax({
-            'url':'http://192.168.43.25:8100/cebest/careers',
+            'url':conf.url+'/cebest/careers',
             // 'url':'http://127.0.0.1:8100/cebest/careers',
             'type':'get',
             'success':function(data){
