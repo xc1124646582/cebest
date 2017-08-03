@@ -71,6 +71,19 @@ class Serve extends Component{
             $(".my-talk_window").show()
         },200)
     };
+    move(ev) {
+        var e=ev||window.event;
+        var x=e.clientX/window.innerWidth;
+        var y=e.clientY/window.innerWidth;
+        $(".my-img-d1").css({
+            "margin-left":(x*40)+"px",
+            "margin-top":(y*40)+"px"
+        })
+        $(".my-img-d2").css({
+            "margin-left":-(x*50)+"px",
+            "margin-top":(y*50)+"px"
+        })
+    };
     render(){
         return(
             <Router>
@@ -104,9 +117,11 @@ class Serve extends Component{
                     {/*Brand Website end*/}
 
                     {/*E-Commerce start*/}
-                    <div className="my-servecon-two clear">
+                    <div className="my-servecon-two clear" onMouseMove={this.move}>
                         <div className="my-scrvecon-l">
                             <img className="my-img-one" src="images/serv_con02_img01.png" alt=""/>
+                            <img className="my-img-d1" src="images/serv_con02_img02.png" alt=""/>
+                            <img className="my-img-d2" src="images/serv_con02_img03.png" alt=""/>
                             <img className="my-img-two scrvecon2img" src="images/serv_con02_img04.png" alt=""/>
                         </div>
                         <div className="my-scrvecon-r">

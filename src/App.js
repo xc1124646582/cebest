@@ -44,27 +44,34 @@ class Index extends Component {
 
     };
     componentDidMount=function () {
-    					$.ajax({
-							type: "get",
-							url: "http://localhost:8100/cebest/logos",
-							success: function(e) {
-								this.setState({
-									logo1:e[0].src,
-									logo2:e[1].src
-								})
-							}.bind(this),
-							error: function() {
-								alert("失败")
-							}
-						});
 		$.ajax({
-			'url':'http://127.0.0.1:8100/cebest/home',
-			// 'url':'http://192.168.43.25:8100/cebest/home',
+			type: "get",
+			// 'url':'http://127.0.0.1:8100/cebest/home',
+			url: "http://192.168.43.25:8100/cebest/logos",
+			success: function(e) {
+				this.setState({
+					logo1:e[0].src,
+					logo2:e[1].src
+				})
+			}.bind(this),
+			error: function() {
+				alert("失败")
+			}
+		});
+		$.ajax({
+			// 'url':'http://127.0.0.1:8100/cebest/home',
+			'url':'http://192.168.43.25:8100/cebest/home',
 			'type':'get',
 			'success':function(opt) {
 				// console.log(opt);
 				this.setState({
 					nav:opt
+				});
+				$("#nav a").click(function () {
+					(document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+					if($(this).index()==0){
+						window.location="http://localhost:3000";
+					}
 				});
 			}.bind(this)
 		})
@@ -115,8 +122,7 @@ class Index extends Component {
 		}else{
 
 		}
-
-
+		
     };
     /* 导航事件*/
     handleScroll=function (e) {
@@ -147,12 +153,12 @@ class Index extends Component {
 			}else{
 				document.getElementById("top").style.height="0";
 			}
-			if(window.location.href=="http://localhost:3000/chinese"){
+			if(window.location.href.indexOf('chinese')!=-1){
 				if(tops>=0){
 					document.getElementById("cn2r").style.left="0";
 					document.getElementById("cn2r").style.opacity="1";
 				}
-			}else if(window.location.href=="http://localhost:3000/careers"){
+			}else if(window.location.href.indexOf('careers')!=-1){
 				if(tops>=400){
 					$(".my-careers .my-why h2").css("top","0");
 					$(".my-careers .my-why h2").css("opacity","1");
@@ -163,7 +169,7 @@ class Index extends Component {
 					$(".my-careers .my-why a").css("top","0");
 					$(".my-careers .my-why a").css("opacity","1");
 				}
-			}else if(window.location.href=="http://localhost:3000/we"){
+			}else if(window.location.href.indexOf('we')!=-1){
 				if(tops>=1300){
 					document.getElementById("wn4tou").style.opacity="1";
 					document.getElementById("tou1text").style.width="5.719806rem";
@@ -228,21 +234,9 @@ class Index extends Component {
       	var ev=e||window.event;
 		var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
 		 	// console.log(tops)
-		if(window.location.href=="http://localhost:3000/"){
-			if(tops<=500){
-				$(".scrveconimg").css("top",tops/3+"px");
-			}
-			if(tops>=200&&tops<=1200){
-				var ww=tops-560;
-				$(".scrvecon2img").css("transform", "translateY("+ww/3+"px)");
-			}
-			if(tops>=1800&&tops<=2300){
-				var ww=tops-1800;
-				$(".scrvecon4img").css("marginLeft", ww/5+"px");
-			}
-		}
+
 		/* chinese */
-		else if(window.location.href=="http://localhost:3000/chinese"){
+		if(window.location.href.indexOf('chinese')!=-1){
 		 	if(tops>=400&&tops<=900){
 		 		document.getElementById("cn2r").style.left="20%";
 		 		document.getElementById("cn2r").style.opacity="1";
@@ -295,7 +289,7 @@ class Index extends Component {
 		 		}
 		 	}
 		 	/* we*/
-		 	}else if(window.location.href=="http://localhost:3000/we"){
+		 	}else if(window.location.href.indexOf('we')!=-1){
 		 		if(tops>=3643&&tops<=3943){
 					$(".ser-step").css("opacity","1");
 					$(".step-txt").css("opacity","1");
@@ -361,7 +355,7 @@ class Index extends Component {
 					document.getElementById("wnli3").style.top="0";
 					document.getElementById("wnli3").style.opacity="1";*/
 				}
-		 	}else if(window.location.href=="http://localhost:3000/cases"){
+		 	}else if(window.location.href.indexOf('cases')!=-1){
 				if(tops>=151&&tops<=1364){
 					$($(".casescon1-n").get(8)).css("opacity","1");
 					$($(".casescon1-n").get(9)).css("opacity","1");
@@ -380,7 +374,7 @@ class Index extends Component {
 					$($(".casescon1-n").get(18)).css("opacity","1");
 					$($(".casescon1-n").get(19)).css("opacity","1");
 				}
-			}else if(window.location.href=="http://localhost:3000/careers"){
+			}else if(window.location.href.indexOf('careers')!=-1){
 				if(tops>=108&&tops<=905){
 					$(".my-careers .my-hr ul li").css("top","0");
 					$(".my-careers .my-hr ul li").css("opacity","1");
@@ -420,6 +414,26 @@ class Index extends Component {
 					$(".my-know-three").css({"position":"static","margin":"0"});
 					$(".my-know-four").css({"margin-top":"0"});
 				}*/
+			}else if(window.location.href.indexOf('more')!=-1){
+
+			}else if(window.location.href.indexOf('contact')!=-1){
+
+			}else{
+				if(tops<=500){
+					$(".scrveconimg").css("top",tops/3+"px");
+				}
+				if(tops>=200&&tops<=1200){
+					var ww=tops-560;
+					var ws=tops-960;
+					var wq=tops-790;
+					$(".scrvecon2img").css("transform", "translateY("+ww/3+"px)");
+					$(".my-img-d1").css("transform", "translateY(-"+ws/2+"px)");
+					$(".my-img-d2").css("transform", "translateX("+wq/2+"px)");
+				}
+				if(tops>=1800&&tops<=2300){
+					var ww=tops-1800;
+					$(".scrvecon4img").css("marginLeft", ww/5+"px");
+				}
 			}
 		 }.bind(this)
     render(){

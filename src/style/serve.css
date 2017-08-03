@@ -94,6 +94,16 @@
     height: 100%;
     position: relative;
 }
+.my-servecon-two .my-scrvecon-l .my-img-d1{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
+.my-servecon-two .my-scrvecon-l .my-img-d2{
+    position: absolute;
+    left: 5%;
+    bottom: 30px;
+}
 .my-servecon-two .my-scrvecon-l .my-img-one{
     position: absolute;
     left: 60%;
