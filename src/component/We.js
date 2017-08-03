@@ -85,8 +85,8 @@ class We extends Component {
     render() {
         return (
             <div className="my-we">
-                <div className="my-ce-ultimate">
-                    <div className="my-we-box clear" id="weasr">
+                <div className="my-ce-ultimate" id="weasr">
+                    <div className="my-we-box clear" >
                         <img className="left aa" src="images/ly_logo37.png" id="wn1l" alt=""/>
                         <div className="my-ce-ultimate-txt left">
                             <img src="images/ly_logo38.png" alt=""/>

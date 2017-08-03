@@ -74,10 +74,8 @@ class More extends Component{
 							<h4>我们非常希望可以帮助到您并和您一起工作，请联系我们专业的咨询顾问！</h4>
 							<div className="my-serve-g">
 								<div className="my-serve">
-								<a href="http://localhost:3000/contact">
 									<p className="my-serve-p-one">+联系我们</p>
 									<p className="my-serve-p-two">+联系我们</p>
-									</a>
 								</div>
 							</div>
 						</div>
