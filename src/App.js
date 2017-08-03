@@ -73,6 +73,9 @@ class Index extends Component {
 						window.location="http://localhost:3000";
 					}
 				});
+				if(window.location.href.indexOf('more')!=-1||window.location.href.indexOf('know')!=-1){
+					$("#nav a:first-of-type li").addClass('active');
+				}
 			}.bind(this)
 		})
         $("#nav a").click(function () {
@@ -82,9 +85,6 @@ class Index extends Component {
                 window.location="http://localhost:3000";
             }
         });
-        if(window.location.href.indexOf('more')!=-1||window.location.href.indexOf('know')!=-1){
-            $("#nav a:first-of-type li").addClass('active');
-        }
     	/* 添加滑轮事件*/
 		if(window.addEventListener){
 			document.addEventListener('scroll', this.bodyScroll.bind(this));
@@ -399,19 +399,39 @@ class Index extends Component {
 				}
 		 	}else if(window.location.href.indexOf('know')!=-1){
 				if (tops>=710){
-					$(".my-know-two").css({"position":"fixed","z-index":"-4","top":"90px","left":"0","right":"0","margin":"0"});
+					$(".my-know-two").css({
+						"position":"fixed",
+						"z-index":"-4",
+						"top":"90px",
+						"left":"0",
+						"right":"0",
+						"margin":"0"
+					});
 					$(".my-know-three").css({"margin-top":"1400px"});
 				}
 				if(tops<710){
-					$(".my-know-two").css({"position":"static","margin-top":"700px"});
+					$(".my-know-two").css({
+						"position":"static",
+						"margin-top":"700px"
+					});
 					$(".my-know-three").css({"margin-top":"0"});
 				}
 				/*if(tops>=1410){
-					$(".my-know-three").css({"position":"fixed","z-index":"-3","top":"90px","left":"0","right":"0","margin":"0"});
+					$(".my-know-three").css({
+						"position":"fixed",
+						"z-index":"-3",
+						"top":"90px",
+						"left":"0",
+						"right":"0",
+						"margin":"0"
+					});
 					$(".my-know-four").css({"margin-top":"2100px"});
 				}
 				if(tops>=710&&tops<1410){
-					$(".my-know-three").css({"position":"static","margin":"0"});
+					$(".my-know-three").css({
+						"position":"static",
+						"margin":"0"
+					});
 					$(".my-know-four").css({"margin-top":"0"});
 				}*/
 			}else if(window.location.href.indexOf('more')!=-1){

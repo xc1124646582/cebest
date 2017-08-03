@@ -10,7 +10,18 @@ class Know extends Component{
         }
     };
     componentDidMount=function () {
-        var con=window.location.href.split("?")[1]
+        var con=window.location.href.split("?")[1];
+        if(con==1){
+            $(".my-know-three").css("background","#e4e4e4");
+            $(".my-know-three h2").css("color","#383838");
+            $(".my-know-three h3").css("background","#262626");
+            $(".my-know-three p").css("color","#7d7d7d");
+        }else{
+            $(".my-know-three").css("background","#333");
+            $(".my-know-three h2").css("color","#fff");
+            $(".my-know-three h3").css("background","#fff");
+            $(".my-know-three p").css("color","#fff");
+        }
         $.ajax({
             // 'url':'http://127.0.0.1:8100/cebest/know',
             'url':'http://192.168.43.25:8100/cebest/know',

@@ -120,9 +120,11 @@
     display: flex;
     justify-content: space-around;
 }
-.my-know-three ul li img{ transform: scale(1.2);}
+.my-know-three ul li img{
+    transform: scale(1.2);
+}
 .my-know-three ul li p{
-margin-top: 38px;
+    margin-top: 38px;
 }
 .my-know-four{
     height: 700px;
