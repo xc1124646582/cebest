@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import conf from './../config'
+import conf from './../config';
+import Ajax from './../Ajax';
 
 class Careers extends Component {
 	constructor(){
@@ -12,46 +13,49 @@ class Careers extends Component {
 			}
 		  };
     componentDidMount = function () {
-    	$.ajax({
-				'url':conf.url+'/cebest/careers1',
-				'type':'get',
-				'success':function(opt){
-					// console.log(opt)
-					this.setState({
-						title:opt
-					})
-					$(".my-work h1").html(this.state.title[0].title)
-					$(".my-work p").html(this.state.title[0].con)
-					$(".my-why-mask h2").html(this.state.title[1].title)
-					$(".my-why-mask p").html(this.state.title[1].con)
-					$(".my-job-l h2").html(this.state.title[2].title)
-					$(".my-job-l p").html(this.state.title[2].con)
-				}.bind(this)
-			})
+    	Ajax({
+            'url':conf.url+'/cebest/careers1',
+            'type':'get',
+            'success':function(opt){
+                // console.log(opt)
+                var data=eval('('+opt+')')
+                this.setState({
+                    title:data
+                })
+                $(".my-work h1").html(this.state.title[0].title);
+                $(".my-work p").html(this.state.title[0].con);
+                $(".my-why-mask h2").html(this.state.title[1].title);
+                $(".my-why-mask p").html(this.state.title[1].con);
+                $(".my-job-l h2").html(this.state.title[2].title);
+                $(".my-job-l p").html(this.state.title[2].con);
+            }.bind(this)
+        })
     	
     	
-    	$.ajax({
-				'url':conf.url+'/cebest/careers2',
-				'type':'get',
-				'success':function(opt){
-                    // console.log(opt)
-					this.setState({
-						con2:opt
-					})
+    	Ajax({
+            'url':conf.url+'/cebest/careers2',
+            'type':'get',
+            'success':function(opt){
+                var data=eval('('+opt+')')
+                // console.log(opt)
+                this.setState({
+                    con2:data
+                })
 
-				}.bind(this)
-			})
+            }.bind(this)
+        })
     	
 
-        $.ajax({
+        Ajax({
             'url':conf.url+'/cebest/careers',
             // 'url':'http://127.0.0.1:8100/cebest/careers',
             'type':'get',
             'success':function(data){
-                var arr=[]
                 // console.log(data)
+                var opt=eval('('+data+')')
+                var arr=[]
                 this.setState({
-                    work:data
+                    work:opt
                 })
                 $(".my-job-r ul li").click(function () {
                     $(this).find(".my-detail").stop(true).fadeToggle().parent().find("img").toggleClass("rot")
@@ -67,26 +71,66 @@ class Careers extends Component {
                 })
             }.bind(this)
         }) 
-
-
-
-    	/*$.ajax({
-				'url':'http://192.168.43.25:8100/cebset/careers',
-				'type':'get',
-				'success':function(opt){
-					for(var i=0;i<opt.length;i++){
-						if(opt[i].work!=null){
-							this.state.work.push(opt[i].work)
-						}
-					}
-					console.log(opt)
-				}.bind(this)
-			})*/
+        
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.careersScroll);
+        }else{
+            document.attachEvent('onscroll', this.careersScroll);
+        }
     };
-
+    careersScroll(){
+        var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+        if(window.screen.width>414){
+            if(tops>=108&&tops<=905){
+                $(".my-careers .my-hr ul li").css("top","0");
+                $(".my-careers .my-hr ul li").css("opacity","1");
+            }
+            if(tops>=800&&tops<=1400){
+                $(".my-careers .my-why h2").css("top","0");
+                $(".my-careers .my-why h2").css("opacity","1");
+                $(".my-careers .my-why img").css("top","0");
+                $(".my-careers .my-why img").css("opacity","1");
+                $(".my-careers .my-why p").css("top","0");
+                $(".my-careers .my-why p").css("opacity","1");
+                $(".my-careers .my-why a").css("top","0");
+                $(".my-careers .my-why a").css("opacity","1");
+            }
+            if(tops>=1400){
+                $(".my-careers .my-job .my-job-l h2").css("top","0");
+                $(".my-careers .my-job .my-job-l h2").css("opacity","1");
+                $(".my-careers .my-job .my-job-l img").css("top","0");
+                $(".my-careers .my-job .my-job-l img").css("opacity","1");
+                $(".my-careers .my-job .my-job-l p").css("top","0");
+                $(".my-careers .my-job .my-job-l p").css("opacity","1");
+            }
+        }else if(window.screen.width<=414){
+            if(tops>=108){
+                $(".my-careers .my-hr ul li").css("top","0");
+                $(".my-careers .my-hr ul li").css("opacity","1");
+            }
+            if(tops>=400){
+                $(".my-careers .my-why h2").css("top","0");
+                $(".my-careers .my-why h2").css("opacity","1");
+                $(".my-careers .my-why img").css("top","0");
+                $(".my-careers .my-why img").css("opacity","1");
+                $(".my-careers .my-why p").css("top","0");
+                $(".my-careers .my-why p").css("opacity","1");
+                $(".my-careers .my-why a").css("top","0");
+                $(".my-careers .my-why a").css("opacity","1");
+            }
+        }
+        
+    }
+    componentWillUnmount(){
+        if(window.addEventListener){
+            document.removeEventListener('scroll', this.careersScroll);
+        }else{
+            document.detachEvent('onscroll', this.careersScroll);
+        }
+    }
     render() {
         return (
             <div className="my-careers">
@@ -95,10 +139,6 @@ class Careers extends Component {
                     <h1></h1>
                     <img src="images/ly_img07.png" alt=""/>
                     <p></p>
-                    <a href="">
-                        <span className="my-work-span-one">查看工作机会</span>
-                        <span className="my-work-span-two">查看工作机会</span>
-                    </a>
                 </div>
                 {/*work end*/}
                 {/*hr start*/}
@@ -122,10 +162,7 @@ class Careers extends Component {
                         <h2></h2>
                         <img src="images/ly_img07.png" alt=""/>
                         <p></p>
-                        <a href="">
-                            <span className="my-why-span-one">了解我们</span>
-                            <span className="my-why-span-two">了解我们</span>
-                        </a>
+
                     </div>
                 </div>
                 {/*why end*/}

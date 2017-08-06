@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import conf from './../config'
+import Ajax from './../Ajax';
 
 class Know extends Component{
     constructor(){
@@ -11,7 +12,7 @@ class Know extends Component{
         }
     };
     componentDidMount=function () {
-        var con=window.location.href.split("?")[1];
+        var con=window.location.href.split("=")[1];
         if(con==1){
             $(".my-know-three").css("background","#e4e4e4");
             $(".my-know-three h2").css("color","#383838");
@@ -23,12 +24,13 @@ class Know extends Component{
             $(".my-know-three h3").css("background","#fff");
             $(".my-know-three p").css("color","#fff");
         }
-        $.ajax({
+        Ajax({
             // 'url':'http://127.0.0.1:8100/cebest/know',
             'url':conf.url+'/cebest/know',
             'type':'get',
-            'success':function(opt) {
-                // console.log(opt);
+            'success':function(data) {
+                var opt=eval('('+data+')')
+                // console.log(data);
                 for (var i in opt) {
                     if (opt[i].con==con) {
                         this.state.know.push(opt[i]);
@@ -43,7 +45,80 @@ class Know extends Component{
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.knowScroll);
+        }else{
+            document.attachEvent('onscroll', this.knowScroll);
+        }
     };
+    knowScroll(){
+        var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+        if(window.screen.width>414){
+            if (tops>=710){
+                $(".my-know-two").css({
+                    "position":"fixed",
+                    "z-index":"-4",
+                    "top":"90px",
+                    "left":"0",
+                    "right":"0",
+                    "margin":"0"
+                });
+                $(".my-know-three").css({"margin-top":"1400px"});
+            }
+            if(tops<710){
+                $(".my-know-two").css({
+                    "position":"static",
+                    "margin-top":"700px"
+                });
+                $(".my-know-three").css({"margin-top":"0"});
+            }
+            /*if(tops>=1410){
+             $(".my-know-three").css({
+                 "position":"fixed",
+                 "z-index":"-3",
+                 "top":"90px",
+                 "left":"0",
+                 "right":"0",
+                 "margin":"0"
+             });
+             $(".my-know-four").css({"margin-top":"2100px"});
+             }
+             if(tops>=710&&tops<1410){
+             $(".my-know-three").css({
+                 "position":"static",
+                 "margin":"0"
+             });
+             $(".my-know-four").css({"margin-top":"0"});
+             }*/
+        }else if(window.screen.width<=414){
+            if (tops>=710){
+                $(".my-know-two").css({
+                    "position":"static",
+                    "z-index":"-4",
+                    "top":"90px",
+                    "left":"0",
+                    "right":"0",
+                    "margin":"0"
+                });
+                $(".my-know-three").css({"margin-top":"0"});
+            }
+            if(tops<710){
+                $(".my-know-two").css({
+                    "position":"static",
+                    "margin-top":"0"
+                });
+                $(".my-know-three").css({"margin-top":"0"});
+            }
+        }
+
+    }
+    componentWillUnmount(){
+        if(window.addEventListener){
+            document.removeEventListener('scroll', this.knowScroll);
+        }else{
+            document.detachEvent('onscroll', this.knowScroll);
+        }
+    }
     render(){
         return(
             <div className="my-know">

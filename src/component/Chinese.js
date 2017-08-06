@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import conf from './../config'
+import conf from './../config';
+import Ajax from './../Ajax';
 
 class Chinese extends Component{
     constructor(){
         super();
         this.state={
+            chins:true,
             chinese1:[],
             chinese2:"",
             chinese3:"",
@@ -14,37 +16,112 @@ class Chinese extends Component{
             chinesebox:[]
         }
     };
-	   componentDidMount=function () {
-	           $.ajax({
+    componentDidMount=function () {
+        Ajax({
             'url':conf.url+'/cebest/chinese1',
             'type':'get',
-            'success':function(opt){
+            'success':function(data){
+                var opt=eval('('+data+')')
                 this.setState({
-                chinese1:opt[0],
-                chinese2:opt[1],
-                chinese3:opt[2],
-                chinese4:opt[3],
-                chinese5:opt[4]
+                    chinese1:opt[0],
+                    chinese2:opt[1],
+                    chinese3:opt[2],
+                    chinese4:opt[3],
+                    chinese5:opt[4]
                 })
                 document.getElementById("c1text").innerHTML=this.state.chinese1.con
-                
+
             }.bind(this)
         })
         
         
-    $.ajax({
+        Ajax({
             'url':conf.url+'/cebest/chinese2',
             'type':'get',
             'success':function(opt){
+                var data=eval('('+opt+')')
                 this.setState({
-                chinesebox:opt
+                    chinesebox:data
                 })
                 console.log(this.state.chinesebox)
             }.bind(this)
         })
-		   
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.chineseScroll);
+        }else{
+            document.attachEvent('onscroll', this.chineseScroll);
+        }
 
-	   };
+	};
+    chineseScroll=function(){
+        var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+        if(window.screen.width>414){
+            if(tops>=400&&tops<=900){
+                document.getElementById("cn2r").style.left="20%";
+                document.getElementById("cn2r").style.opacity="1";
+            }
+            if(tops>=800&&tops<=1600){
+                $(".chinese-con-n").css("top","0");
+                $(".chinese-con-n").css("opacity","1");
+            }
+            if(tops>=1600&&tops<=2200){
+                $($(".chinese-con4-left>img:nth-child(1)").get(0)).css("top","0");
+                $($(".chinese-con4-left>img:nth-child(1)").get(0)).css("opacity","1");
+                $(".chinese-con4-left>span:nth-child(2) img").css("transform","scale(1)");
+                $(".chinese-con4-left>span:nth-child(2) img").css("opacity","1");
+                $(".chinese-con4-left>span:nth-child(3) img").css("transform","scale(1)");
+                $(".chinese-con4-left>span:nth-child(3) img").css("opacity","1");
+            }
+            if(tops>=1947&&tops<=2847){
+                $($(".chinese-con4-left>img:nth-child(1)").get(1)).css("transition","nul");
+                $($(".chinese-con4-left>img:nth-child(1)").get(1)).css("top","0");
+                $($(".chinese-con4-left>img:nth-child(1)").get(1)).css("opacity","1");
+                var ww=tops-1947;
+                $($(".chinese-con4-left>img:nth-child(1)").get(1)).css("marginLeft",-(ww/8)+"px");
+
+            }
+            if(tops>=2668&&tops<=3191){
+                if(this.state.chins==true){
+                    this.setState({
+                        chins:false
+                    });
+                    var aa=0;
+                    var bb=0;
+                    var cc=0;
+                    var	time=setInterval(function(){
+                        aa++;
+                        bb=bb+2;
+                        cc=cc+3;
+                        if(aa>=8){
+                            aa=8;
+                        }
+                        if(bb>=100){
+                            bb=100;
+                        }
+                        if(cc>=150){
+                            cc=150;
+                        }
+                        $($(".chinnums").get(0)).text(aa);
+                        $($(".chinnums").get(1)).text(bb);
+                        $($(".chinnums").get(2)).text(cc);
+                    },30)
+                }
+            }
+        }else if(window.screen.width<=414){
+            if(tops>=0){
+                document.getElementById("cn2r").style.left="0";
+                document.getElementById("cn2r").style.opacity="1";
+            }
+        }
+        
+    }.bind(this)
+    componentWillUnmount(){
+        if(window.addEventListener){
+            document.removeEventListener('scroll', this.chineseScroll);
+        }else{
+            document.detachEvent('onscroll', this.chineseScroll);
+        }
+    }
 	  render(){
   	return(
 <div className="chinese">
@@ -91,7 +168,6 @@ class Chinese extends Component{
 
 
 </div>
-<div className="scrvebtn margin" id="servebtn"><p>+了解更多</p><p>+了解更多</p></div>
 </div>
 {/*con3 end */}
 
@@ -139,7 +215,7 @@ class Chinese extends Component{
 <dd>迭代打磨而成的产品</dd>
 </dl>
 </div>
-<div className="scrvebtn margin " id="servebtn"><p>+查看案例</p><p>+了解更多</p></div>
+
 </div>
 	{/*help start*/}
 	<div className="my-help">

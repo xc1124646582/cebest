@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Ajax from './../Ajax';
 import conf from './../config'
 
 
@@ -12,25 +13,64 @@ class Cases extends Component{
 			}
 		  };
 	   componentDidMount=function () {
-	   		$.ajax({
+	   		Ajax({
 				'url':conf.url+'/cebest/cases1',
 				'type':'get',
 				'success':function(opt){
-					console.log(opt)
-					this.setState({cases1:opt});
+					// console.log(opt)
+					var data=eval('('+opt+')')
+					this.setState({
+						cases1:data
+					});
 				}.bind(this)
 			})
-	   		$.ajax({
+	   		Ajax({
 				'url':conf.url+'/cebest/cases2',
 				'type':'get',
 				'success':function(opt){
-					this.setState({cases2:opt});
+					var data=eval('('+opt+')')
+					this.setState({
+						cases2:data
+					});
 				}.bind(this)
 			})
 		   setTimeout(function () {
 			   $(".my-talk_window").show()
 		   },200)
-		 };
+		   if(window.addEventListener){
+			   document.addEventListener('scroll', this.casesScroll);
+		   }else{
+			   document.attachEvent('onscroll', this.casesScroll);
+		   }
+	   };
+	casesScroll(){
+		var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+		if(tops>=151&&tops<=1364){
+			$($(".casescon1-n").get(8)).css("opacity","1");
+			$($(".casescon1-n").get(9)).css("opacity","1");
+			$($(".casescon1-n").get(10)).css("opacity","1");
+			$($(".casescon1-n").get(11)).css("opacity","1");
+		}
+		if(tops>=500&&tops<=1349){
+			$($(".casescon1-n").get(12)).css("opacity","1");
+			$($(".casescon1-n").get(13)).css("opacity","1");
+			$($(".casescon1-n").get(14)).css("opacity","1");
+			$($(".casescon1-n").get(15)).css("opacity","1");
+		}
+		if(tops>=812&&tops<=1667){
+			$($(".casescon1-n").get(16)).css("opacity","1");
+			$($(".casescon1-n").get(17)).css("opacity","1");
+			$($(".casescon1-n").get(18)).css("opacity","1");
+			$($(".casescon1-n").get(19)).css("opacity","1");
+		}
+	}
+	componentWillUnmount(){
+		if(window.addEventListener){
+			document.removeEventListener('scroll', this.casesScroll);
+		}else{
+			document.detachEvent('onscroll', this.casesScroll);
+		}
+	}
 	  render(){
   	return(
   		<div className="cases clear">

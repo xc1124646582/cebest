@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import conf from './../config'
+import conf from './../config';
+import Ajax from './../Ajax';
 
 class We extends Component {
     constructor(){
@@ -18,11 +19,12 @@ class We extends Component {
         }
     }
     componentDidMount(){
-        $.ajax({
+        Ajax({
             url:conf.url+"/cebest/we",
             // url:"http://127.0.0.1:8100/cebest/we",
             type:"get",
-            success:function (data) {
+            success:function (opt) {
+                var data=eval('('+opt+')')
                 // console.log(data)
                 this.setState({
                     data:{
@@ -36,11 +38,12 @@ class We extends Component {
                 })
             }.bind(this)
         })
-        $.ajax({
+        Ajax({
             url:conf.url+"/cebest/we_n",
             // url:"http://127.0.0.1:8100/cebest/we_n",
             type:"get",
-            success:function (data) {
+            success:function (opt) {
+                var data=eval('('+opt+')')
                 // console.log(data)
                 this.setState({
                     arr:data
@@ -82,6 +85,135 @@ class We extends Component {
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.weScroll);
+        }else{
+            document.attachEvent('onscroll', this.weScroll);
+        }
+    }
+    weScroll(){
+        var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+        if(window.screen.width>414){
+            if(tops>=3463&&tops<=3943){
+                $(".ser-step").css("opacity","1");
+                $(".step-txt").css("opacity","1");
+                $(".sers").css("width","95px");
+                $(".ser-curve6 ").css("width","230px");
+            }
+            if(tops>=2800&&tops<=3200){
+                document.getElementById("wns1").style.opacity="1";
+                document.getElementById("wns2").style.width="267px";
+                document.getElementById("wns3").style.width="267px";
+                document.getElementById("wns4").style.opacity="1";
+                document.getElementById("wns5").style.opacity="1";
+            }
+            if(tops>=2000&&tops<=2800){
+                document.getElementById("wn4tou").style.opacity="1";
+                document.getElementById("tou1text").style.width="231px";
+                document.getElementById("tou1text").style.opacity="1";
+                document.getElementById("tou1lin").style.width="316px";
+                document.getElementById("tou2text").style.width="85px";
+                document.getElementById("tou2text").style.opacity="1";
+                document.getElementById("tou2lin").style.width="188px";
+                document.getElementById("tou3text").style.width="62px";
+                document.getElementById("tou3text").style.opacity="1";
+                document.getElementById("tou3lin").style.width="304px";
+                document.getElementById("tou4text").style.width="161px";
+                document.getElementById("tou4text").style.opacity="1";
+                document.getElementById("tou4lin").style.width="261px";
+                document.getElementById("tou5text").style.width="143px";
+                document.getElementById("tou5text").style.opacity="1";
+                document.getElementById("tou5lin").style.width="165px";
+                document.getElementById("tou6text").style.width="261px";
+                document.getElementById("tou6text").style.opacity="1";
+                document.getElementById("tou6lin").style.width="276px";
+                document.getElementById("tou7text").style.width="125px";
+                document.getElementById("tou7text").style.opacity="1";
+                document.getElementById("tou7lin").style.width="219px";
+
+                var ww=tops-1900
+                document.getElementById("tou1text").style.marginLeft=-(ww/8)+20+"px";
+                document.getElementById("tou2text").style.marginLeft=-(ww/8)+"px";
+                document.getElementById("tou3text").style.marginLeft=-(ww/10)+60+"px";
+                document.getElementById("tou4text").style.marginLeft=-(ww/10)+50+"px";
+                document.getElementById("tou5text").style.marginLeft=(ww/10)-50+"px";
+                document.getElementById("tou6text").style.marginLeft=(ww/10)-50+"px";
+                document.getElementById("tou7text").style.marginLeft=(ww/10)-50+"px";
+            }
+            if(tops>=800&&tops<=1200){
+                var ww=tops-800;
+                console.log(ww);
+                document.getElementById("wn3img").style.top=-(ww/9)+"px";
+            }
+            if(tops>=400&&tops<=900){
+                $("#wnli1").css("top","0");
+                $("#wnli1").css("opacity","1");
+                $("#wnli2").css("top","0");
+                $("#wnli2").css("opacity","1");
+                $("#wnli3").css("top","0");
+                $("#wnli3").css("opacity","1");
+                /*document.getElementById("wnli1").style.top="0";
+                 document.getElementById("wnli1").style.opacity="1";
+                 document.getElementById("wnli2").style.top="0";
+                 document.getElementById("wnli2").style.opacity="1";
+                 document.getElementById("wnli3").style.top="0";
+                 document.getElementById("wnli3").style.opacity="1";*/
+            }
+        }else if(window.screen.width<=414){
+            if(tops>=1300){
+                document.getElementById("wn4tou").style.opacity="1";
+                document.getElementById("tou1text").style.width="5.719806rem";
+                document.getElementById("tou1text").style.opacity="1";
+                document.getElementById("tou1lin").style.width="5.41062rem";
+                document.getElementById("tou2text").style.width="2.125603rem";
+                document.getElementById("tou2text").style.opacity="1";
+                document.getElementById("tou2lin").style.width="4.09661rem";
+                document.getElementById("tou3text").style.width="1.62318rem";
+                document.getElementById("tou3text").style.opacity="1";
+                document.getElementById("tou3lin").style.width="5.21739rem";
+                document.getElementById("tou4text").style.width="4.01932rem";
+                document.getElementById("tou4text").style.opacity="1";
+                document.getElementById("tou4lin").style.width="6.99516rem";
+                document.getElementById("tou5text").style.width="3.55555rem";
+                document.getElementById("tou5text").style.opacity="1";
+                document.getElementById("tou5lin").style.width="3.94202rem";
+                document.getElementById("tou6text").style.width="5.21739rem";
+                document.getElementById("tou6text").style.opacity="1";
+                document.getElementById("tou6lin").style.width="5.17874rem";
+                document.getElementById("tou7text").style.width="3.09178rem";
+                document.getElementById("tou7text").style.opacity="1";
+                document.getElementById("tou7lin").style.width="4.251207rem";
+
+                document.getElementById("tou1text").style.marginLeft=0;
+                document.getElementById("tou2text").style.marginLeft=0;
+                document.getElementById("tou3text").style.marginLeft=0;
+                document.getElementById("tou4text").style.marginLeft=0;
+                document.getElementById("tou5text").style.marginLeft=0;
+                document.getElementById("tou6text").style.marginLeft=0;
+                document.getElementById("tou7text").style.marginLeft=0;
+            }
+            if(tops>=1950){
+                document.getElementById("wns1").style.opacity="1";
+                document.getElementById("wns2").style.width="4.251207rem";
+                document.getElementById("wns3").style.width="4.251207rem";
+                document.getElementById("wns4").style.opacity="1";
+                document.getElementById("wns5").style.opacity="1";
+            }
+            if(tops>=2200){
+                $(".ser-step").css("opacity","1");
+                $(".step-txt").css("opacity","1");
+                $(".sers").css("width","1.27536rem");
+                $(".ser-curve6 ").css("width","3.09178rem");
+            }
+        }
+        
+    }
+    componentWillUnmount(){
+        if(window.addEventListener){
+            document.removeEventListener('scroll', this.weScroll);
+        }else{
+            document.detachEvent('onscroll', this.weScroll);
+        }
     }
     render() {
         return (

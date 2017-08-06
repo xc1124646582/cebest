@@ -31,8 +31,8 @@
     color: #C4C4C4;
     line-height: 26px;
     position: relative;
-        top: 100px;
-        opacity: 0;
+    top: 100px;
+    opacity: 0;
     animation: cn1 .8s forwards;
     margin-bottom: 48px;
     font-family: "微软雅黑";
@@ -42,9 +42,9 @@
 .chinese-con1 img{
     display: block;
     max-width: 720px;
-        position: relative;
-        top: 100px;
-                animation: cn1 .8s forwards 0.2s;
+    position: relative;
+    top: 100px;
+    animation: cn1 .8s forwards 0.2s;
     opacity:0;
     margin:  0 auto;
 }

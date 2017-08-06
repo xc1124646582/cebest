@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import conf from './../config'
+import Ajax from './../Ajax';
 import Know from './Know';
 import More from './More';
 import './../style/know.css';
@@ -27,24 +28,26 @@ class Serve extends Component{
         }
     };
     componentDidMount=function () {
-        $.ajax({
+        Ajax({
             'url':conf.url+'/cebest/gengduo',
             'type':'get',
             'success':function(opt){
+                var data=eval('('+opt+')')
                 // console.log(opt);
                 this.setState({
-                    gengduo:opt
+                    gengduo:data
                 });
                 $(".my-more-services ul a").click(function () {
                     (document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
                 })
             }.bind(this)
         });
-        $.ajax({
+        Ajax({
             // 'url':'http://127.0.0.1:8100/cebest/know',
             'url':conf.url+'/cebest/know',
             'type':'get',
-            'success':function(opt) {
+            'success':function(data) {
+                var opt=eval('('+data+')')
                 // console.log(opt);
                 for (var i in opt) {
                     if (opt[i].con=='1') {
@@ -71,11 +74,41 @@ class Serve extends Component{
         setTimeout(function () {
             $(".my-talk_window").show()
         },200)
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.serveScroll);
+        }else{
+            document.attachEvent('onscroll', this.serveScroll);
+        }
     };
+    serveScroll(){
+        var tops=(document.body.scrollTop)||(document.documentElement.scrollTop);
+        if(tops<=500){
+            $(".scrveconimg").css("top",tops/3+"px");
+        }
+        if(tops>=200&&tops<=1200){
+            var ww=tops-560;
+            var ws=tops-960;
+            var wq=tops-790;
+            $(".scrvecon2img").css("transform", "translateY("+ww/3+"px)");
+            $(".my-img-d1").css("transform", "translateY(-"+ws/2+"px)");
+            $(".my-img-d2").css("transform", "translateX("+wq/2+"px)");
+        }
+        if(tops>=1800&&tops<=2300){
+            var ww=tops-1800;
+            $(".scrvecon4img").css("marginLeft", ww/5+"px");
+        }
+    }
+    componentWillUnmount(){
+        if(window.addEventListener){
+            document.removeEventListener('scroll', this.serveScroll);
+        }else{
+            document.detachEvent('onscroll', this.serveScroll);
+        }
+    }
     move(ev) {
         var e=ev||window.event;
         var x=e.clientX/window.innerWidth;
-        var y=e.clientY/window.innerWidth;
+        var y=e.clientY/window.innerHeight;
         $(".my-img-d1").css({
             "margin-left":(x*40)+"px",
             "margin-top":(y*40)+"px"
@@ -112,7 +145,7 @@ class Serve extends Component{
                                         })
                                     }
                                 </ul>
-                                <Link to="/know?1" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
+                                <Link to="/know?id=1" className="scrvebtn" id="servebtn"><p>+了解更多</p><p>+了解更多</p></Link>
                             </div>
                         </div>
                     {/*Brand Website end*/}
@@ -140,7 +173,7 @@ class Serve extends Component{
                                     })
                                 }
                             </ul>
-                            <Link to="/know?2" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?id=2" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*E-Commerce end*/}
@@ -166,7 +199,7 @@ class Serve extends Component{
                                     })
                                 }
                             </ul>
-                            <Link to="/know?3" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?id=3" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*Event Marketing end*/}
@@ -193,7 +226,7 @@ class Serve extends Component{
                                     })
                                 }
                             </ul>
-                            <Link to="/know?4" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
+                            <Link to="/know?id=4" className="scrvebtn" id="servebtn2"><p>+了解更多</p><p>+了解更多</p></Link>
                         </div>
                     </div>
                     {/*Business System end*/}
@@ -205,7 +238,7 @@ class Serve extends Component{
                         </h2>
                         <ul className="clear">
                         {this.state.gengduo.map(function(v,i){
-                        return  <Link key={i}  to={`/more?${v.id}`}>
+                        return  <Link key={i}  to={`/more?id=${v.id}`}>
                                 <li>
                                     <dl>
                                         <dt>

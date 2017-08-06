@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import conf from './../config'
+import Ajax from './../Ajax';
 
 class More extends Component{
 	constructor(){
@@ -12,28 +13,30 @@ class More extends Component{
 	};
 	componentDidMount=function () {
 		(document.body.scrollTop=0) || (document.documentElement.scrollTop=0)
-		var href=window.location.href.split("?")[1]
-        $.ajax({
+		var href=window.location.href.split("=")[1]
+        Ajax({
             'url':conf.url+'/cebest/gengduo',
             'type':'get',
-            'success':function(opt){
+            'success':function(data){
+				// console.log(data);
+				var opt=eval('('+data+')')
                 this.setState({
 					gengduo:opt[href-1]
 				});
-                console.log(opt);
                 $(".my-icd h2").text(this.state.gengduo.title1);
                 $(".my-icd p").text(this.state.gengduo.title2);
                 $(".my-icd div").html(this.state.gengduo.content);
             }.bind(this)
         });
-        $.ajax({
+        Ajax({
             'url':conf.url+'/cebest/more',
             'type':'get',
             'success':function(opt){
+				// console.log(opt)
+				var data=eval('('+opt+')')
                 this.setState({
-					img:opt
+					img:data
 				});
-                // console.log(opt)
             }.bind(this)
         });
 		setTimeout(function () {

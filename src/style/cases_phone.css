@@ -36,7 +36,6 @@
         transition: 1s;
         overflow: hidden;
         position: relative;
-        cursor: pointer;
     }
     .casescon1-n img{
         width: 100%;
@@ -95,7 +94,6 @@
         box-sizing: border-box;
         height: 5.797101rem;
         overflow: hidden;
-        cursor: pointer;
         transform-style: preserve-3d;
         border: 1px solid #eee;
         border-left: none;;

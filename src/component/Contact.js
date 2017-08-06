@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import conf from './../config'
+import Ajax from './../Ajax';
 
 class Contact extends Component {
     constructor(){
@@ -10,10 +11,11 @@ class Contact extends Component {
         }
     };
     componentDidMount () {
-        $.ajax({
+        Ajax({
             type:"get",
             url:conf.url+"/cebest/contact",
-            success:function(data){
+            success:function(opt){
+                var data=eval('('+opt+')')
                 this.setState({
                     contact:data[0]
                 })
